@@ -1,3 +1,18 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/* custom css */
+
+@font-face {
+  font-family: 'Karrik-Regular';
+  src: url('~assets/fonts/Karrik-Regular.woff2') format('woff2'),
+    url('~assets/fonts/Karrik-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Karrik-Regular';
+  src: url('~assets/fonts/Karrik-Italic.woff2'), format('woff2'),
+    url('~assets/fonts/Karrik-Italic.woff') format('woff');
+  font-style: italic;
+}
