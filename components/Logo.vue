@@ -1,5 +1,12 @@
 <template>
-  <svg width="97" height="97" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    class="logo"
+    width="97"
+    height="97"
+    viewBox="0 0 97 97"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <circle cx="48.5" cy="48.5" r="48.5" fill="#FF6B00" />
     <path
       fill-rule="evenodd"
@@ -9,16 +16,16 @@
     />
   </svg>
 </template>
-
-<style>
-.NuxtLogo {
-  animation: 1s appear;
-  margin: auto;
+<script>
+export default {
+  methods: {
+    animateLogo() {
+      TweenMax.to('.logo', 1, { x: 100, alpha: 0, ease: Sine.easeIn })
+      console.log('test')
+    },
+  },
+  beforeMount() {
+    this.animateLogo()
+  },
 }
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-}
-</style>
+</script>
