@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>
-      <h1 class="font-display">coming soon</h1>
-    </div>
+    <div class="w-screen h-screen bg-orange"></div>
   </div>
 </template>
 
@@ -16,6 +14,7 @@ export default {
       ],
     }
   },
+  layout: 'indexLayout',
 }
 </script>
 
