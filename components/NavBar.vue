@@ -12,12 +12,13 @@
     </nav>
   </div> -->
   <div class="font-display text-green">
-    <nav class="flex items-center justify-between flex-no-wrap">
-      <div class="flex items-center text-5xl">
-        <!-- <img class="object-contain" src="img/logo.svg" /> -->
+    <nav class="flex items-baseline justify-between flex-no-wrap">
+      <!-- <img class="object-contain" src="img/logo.svg" /> -->
+
+      <div class="text-5xl">
         <NuxtLink to="/">noshi</NuxtLink>
       </div>
-      <div class="flex items-center justify-end flex-no-wrap sm:hidden">
+      <div class="flex justify-end flex-no-wrap text-2xl sm:hidden">
         <!-- THIS WILL BE RESPONIVE MENU / BUTTON -->
         YO
       </div>
@@ -25,15 +26,15 @@
       <div
         class="sm:flex sm:items-center sm:justify-end sm:flex-no-wrap sm:show hidden"
       >
-        <div class="flex items-center text-2xl">
+        <div class="self-end text-2xl pr-5">
           <!-- <img class="object-contain" src="img/logo.svg" /> -->
           <NuxtLink to="/work">work</NuxtLink>
         </div>
-        <div class="flex items-center text-2xl">
+        <div class="self-end text-2xl">
           <!-- <img class="object-contain" src="img/logo.svg" /> -->
           <NuxtLink to="/about">about</NuxtLink>
         </div>
-        <div class="flex items-center text-2xl">
+        <div class="self-end text-2xl pl-5">
           <!-- <img class="object-contain" src="img/logo.svg" /> -->
           <NuxtLink to="/contact">contact</NuxtLink>
         </div>
