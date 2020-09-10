@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <!-- <div class="nav">
     <NuxtLink to="/" class="brand">
       <Logo />
     </NuxtLink>
@@ -9,6 +9,35 @@
       <NuxtLink to="/about">about</NuxtLink>&nbsp;
       <NuxtLink to="/contact">contact</NuxtLink>&nbsp;
       <NuxtLink to="/blog">blog</NuxtLink>&nbsp;
+    </nav>
+  </div> -->
+  <div class="font-display text-green">
+    <nav class="flex items-center justify-between flex-no-wrap">
+      <div class="flex items-center text-5xl">
+        <!-- <img class="object-contain" src="img/logo.svg" /> -->
+        <NuxtLink to="/">noshi</NuxtLink>
+      </div>
+      <div class="flex items-center justify-end flex-no-wrap sm:hidden">
+        <!-- THIS WILL BE RESPONIVE MENU / BUTTON -->
+        YO
+      </div>
+
+      <div
+        class="sm:flex sm:items-center sm:justify-end sm:flex-no-wrap sm:show hidden"
+      >
+        <div class="flex items-center text-2xl">
+          <!-- <img class="object-contain" src="img/logo.svg" /> -->
+          <NuxtLink to="/work">work</NuxtLink>
+        </div>
+        <div class="flex items-center text-2xl">
+          <!-- <img class="object-contain" src="img/logo.svg" /> -->
+          <NuxtLink to="/about">about</NuxtLink>
+        </div>
+        <div class="flex items-center text-2xl">
+          <!-- <img class="object-contain" src="img/logo.svg" /> -->
+          <NuxtLink to="/contact">contact</NuxtLink>
+        </div>
+      </div>
     </nav>
   </div>
 </template>
@@ -20,31 +49,3 @@ export default {
   },
 }
 </script>
-<style scoped>
-.brand {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.5em;
-  color: #39b982;
-  text-decoration: none;
-}
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-}
-.nav .nav-item {
-  box-sizing: border-box;
-  margin: 0 5px;
-  color: rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-}
-.nav .nav-item.router-link-exact-active {
-  color: #39b982;
-  border-bottom: solid 2px #39b982;
-}
-.nav a {
-  display: inline-block;
-}
-</style>
