@@ -18,7 +18,7 @@
           <Sun id="sun" class="right-0 top-0 absolute" />
         </div>
       </div>-->
-      <div class="w-full h-full mx-auto py-24">
+      <div class="w-full h-auto mx-auto py-24">
         <Growing class="w-full" />
       </div>
       <Nuxt id="body" />
