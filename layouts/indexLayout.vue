@@ -10,7 +10,7 @@
             class="font-display text-green noshi-info absolute inset-y-0 left-0"
           >
             <div class="my-20">
-              <div class="text-5xl">noshi</div>
+              <div id="noshi" class="text-5xl">noshi</div>
               <div class="text-xl">Some tagline type thing</div>
             </div>
           </div>
@@ -40,8 +40,18 @@ export default {
   methods: {
     animate() {
       let controller = new ScrollMagic.Controller()
-      let tween = TweenLite.to('#nav', 4, { display: 'block', opacity: '100%' })
-      var scene = new ScrollMagic.Scene({
+      let tl = new TimelineMax()
+
+      // TweenLite.to('#noshi', 4, { position: 'fixed', top: '100px', delay: 1 })
+
+      //set tweens
+      tl.to('#nav', 0.001, {
+        display: 'block',
+        opacity: '100%',
+      })
+
+      //set scrollmagic sceen
+      let scene = new ScrollMagic.Scene({
         triggerElement: '#body',
         triggerHook: 0,
       })
@@ -51,7 +61,7 @@ export default {
           colorEnd: 'white',
           indent: 5,
         })
-        .setTween(tween)
+        .setTween(tl)
         .addTo(controller)
     },
   },
@@ -62,6 +72,7 @@ export default {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  transform: scale(1);
 }
 
 #nav {
