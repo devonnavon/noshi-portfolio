@@ -2,7 +2,7 @@
   <div class="bg-orange h-full w-full">
     <div class="xl:container mx-auto px-6 sm:px-12 pt-6">
       <NavBar id="nav" class="sticky top-0" />
-      <div
+      <!-- <div
         class="flex items-center justify-center py-24 w-full max-w-4xl mx-auto"
       >
         <div class="border w-3/4 h-full relative">
@@ -17,6 +17,9 @@
           <Plant class="plant mt-32" />
           <Sun id="sun" class="right-0 top-0 absolute" />
         </div>
+      </div>-->
+      <div class="w-full h-full mx-auto py-24">
+        <Growing class="w-full" />
       </div>
       <Nuxt id="body" />
     </div>
@@ -27,12 +30,14 @@
 import NavBar from '~/components/NavBar'
 import Plant from '~/components/Plant'
 import Sun from '~/components/Sun'
+import Growing from '~/components/Growing'
 
 export default {
   components: {
     NavBar,
     Plant,
     Sun,
+    Growing,
   },
   mounted() {
     this.animate()
