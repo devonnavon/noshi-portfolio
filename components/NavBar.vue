@@ -1,16 +1,4 @@
 <template>
-  <!-- <div class="nav">
-    <NuxtLink to="/" class="brand">
-      <Logo />
-    </NuxtLink>
-    <NuxtLink to="/" class="brand">Noshi</NuxtLink>
-    <nav>
-      <NuxtLink to="/work">work</NuxtLink>&nbsp;
-      <NuxtLink to="/about">about</NuxtLink>&nbsp;
-      <NuxtLink to="/contact">contact</NuxtLink>&nbsp;
-      <NuxtLink to="/blog">blog</NuxtLink>&nbsp;
-    </nav>
-  </div> -->
   <div class="font-display text-green">
     <nav class="flex items-baseline justify-between flex-no-wrap">
       <!-- <img class="object-contain" src="img/logo.svg" /> -->

@@ -1,0 +1,17 @@
+<template>
+  <svg
+    width="99"
+    height="99"
+    viewBox="0 0 99 99"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="49.5" cy="49.5" r="49.5" fill="#FF6B00" />
+  </svg>
+</template>
+
+<script>
+export default {}
+</script>
+
+<style></style>
