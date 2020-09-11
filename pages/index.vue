@@ -1,6 +1,6 @@
 <template>
-  <div class="text-green">
-    <div class="bg-pink text-2xl text-center">what we do</div>
+  <div class="bg-pink text-green h-screen w-full">
+    <div id="whatwedo" class="text-2xl text-center">what we do</div>
   </div>
 </template>
 

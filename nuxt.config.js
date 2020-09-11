@@ -35,6 +35,10 @@ export default {
       //scrollmagic
       {
         src:
+          'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js',
+      },
+      {
+        src:
           'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js',
       },
       {

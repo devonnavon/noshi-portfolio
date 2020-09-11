@@ -1,7 +1,7 @@
 <template>
   <div class="bg-orange h-full w-full">
     <div class="xl:container mx-auto px-6 sm:px-12 pt-6">
-      <NavBar />
+      <NavBar id="nav" class="sticky top-0" />
       <div
         class="flex items-center justify-center py-24 w-full max-w-4xl mx-auto"
       >
@@ -15,10 +15,10 @@
             </div>
           </div>
           <Plant class="plant mt-32" />
-          <Sun class="right-0 top-0 absolute" />
+          <Sun id="sun" class="right-0 top-0 absolute" />
         </div>
       </div>
-      <Nuxt />
+      <Nuxt id="body" />
     </div>
   </div>
 </template>
@@ -28,14 +28,32 @@ import NavBar from '~/components/NavBar'
 import Plant from '~/components/Plant'
 import Sun from '~/components/Sun'
 
-TweenLite.defaultEase = Linear.easeNone
-var controller = new ScrollMagic.Controller()
-
 export default {
   components: {
     NavBar,
     Plant,
     Sun,
+  },
+  mounted() {
+    this.animate()
+  },
+  methods: {
+    animate() {
+      let controller = new ScrollMagic.Controller()
+      let tween = TweenLite.to('#nav', 4, { display: 'block', opacity: '100%' })
+      var scene = new ScrollMagic.Scene({
+        triggerElement: '#body',
+        triggerHook: 0,
+      })
+        .addIndicators({
+          colorTrigger: 'white',
+          colorStart: 'white',
+          colorEnd: 'white',
+          indent: 5,
+        })
+        .setTween(tween)
+        .addTo(controller)
+    },
   },
 }
 </script>
@@ -44,6 +62,11 @@ export default {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+#nav {
+  display: none;
+  opacity: 0;
 }
 
 .noshi-info {
