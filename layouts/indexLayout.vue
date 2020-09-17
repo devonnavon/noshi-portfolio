@@ -1,15 +1,15 @@
 <template>
   <div id="container" class="bg-orange h-full w-full">
-    <div class="xl:container">
-      <!-- <div class="w-full h-auto mx-auto sm:py-24 py-6">
+    <!-- <div class="xl:container pt-6"> -->
+    <!-- <div class="w-full h-auto mx-auto sm:py-24 py-6">
         <Growing class="w-full" />
-      </div>-->
-      <div id="growing" class="w-full h-screen mx-auto sm:py-24 py-6 px-6 sm:px-12 flex">
-        <Growing class="w-full self-center" />
-      </div>
-      <Nuxt id="body" class="mx-auto px-6 sm:px-12" />
+    </div>-->
+    <div id="growing" class="w-full h-screen mx-auto flex">
+      <Growing class="w-full h-full self-center" />
     </div>
+    <Nuxt id="body" class="mx-auto px-6 sm:px-12" />
   </div>
+  <!-- </div> -->
 </template>
 
 <script>
