@@ -2,8 +2,8 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="802"
-    height="508"
-    viewBox="0 0 802 508"
+    height="608"
+    viewBox="0 0 802 608"
     fill="none"
   >
     <g id="Group 2">
@@ -161,7 +161,7 @@ export default {
         opacity: 0,
       })
       gsap.set('#logo', {
-        y: +600,
+        y: +800,
         opacity: 0,
       })
       gsap.to('#logo', {
@@ -169,7 +169,7 @@ export default {
         delay: 2.0,
         duration: 2.5,
         y: 0,
-        ease: 'elastic.inOut(1.75, 1)',
+        ease: 'elastic.inOut(1, 1)',
       })
       gsap.to('.menu', {
         opacity: 100,
