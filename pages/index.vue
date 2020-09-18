@@ -1,11 +1,28 @@
 <template>
   <div>
+    <section class="parallax parallax--hero">
+      <div id="growing" class="w-full h-screen mx-auto flex pl-5 xl:container">
+        <Growing class="w-full h-auto self-center" />
+      </div>
+    </section>
+    <section class="parallax parallax--about bg-pink">
+      <div id="whatwedo" class="text-2xl text-center">what we do</div>
+    </section>
+    <section class="parallax parallax--featured bg-orange">
+      FEATURED SECTION
+    </section>
+    <section class="parallax parallax--footer bg-pink">FOOTER</section>
+
+    <!-- old stuff works -->
+    <!-- 
     <div id="growing" class="w-full h-screen mx-auto flex pl-5 xl:container">
       <Growing class="w-full h-auto self-center" />
     </div>
-    <div class="bg-pink text-green h-screen w-full">
+    <div class="bg-pink text-green h-screen">
       <div id="whatwedo" class="text-2xl text-center">what we do</div>
-    </div>
+    </div> -->
+
+    <!-- old stuff end -->
   </div>
 </template>
 
@@ -23,10 +40,39 @@ export default {
     }
   },
   layout: 'indexLayout',
-  created() {
-    this.$nuxt.$emit('animate-nav')
+  mounted() {
+    this.animate()
+    // this.$nuxt.$emit('animate-nav')
+  },
+  methods: {
+    animate() {
+      gsap.registerPlugin(ScrollTrigger)
+      gsap.utils.toArray('section').forEach((section, i) => {
+        ScrollTrigger.create({
+          trigger: section,
+          start: 'top top',
+          pin: true,
+          pinSpacing: false,
+        })
+      })
+    },
   },
 }
 </script>
 
-<style></style>
+<style>
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
