@@ -17,6 +17,9 @@ module.exports = {
       pink: '#D8CBCF',
       white: '#F6F6F6',
     },
+    container: {
+      center: true,
+    },
   },
   variants: {},
   plugins: [],

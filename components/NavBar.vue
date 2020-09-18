@@ -1,5 +1,5 @@
 <template>
-  <div class="font-display text-green">
+  <div class="font-display text-green z-50 xl:container px-6 sm:px-12">
     <nav class="flex items-baseline justify-between flex-no-wrap">
       <!-- <img class="object-contain" src="img/logo.svg" /> -->
 
