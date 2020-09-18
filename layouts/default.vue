@@ -1,5 +1,5 @@
 <template>
-  <div class="xl:container mx-auto px-6 sm:px-12">
+  <div id="container" class="bg-orange bg-auto mx-auto h-full w-full">
     <NavBar />
     <Nuxt />
   </div>
