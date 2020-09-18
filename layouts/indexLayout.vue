@@ -1,21 +1,16 @@
 <template>
   <div id="container" class="bg-orange bg-auto mx-auto h-full w-full">
     <NavBar id="nav" class="sticky top-0 xl:container px-6 sm:px-12" />
-    <div id="growing" class="w-full h-screen mx-auto flex pl-5 xl:container">
-      <Growing class="w-full h-auto self-center" />
-    </div>
     <Nuxt id="body" class="mx-auto px-6 sm:px-12" />
   </div>
 </template>
 
 <script>
 import NavBar from '~/components/NavBar'
-import Growing from '~/components/Growing'
 
 export default {
   components: {
     NavBar,
-    Growing,
   },
   mounted() {
     this.animate()
