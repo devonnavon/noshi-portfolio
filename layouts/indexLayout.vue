@@ -4,7 +4,7 @@
     <!-- <div class="w-full h-auto mx-auto sm:py-24 py-6">
         <Growing class="w-full" />
     </div>-->
-    <NavBar id="nav" class="sticky top-0" />
+    <NavBar id="nav" class="sticky top-0 xl:container px-6 sm:px-12" />
     <div id="growing" class="w-full h-screen mx-auto flex pl-5 xl:container">
       <Growing class="w-full h-auto self-center" />
     </div>
