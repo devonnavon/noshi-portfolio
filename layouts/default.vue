@@ -1,54 +1,70 @@
 <template>
   <div id="container" class="bg-orange bg-auto mx-auto h-full w-full">
     <NavBar id="nav" class="sticky top-0 xl:container px-6 sm:px-12" />
-    <Nuxt id="body" class="mx-auto w-screen" />
+    <Nuxt id="body" class="mx-auto w-full" />
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import NavBar from '~/components/NavBar'
 
 export default {
   components: {
     NavBar,
   },
+  computed: { ...mapState(['page']) },
   mounted() {
-    // console.log($nuxt.$route.name, 'x')
-    // this.animate()
+    console.log()
+    if (this.page === 'index') this.animate()
+    else this.showNav()
+  },
+  watch: {
+    page(newVal, oldVal) {
+      console.log('hello')
+      if (newVal === this.animate) this.animate()
+      else this.showNav()
+    },
   },
   methods: {
-    // animate() {
-    //   gsap.registerPlugin(ScrollTrigger)
-    //   //set tweens
-    //   gsap.set('#nav', {
-    //     y: -600,
-    //     opacity: 0,
-    //   })
-    //   gsap.to('#body', {
-    //     yPercent: -100,
-    //     ease: 'slow',
-    //     scrollTrigger: {
-    //       trigger: '#container',
-    //       start: 'top top',
-    //       end: '+=250',
-    //       scrub: 1,
-    //     },
-    //   })
-    //   gsap.to('#nav', {
-    //     opacity: 100,
-    //     delay: 3.5,
-    //     stagger: 0.3,
-    //     duration: 1.5,
-    //     y: 0,
-    //     ease: 'elastic.out(0.9, 1)',
-    //     scrollTrigger: {
-    //       trigger: '#container',
-    //       start: 'top top',
-    //       end: '+=250',
-    //       scrub: 1,
-    //     },
-    //   })
-    // },
+    animate() {
+      gsap.registerPlugin(ScrollTrigger)
+      //set tweens
+      gsap.set('#nav', {
+        y: -600,
+        opacity: 0,
+      })
+      gsap.to('#body', {
+        yPercent: -100,
+        ease: 'slow',
+        scrollTrigger: {
+          trigger: '#container',
+          start: 'top top',
+          end: '+=250',
+          scrub: 1,
+        },
+      })
+      gsap.to('#nav', {
+        opacity: 100,
+        delay: 3.5,
+        stagger: 0.3,
+        duration: 1.5,
+        y: 0,
+        ease: 'elastic.out(0.9, 1)',
+        scrollTrigger: {
+          trigger: '#container',
+          start: 'top top',
+          end: '+=250',
+          scrub: 1,
+        },
+      })
+    },
+    showNav() {
+      gsap.set('#nav', {
+        y: 0,
+        opacity: 100,
+      })
+    },
   },
 }
 </script>

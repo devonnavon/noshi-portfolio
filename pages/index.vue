@@ -2,7 +2,7 @@
   <div>
     <section class="parallax parallax--hero">
       <div id="growing" class="w-full h-screen mx-auto flex pl-5 xl:container">
-        <Growing class="w-full h-auto self-center" />
+        <Growing class="w-screen h-auto self-center" />
       </div>
     </section>
     <section class="parallax parallax--about bg-pink">
@@ -39,7 +39,7 @@ export default {
       ],
     }
   },
-  layout: 'indexLayout',
+  // layout: 'indexLayout',
   mounted() {
     this.animate()
     // this.$nuxt.$emit('animate-nav')
