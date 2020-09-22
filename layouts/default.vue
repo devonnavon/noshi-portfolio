@@ -14,18 +14,18 @@ export default {
     NavBar,
   },
   computed: { ...mapState(['page']) },
-  mounted() {
-    console.log()
-    if (this.page === 'index') this.animate()
-    else this.showNav()
-  },
-  watch: {
-    page(newVal, oldVal) {
-      console.log('hello')
-      if (newVal === this.animate) this.animate()
-      else this.showNav()
-    },
-  },
+  // mounted() {
+  //   console.log()
+  //   if (this.page === 'index') this.animate()
+  //   else this.showNav()
+  // },
+  // watch: {
+  //   page(newVal, oldVal) {
+  //     console.log('hello')
+  //     if (newVal === this.animate) this.animate()
+  //     else this.showNav()
+  //   },
+  // },
   methods: {
     animate() {
       gsap.registerPlugin(ScrollTrigger)
