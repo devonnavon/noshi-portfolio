@@ -12,17 +12,6 @@
       FEATURED SECTION
     </section>
     <section class="parallax parallax--footer bg-pink">FOOTER</section>
-
-    <!-- old stuff works -->
-    <!-- 
-    <div id="growing" class="w-full h-screen mx-auto flex pl-5 xl:container">
-      <Growing class="w-full h-auto self-center" />
-    </div>
-    <div class="bg-pink text-green h-screen">
-      <div id="whatwedo" class="text-2xl text-center">what we do</div>
-    </div> -->
-
-    <!-- old stuff end -->
   </div>
 </template>
 
@@ -39,11 +28,7 @@ export default {
       ],
     }
   },
-  // layout: 'indexLayout',
-  mounted() {
-    this.animate()
-    // this.$nuxt.$emit('animate-nav')
-  },
+  mounted() {},
   methods: {
     animate() {
       gsap.registerPlugin(ScrollTrigger)
