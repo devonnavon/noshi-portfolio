@@ -1,6 +1,9 @@
 <template>
   <div class="font-display text-green z-50">
-    <nav class="flex items-baseline justify-between flex-no-wrap">
+    <nav
+      class="flex items-baseline justify-between flex-no-wrap"
+      :class="{ 'navbar--hidden': !showNavbar }"
+    >
       <!-- <img class="object-contain" src="img/logo.svg" /> -->
 
       <div class="text-5xl">
@@ -36,5 +39,39 @@ export default {
   components: {
     Logo,
   },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  data() {
+    return {
+      showNavbar: true,
+      lastScrollPosition: 0,
+    }
+  },
+  methods: {
+    onScroll() {
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop
+      if (currentScrollPosition < 0) {
+        return
+      }
+      // Stop executing this function if the difference between
+      // current scroll position and last scroll position is less than some offset
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+        return
+      }
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition
+      this.lastScrollPosition = currentScrollPosition
+    },
+  },
 }
 </script>
+<style>
+.navbar--hidden {
+  box-shadow: none;
+  transform: translate3d(0, -100%, 0);
+}
+</style>

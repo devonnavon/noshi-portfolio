@@ -6,8 +6,13 @@
       </div>
     </section>
     <section class="parallax parallax--about bg-pink">
-      <div id="whatwedo" class="text-2xl text-center">
-        <HomepageServices />
+      <div id="whatwedo" class="text-2xl font-display">
+        <div
+          class="text-green text-opacity-50 absolute inset-x-0 top-0 pl-10 pt-10"
+        >
+          what we like to do...
+        </div>
+        <!-- <HomepageServices /> -->
       </div>
     </section>
     <section class="parallax parallax--featured bg-orange">
@@ -31,18 +36,21 @@ export default {
       ],
     }
   },
-  mounted() {},
+  mounted() {
+    this.animate()
+  },
   methods: {
     animate() {
       gsap.registerPlugin(ScrollTrigger)
-      gsap.utils.toArray('section').forEach((section, i) => {
-        ScrollTrigger.create({
-          trigger: section,
-          start: 'top top',
-          pin: true,
-          pinSpacing: false,
-        })
-      })
+
+      // gsap.utils.toArray('section').forEach((section, i) => {
+      //   ScrollTrigger.create({
+      //     trigger: section,
+      //     start: 'top top',
+      //     pin: true,
+      //     pinSpacing: false,
+      //   })
+      // })
     },
   },
 }
