@@ -6,11 +6,26 @@
       </div>
     </section>
     <section class="parallax parallax--about bg-pink">
-      <div id="whatwedo" class="text-2xl font-display">
+      <div id="whatwedo" class="flex font-display h-screen">
         <div
-          class="text-green text-opacity-50 absolute inset-x-0 top-0 pl-10 pt-10"
+          class="text-2xl text-green text-opacity-50 absolute inset-x-0 top-0 pl-10 pt-5"
         >
           what we like to do...
+        </div>
+        <div id="services" class="text-green text-6xl pl-10 w-1/4">
+          <div
+            class="text-2xl text-green text-opacity-50 absolute inset-x-0 top-0 pl-10 pt-5"
+          >
+            what we like to do...
+          </div>
+          <div id="design pb-5">design</div>
+          <div id="develop pb-5">develop</div>
+          <div id="etc pb-5">etc</div>
+        </div>
+        <div id="service-descriptions" class="bg-green w-3/4">
+          <div id="design pb-5">design</div>
+          <div id="develop pb-5">develop</div>
+          <div id="etc pb-5">etc</div>
         </div>
         <!-- <HomepageServices /> -->
       </div>
@@ -57,7 +72,7 @@ export default {
 </script>
 
 <style>
-section {
+/* section {
   position: relative;
   display: flex;
   justify-content: center;
@@ -70,5 +85,5 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 </style>
