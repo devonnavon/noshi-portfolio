@@ -5,29 +5,34 @@
         <Growing class="w-screen h-auto self-center" />
       </div>
     </section>
-    <section class="parallax parallax--about bg-pink">
-      <div id="whatwedo" class="flex font-display h-screen">
+    <!-- <HomepageServices /> -->
+    <section id="whatwedo" class="parallax parallax--about bg-pink">
+      <div class="relative flex font-display h-screen">
         <div
           class="text-2xl text-green text-opacity-50 absolute inset-x-0 top-0 pl-10 pt-5"
         >
           what we like to do...
         </div>
-        <div id="services" class="text-green text-6xl pl-10 w-1/4">
+        <div
+          id="services"
+          class="flex flex-col justify-center text-green text-6xl w-2/5 pl-16 pt-16 pb-16"
+        >
+          <div id="design" class="py-8">design</div>
+          <div id="develop" class="py-8">develop</div>
+          <div id="etc" class="py-8">etc.</div>
+        </div>
+        <div class="relative bg-green w-3/5">
           <div
-            class="text-2xl text-green text-opacity-50 absolute inset-x-0 top-0 pl-10 pt-5"
+            v-for="item in servicesDetail"
+            :key="item.key"
+            :id="`${item.key}-detail`"
+            class="absolute inset-0 flex flex-col justify-center text-2xl text-white pl-16"
           >
-            what we like to do...
+            <div v-for="(detail, i) in item.details" :key="i" class="py-6">
+              {{ detail }}
+            </div>
           </div>
-          <div id="design pb-5">design</div>
-          <div id="develop pb-5">develop</div>
-          <div id="etc pb-5">etc</div>
         </div>
-        <div id="service-descriptions" class="bg-green w-3/4">
-          <div id="design pb-5">design</div>
-          <div id="develop pb-5">develop</div>
-          <div id="etc pb-5">etc</div>
-        </div>
-        <!-- <HomepageServices /> -->
       </div>
     </section>
     <section class="parallax parallax--featured bg-orange">
@@ -54,36 +59,123 @@ export default {
   mounted() {
     this.animate()
   },
+  data() {
+    return {
+      servicesDetail: [
+        {
+          key: 'design',
+          details: [
+            'ux/ui design',
+            'prototyping',
+            'graphic design',
+            'package design',
+            'creative direction',
+          ],
+        },
+        {
+          key: 'develop',
+          details: [
+            'website',
+            'application',
+            'desktop',
+            'mobile',
+            'vuejs',
+            'nodejs',
+            'JAMstack',
+          ],
+        },
+        {
+          key: 'etc',
+          details: [
+            'ux strategy',
+            'innovation workshops',
+            'business model design',
+            'analytics',
+            'data science',
+            'machine learning',
+          ],
+        },
+      ],
+    }
+  },
   methods: {
     animate() {
       gsap.registerPlugin(ScrollTrigger)
 
-      // gsap.utils.toArray('section').forEach((section, i) => {
-      //   ScrollTrigger.create({
-      //     trigger: section,
-      //     start: 'top top',
-      //     pin: true,
-      //     pinSpacing: false,
-      //   })
-      // })
+      gsap.set('#design-detail', {
+        y: -600,
+        opacity: 0,
+      })
+      gsap.set('#develop-detail', {
+        y: -600,
+        opacity: 0,
+      })
+      gsap.set('#etc-detail', {
+        y: -600,
+        opacity: 0,
+      })
+
+      const tl = gsap.timeline()
+      tl.from('#design', {
+        x: -400,
+      })
+        .to('#design-detail', {
+          opacity: 100,
+          y: 0,
+        })
+        .add('develop')
+        .from(
+          '#develop',
+          {
+            x: -400,
+          },
+          'develop'
+        )
+        .to(
+          '#design-detail',
+          {
+            opacity: 0,
+            y: 600,
+          },
+          'develop'
+        )
+        .to('#develop-detail', {
+          opacity: 100,
+          y: 0,
+        })
+        .add('etc')
+        .from(
+          '#etc',
+          {
+            x: -400,
+          },
+          'etc'
+        )
+        .to(
+          '#develop-detail',
+          {
+            opacity: 0,
+            y: 600,
+          },
+          'etc'
+        )
+        .to('#etc-detail', {
+          opacity: 100,
+          y: 0,
+        })
+
+      ScrollTrigger.create({
+        animation: tl,
+        trigger: '#whatwedo',
+        start: 'top top',
+        end: '+=4000',
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+      })
     },
   },
 }
 </script>
 
-<style>
-/* section {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-  font-size: 3rem;
-  font-family: 'Poppins', sans-serif;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
-</style>
+<style></style>
