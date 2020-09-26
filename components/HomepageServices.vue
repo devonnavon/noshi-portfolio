@@ -10,7 +10,13 @@
         id="services"
         class="flex flex-col justify-center text-green text-6xl w-2/5 pl-16 pt-16 pb-16"
       >
-        <div id="design" class="py-8">design</div>
+        <div
+          id="design"
+          class="py-8"
+          @click="clickable ? serviceClick('design') : null"
+        >
+          design
+        </div>
         <div id="develop" class="py-8">develop</div>
         <div id="etc" class="py-8">etc.</div>
       </div>
@@ -33,10 +39,11 @@
 <script>
 export default {
   mounted() {
-    this.animate()
+    this.scrollAnimate()
   },
   data() {
     return {
+      clickable: false,
       servicesDetail: [
         {
           key: 'design',
@@ -75,32 +82,36 @@ export default {
     }
   },
   methods: {
-    animate() {
+    serviceClick(service) {
+      console.log(service)
+    },
+    scrollAnimate() {
       gsap.registerPlugin(ScrollTrigger)
-
-      gsap.set('#design-detail', {
-        y: -600,
-        opacity: 0,
-      })
-      gsap.set('#develop-detail', {
-        y: -600,
-        opacity: 0,
-      })
-      gsap.set('#etc-detail', {
-        y: -600,
-        opacity: 0,
-      })
-
       const tl = gsap.timeline()
-      tl.from('#design', {
-        x: -400,
-      })
-        .to('#design-detail', {
-          opacity: 100,
-          y: 0,
-        })
+      tl
+        //DESIGN LABEL
+        .add('design')
+        .from(
+          //design big text comes in
+          '#design',
+          {
+            x: -400,
+          },
+          'design'
+        )
+        .from(
+          '#design-detail',
+          {
+            //design detail comes in
+            opacity: 0,
+            y: -600,
+          },
+          'design'
+        )
+        //DEVELOP LABEL
         .add('develop')
         .from(
+          //develop big text comes in
           '#develop',
           {
             x: -400,
@@ -108,6 +119,7 @@ export default {
           'develop'
         )
         .to(
+          //design detail leaves
           '#design-detail',
           {
             opacity: 0,
@@ -115,10 +127,16 @@ export default {
           },
           'develop'
         )
-        .to('#develop-detail', {
-          opacity: 100,
-          y: 0,
-        })
+        .from(
+          '#develop-detail',
+          {
+            //develop detail comes in
+            opacity: 0,
+            y: -600,
+          },
+          'develop'
+        )
+        //ETC LLABEL
         .add('etc')
         .from(
           '#etc',
@@ -135,10 +153,15 @@ export default {
           },
           'etc'
         )
-        .to('#etc-detail', {
-          opacity: 100,
-          y: 0,
-        })
+        .from(
+          '#etc-detail',
+          {
+            opacity: 0,
+            y: -600,
+          },
+          'etc'
+        )
+        //END LABEL
         .add('end')
 
       ScrollTrigger.create({
@@ -152,6 +175,7 @@ export default {
         // once: true,
         anticipatePin: 1,
         onLeave: (self) => {
+          //disable scroll and set current state back
           self.disable()
           gsap.set('#etc-detail', {
             y: 0,
@@ -160,6 +184,7 @@ export default {
           gsap.set('#design', { x: 0 })
           gsap.set('#develop', { x: 0 })
           gsap.set('#etc', { x: 0 })
+          this.clickable = true //make text clickable
         },
         snap: {
           snapTo: 'labels', // snap to the closest label in the timeline
