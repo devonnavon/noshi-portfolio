@@ -17,8 +17,20 @@
         >
           design
         </div>
-        <div id="develop" class="py-8">develop</div>
-        <div id="etc" class="py-8">etc.</div>
+        <div
+          id="develop"
+          class="py-8"
+          @click="clickable ? serviceClick('develop') : null"
+        >
+          develop
+        </div>
+        <div
+          id="etc"
+          class="py-8"
+          @click="clickable ? serviceClick('etc') : null"
+        >
+          etc.
+        </div>
       </div>
       <div class="relative bg-green w-3/5">
         <div
@@ -44,6 +56,7 @@ export default {
   data() {
     return {
       clickable: false,
+      currentService: null,
       servicesDetail: [
         {
           key: 'design',
@@ -83,7 +96,14 @@ export default {
   },
   methods: {
     serviceClick(service) {
-      console.log(service)
+      //i should probably do this without a timeline huh?
+      gsap.set(`#${service}-detail`, { opacity: 100, y: 0 }, 'x')
+      const tl = gsap.timeline()
+      tl.add('x')
+        .to(`#${this.currentService}-detail`, { opacity: 0, y: 600 }, 'x')
+        .from(`#${service}-detail`, { opacity: 0, y: -600 }, 'x')
+      tl.play()
+      this.currentService = service
     },
     scrollAnimate() {
       gsap.registerPlugin(ScrollTrigger)
@@ -185,6 +205,7 @@ export default {
           gsap.set('#develop', { x: 0 })
           gsap.set('#etc', { x: 0 })
           this.clickable = true //make text clickable
+          this.currentService = 'etc'
         },
         snap: {
           snapTo: 'labels', // snap to the closest label in the timeline
