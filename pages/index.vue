@@ -5,7 +5,10 @@
         <Growing class="w-screen h-auto self-center" />
       </div>
     </section>
-    <HomepageServices />
+
+    <Summary />
+    <Divider />
+    <Services />
     <section class="parallax parallax--featured bg-orange">
       FEATURED SECTION
     </section>
@@ -15,10 +18,12 @@
 
 <script>
 import Growing from '~/components/Growing'
-import HomepageServices from '~/components/HomepageServices'
+import Services from '~/components/Homepage/Services'
+import Divider from '~/components/Homepage/Divider'
+import Summary from '~/components/Homepage/Summary'
 
 export default {
-  components: { Growing, HomepageServices },
+  components: { Growing, Services, Divider, Summary },
   head() {
     return {
       title: 'noshi',

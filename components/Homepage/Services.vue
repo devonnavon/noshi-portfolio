@@ -4,7 +4,7 @@
       <div
         class="text-2xl text-green text-opacity-50 absolute inset-x-0 top-0 pl-10 pt-5"
       >
-        what we like to do...
+        what we like to do
       </div>
       <div
         id="services"
