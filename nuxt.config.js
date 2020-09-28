@@ -28,11 +28,23 @@ export default {
     script: [
       //gsap
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js' },
+      //motionpath
       {
         src:
           'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js',
       },
-      //scrollmagic
+      //text plugin for typwriter
+      {
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js',
+      },
+      //scroll trigger!
+      {
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js',
+      },
+
+      //scrollmagic - dont think we need anythign below
       {
         src:
           'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js',
@@ -44,10 +56,6 @@ export default {
       {
         src:
           'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js',
-      },
-      {
-        src:
-          'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js',
       },
 
       {
