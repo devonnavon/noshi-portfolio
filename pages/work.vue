@@ -1,5 +1,17 @@
 <template>
   <div>
-    <h1>our work</h1>
+    <ServicesLanding />
   </div>
 </template>
+
+<script>
+import ServicesLanding from '~/components/Workpage/ServicesLanding'
+
+export default {
+  components: {
+    ServicesLanding,
+  },
+}
+</script>
+
+<style></style>
