@@ -1,5 +1,7 @@
 <template>
-  <section class="bg-pink flex justify-center relative font-display mt-8">
+  <section
+    class="bg-pink flex justify-center relative font-display mt-8 h-screen"
+  >
     <svg
       width="792"
       height="934"
