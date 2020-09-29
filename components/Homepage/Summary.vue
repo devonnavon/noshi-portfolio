@@ -1,10 +1,5 @@
 <template>
   <section id="summary" class="bg-pink relative font-display mt-8">
-    <div
-      class="text-2xl text-green text-opacity-50 absolute inset-x-0 top-0 pl-10 pt-5"
-    >
-      who we are
-    </div>
     <div class="pt-8"></div>
     <div id="phrases" class="relative text-green text-6xl pl-16">
       <div v-for="(phrase, i) in phrases" :key="i" :id="`phrase_${i}`"></div>

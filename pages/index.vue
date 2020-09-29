@@ -7,7 +7,7 @@
     </section>
 
     <Summary />
-    <Divider />
+    <!-- <Divider /> -->
     <Services />
     <section class="parallax parallax--featured bg-orange">
       FEATURED SECTION

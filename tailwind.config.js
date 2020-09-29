@@ -9,6 +9,7 @@ module.exports = {
     fontFamily: {
       display: ['Karrik-Regular', 'sans-serif'],
       body: ['Karrik-Regular', 'sans-serif'],
+      serf: ['Minipax-Regular', 'serif'],
     },
     colors: {
       orange: '#F7941E',
