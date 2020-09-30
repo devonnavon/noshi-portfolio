@@ -1,6 +1,6 @@
 <template>
-  <section id="summary" class="bg-pink relative font-display mt-8 pb-24">
-    <div id="phrases" class="relative text-green text-6xl pl-16 mb-24">
+  <section id="summary" class="bg-pink relative font-display h-full">
+    <div id="phrases" class="relative text-green text-6xl pl-16">
       <div v-for="(phrase, i) in phrases" :key="i" :id="`phrase_${i}`"></div>
     </div>
   </section>
@@ -23,6 +23,8 @@ export default {
   },
   methods: {
     animate() {
+      gsap.registerPlugin(ScrollTrigger)
+
       let masterTl = gsap.timeline()
 
       this.phrases.forEach((phrase, i) => {
@@ -36,7 +38,12 @@ export default {
             //create spans to fill with each word (otherwise it just replaces)
             let line = document.getElementById(`phrase_${i}`)
             let span = document.createElement('span')
-            span.setAttribute('id', `word${i}_${j}`)
+            if (word === 'small') {
+              let innerSpan = document.createElement('span')
+              span.setAttribute('id', `smallCrossout`)
+              innerSpan.setAttribute('id', `word${i}_${j}`)
+              span.appendChild(innerSpan)
+            } else span.setAttribute('id', `word${i}_${j}`)
             line.appendChild(span)
             //select each span and fill with word
             tl.to(`#word${i}_${j}`, {
@@ -45,8 +52,18 @@ export default {
             })
             if (word === 'small') {
               //here we need to add the crossout animation
-              let spanRect = span.getBoundingClientRect()
-              console.log(spanRect)
+              let smallCrossSvg = this.crossOutSmall('full', 'full')
+              span.prepend(smallCrossSvg)
+              let path = document.querySelector('#smallPath')
+              let l = path.getTotalLength()
+              gsap.set(path, { opacity: 0 })
+              tl.set(path, { strokeDasharray: l, opacity: 100 })
+              tl.fromTo(
+                path,
+                0.5,
+                { strokeDashoffset: l },
+                { strokeDashoffset: 0 }
+              )
             }
           })
         } else {
@@ -57,13 +74,19 @@ export default {
         }
         masterTl.add(tl)
       })
+      ScrollTrigger.create({
+        animation: masterTl,
+        trigger: '#phrases',
+        start: 'top center',
+      })
     },
     getRelativePosition(elem1, elem2) {},
-    crossOutSmall() {
-      const svg = document.createElement('div')
+    crossOutSmall(width, height) {
+      const svg = document.createElement('span')
+      svg.setAttribute('id', 'crossOutSmall')
       svg.innerHTML = `
-        <svg width="245" height="53" viewBox="0 0 245 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 51C14.5887 46.1148 28.2203 44.1957 41.4444 41.7778C79.2446 34.8662 117.187 28.8573 154.833 21.1111C184.283 15.0514 213.677 8.51624 243 2" stroke="#F7941E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="162" height="71" viewBox="0 0 162 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="smallPath" d="M2 51C14.5887 46.1148 28.2203 44.1957 41.4444 41.7778C79.2446 34.8662 117.187 28.8573 154.833 21.1111C184.283 15.0514 213.677 8.51624 243 2" stroke="#F7941E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         `
       return svg
@@ -80,5 +103,15 @@ export default {
 }
 #summary {
   height: 450px;
+}
+
+#smallCrossout {
+  position: relative;
+}
+
+#crossOutSmall {
+  position: absolute;
+  bottom: 0px;
+  left: -5px;
 }
 </style>

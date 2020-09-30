@@ -27,12 +27,12 @@
             From digital strategy, interactive design and full-stack
             development, our complete range of expertise makes us key players in
             implementing digital solutions for small to large-scale web
-            projects. Learn more here.
+            projects. <br />Learn more here.
           </div>
         </div>
         <div class="w-3/5 font-serif text-green text-4xl pl-20 pt-4 text-left">
           <div>We can make your next</div>
-          <div id="switcharoo" class="text-6xl font-semibold"></div>
+          <div id="switcharoo" class="text-5xl font-semibold"></div>
         </div>
       </div>
       <div class="flex">
