@@ -6,7 +6,7 @@
         class="bigtext font-serif text-green pl-20 pb-10 transform -rotate-10"
       >
         <div>we can build</div>
-        <div>your next...</div>
+        <div>your next..</div>
       </div>
     </div>
     <div id="product" class="bigtext font-serif text-green pr-20 text-right">
