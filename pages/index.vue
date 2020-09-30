@@ -11,7 +11,7 @@
     <!-- <Divider /> -->
     <Services />
     <section class="parallax parallax--featured bg-orange">
-      FEATURED SECTION
+      FEATURED SECTION.
     </section>
     <section class="parallax parallax--footer bg-pink">FOOTER</section>
   </div>
