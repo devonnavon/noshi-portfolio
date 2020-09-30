@@ -1,7 +1,6 @@
 <template>
-  <section id="summary" class="bg-pink relative font-display mt-8">
-    <div class="pt-8"></div>
-    <div id="phrases" class="relative text-green text-6xl pl-16">
+  <section id="summary" class="bg-pink relative font-display mt-8 pb-24">
+    <div id="phrases" class="relative text-green text-6xl pl-16 mb-24">
       <div v-for="(phrase, i) in phrases" :key="i" :id="`phrase_${i}`"></div>
     </div>
   </section>

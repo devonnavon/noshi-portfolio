@@ -1,5 +1,5 @@
 <template>
-  <div id="container" class="bg-orange bg-auto mx-auto h-full w-full">
+  <div id="container" class="bg-pink bg-auto mx-auto h-full w-full">
     <NavBar id="nav" class="sticky top-0 xl:container px-6 sm:px-12" />
     <Nuxt id="body" class="mx-auto w-full" />
   </div>

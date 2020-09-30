@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="#container" class="w-full h-screen">
     <ServicesLanding />
     <Services />
   </div>

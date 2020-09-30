@@ -9,7 +9,10 @@ module.exports = {
     fontFamily: {
       display: ['Karrik-Regular', 'sans-serif'],
       body: ['Karrik-Regular', 'sans-serif'],
-      serf: ['Minipax-Regular', 'serif'],
+      serif: ['Minipax-Regular', 'serif'],
+      minibold: ['Minipax-Bold', 'serif'],
+      minisemi: ['Minipax-SemiBold', 'serif'],
+      minimedium: ['Minipax-Medium', 'serif'],
     },
     colors: {
       orange: '#F7941E',
@@ -20,6 +23,16 @@ module.exports = {
     },
     container: {
       center: true,
+    },
+    rotate: {
+      '-180': '-180deg',
+      '-90': '-90deg',
+      '-45': '-45deg',
+      '-10': '-10deg',
+      0: '0',
+      45: '45deg',
+      90: '90deg',
+      180: '180deg',
     },
   },
   variants: {},
