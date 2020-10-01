@@ -34,6 +34,11 @@ module.exports = {
       90: '90deg',
       180: '180deg',
     },
+    extend: {
+      fontSize: {
+        huge: '6rem',
+      },
+    },
   },
   variants: {},
   plugins: [],

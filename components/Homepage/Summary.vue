@@ -1,6 +1,6 @@
 <template>
-  <section id="summary" class="bg-pink relative font-display h-full">
-    <div id="phrases" class="relative text-green text-6xl pl-16">
+  <section id="summary" class="bg-pink relative font-display">
+    <div id="phrases" class="relative text-green text-huge pl-16">
       <div v-for="(phrase, i) in phrases" :key="i" :id="`phrase_${i}`"></div>
     </div>
   </section>
@@ -85,7 +85,7 @@ export default {
       const svg = document.createElement('span')
       svg.setAttribute('id', 'crossOutSmall')
       svg.innerHTML = `
-        <svg width="162" height="71" viewBox="0 0 162 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="240" height="107" viewBox="0 0 162 71" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="smallPath" d="M2 51C14.5887 46.1148 28.2203 44.1957 41.4444 41.7778C79.2446 34.8662 117.187 28.8573 154.833 21.1111C184.283 15.0514 213.677 8.51624 243 2" stroke="#F7941E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         `
@@ -102,7 +102,7 @@ export default {
   right: 400px;
 }
 #summary {
-  height: 450px;
+  min-height: 500px;
 }
 
 #smallCrossout {
