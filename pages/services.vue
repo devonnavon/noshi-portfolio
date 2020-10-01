@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import ServicesLanding from '~/components/Workpage/ServicesLanding'
-import Services from '~/components/Workpage/Services'
+import ServicesLanding from '~/components/ServicesPage/ServicesLanding'
+import Services from '~/components/ServicesPage/Services'
 
 export default {
   components: {
