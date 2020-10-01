@@ -27,7 +27,8 @@
             From digital strategy, interactive design and full-stack
             development, our complete range of expertise makes us key players in
             implementing digital solutions for small to large-scale web
-            projects. <br />Learn more here.
+            projects. <br />
+            <span class="underline">Learn more here.</span>
           </div>
         </div>
         <div class="w-3/5 font-serif text-green text-4xl pl-20 pt-4 text-left">
@@ -38,25 +39,25 @@
       <div class="flex pb-24">
         <div
           id="services"
-          class="flex flex-col justify-center text-green text-5xl w-2/5 pl-16 pb-16"
+          class="flex flex-col justify-center text-green text-5xl w-2/5 pl-16 pb-16 font-semibold"
         >
           <div
             id="design"
-            class="py-3 pt-16 ml-1 font-minibold"
+            class="py-3 pt-16 ml-1 font-minibold cursor-pointer"
             @click="clickable ? serviceClick('design') : null"
           >
             design
           </div>
           <div
             id="develop"
-            class="py-3 ml-1 font-minisemi"
+            class="py-3 ml-1 font-minisemi cursor-pointer"
             @click="clickable ? serviceClick('develop') : null"
           >
             develop
           </div>
           <div
             id="etc"
-            class="py-3 ml-1 font-minimedium"
+            class="py-3 ml-1 font-minimedium cursor-pointer"
             @click="clickable ? serviceClick('etc') : null"
           >
             etc.

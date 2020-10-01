@@ -11,10 +11,11 @@
     <!-- <Divider /> -->
     <Services />
     <Experience />
-    <section class="parallax parallax--featured bg-orange">
+    <Contact />
+    <!-- <section class="parallax parallax--featured bg-orange">
       FEATURED SECTION.
     </section>
-    <section class="parallax parallax--footer bg-pink">FOOTER</section>
+    <section class="parallax parallax--footer bg-pink">FOOTER</section> -->
   </div>
 </template>
 
@@ -24,9 +25,10 @@ import Services from '~/components/Homepage/Services'
 import Divider from '~/components/Homepage/Divider'
 import Summary from '~/components/Homepage/Summary'
 import Experience from '~/components/Homepage/Experience'
+import Contact from '~/components/Homepage/Contact'
 
 export default {
-  components: { Growing, Services, Divider, Summary, Experience },
+  components: { Growing, Services, Divider, Summary, Experience, Contact },
   head() {
     return {
       title: 'noshi',
