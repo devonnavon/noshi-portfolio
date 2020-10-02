@@ -19,7 +19,7 @@
       >
         <div class="self-end text-2xl pr-5">
           <!-- <img class="object-contain" src="img/logo.svg" /> -->
-          <NuxtLink to="/work">work</NuxtLink>
+          <NuxtLink to="/services">services</NuxtLink>
         </div>
         <div class="self-end text-2xl">
           <!-- <img class="object-contain" src="img/logo.svg" /> -->
