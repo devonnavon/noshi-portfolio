@@ -10,9 +10,9 @@
       </div>
     </div>
     <div id="product" class="bigtext font-serif pr-20 text-right">
-      <ServicesSwitcher /><span>&nbsp;</span>
+      <ServicesSwitcher />
     </div>
-    <div class="flex pt-20 pl-20 pr-20">
+    <div class="flex pt-20 px-20">
       <div class="font-display text-2xl text-justify w-2/5 pt-12">
         From digital strategy, interactive design and full-stack development,
         our complete range of expertise makes us key players in implementing

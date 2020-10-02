@@ -3,6 +3,7 @@
     <ServicesLanding />
     <Services />
     <DesignDevelop />
+    <WhatYouSee />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import ServicesLanding from '~/components/ServicesPage/ServicesLanding'
 import Services from '~/components/ServicesPage/Services'
 import DesignDevelop from '~/components/ServicesPage/DesignDevelop'
+import WhatYouSee from '~/components/ServicesPage/WhatYouSee'
 
 export default {
   components: {
     ServicesLanding,
     Services,
     DesignDevelop,
+    WhatYouSee,
   },
 }
 </script>

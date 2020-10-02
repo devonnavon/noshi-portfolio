@@ -1,5 +1,5 @@
 <template>
-  <span id="switcharoo"></span>
+  <span><span id="switcharoo"></span><span>&nbsp;</span></span>
 </template>
 
 <script>
