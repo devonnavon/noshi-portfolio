@@ -34,41 +34,8 @@ export default {
         let pauseFlag = false
         let tl = gsap.timeline()
         let duration = 0.1
-        if (i == 0) {
-          //we need to split out the first one into seperate words so we can pause
-          let words = phrase.split(' ')
-          words.forEach((word, j) => {
-            //create spans to fill with each word (otherwise it just replaces)
-            let line = document.getElementById(`phrase_${i}`)
-            let span = document.createElement('span')
-            if (word === 'small') {
-              let innerSpan = document.createElement('span')
-              span.setAttribute('id', `smallCrossout`)
-              innerSpan.setAttribute('id', `word${i}_${j}`)
-              span.appendChild(innerSpan)
-            } else span.setAttribute('id', `word${i}_${j}`)
-            line.appendChild(span)
-            //select each span and fill with word
-            tl.to(`#word${i}_${j}`, {
-              duration: duration * word.length,
-              text: word + ' ',
-            })
-            if (word === 'small') {
-              //here we need to add the crossout animation
-              let smallCrossSvg = this.crossOutSmall('full', 'full')
-              span.prepend(smallCrossSvg)
-              let path = document.querySelector('#smallPath')
-              let l = path.getTotalLength()
-              gsap.set(path, { opacity: 0 })
-              tl.set(path, { strokeDasharray: l, opacity: 100 })
-              tl.fromTo(
-                path,
-                0.5,
-                { strokeDashoffset: l },
-                { strokeDashoffset: 0 }
-              )
-            }
-          })
+        if ([0, 2].includes(i)) {
+          this.splitWords(phrase, tl, i, duration, ['small'])
         } else {
           tl.to(`#phrase_${i}`, {
             duration: duration * phrase.length,
@@ -77,14 +44,51 @@ export default {
         }
         masterTl.add(tl)
       })
+
       ScrollTrigger.create({
         animation: masterTl,
         trigger: '#phrases',
         start: 'top center',
       })
     },
-    getRelativePosition(elem1, elem2) {},
-    crossOutSmall(width, height) {
+    splitWords(phrase, tl, i, duration, keywords) {
+      //we need to split out the first one into seperate words so we can pause
+      let words = phrase.split(' ')
+      words.forEach((word, j) => {
+        //create spans to fill with each word (otherwise it just replaces)
+        let line = document.getElementById(`phrase_${i}`)
+        let span = document.createElement('span')
+        if (keywords.includes(word)) this.createSvgContainer(i, j, span)
+        //small
+        else span.setAttribute('id', `word${i}_${j}`)
+        line.appendChild(span)
+        //select each span and fill with word
+        tl.to(`#word${i}_${j}`, {
+          duration: duration * word.length,
+          text: word + ' ',
+        })
+        if (keywords.includes(word)) {
+          let svg = this.svgCrossOutSmall()
+          span.prepend(svg)
+          this.drawSvgAnimation(`#${word}Path`, 0.5, tl)
+        }
+      })
+    },
+    createSvgContainer(i, j, span) {
+      let innerSpan = document.createElement('span')
+      span.setAttribute('id', `word${i}_${j}_container`)
+      span.style.position = 'relative'
+      innerSpan.setAttribute('id', `word${i}_${j}`)
+      span.appendChild(innerSpan)
+    },
+    drawSvgAnimation(path, duration, tl) {
+      let p = document.querySelector(path)
+      let l = p.getTotalLength()
+      gsap.set(p, { opacity: 0 })
+      tl.set(p, { strokeDasharray: l, opacity: 100 })
+      tl.fromTo(p, duration, { strokeDashoffset: l }, { strokeDashoffset: 0 })
+    },
+    svgCrossOutSmall() {
       const svg = document.createElement('span')
       svg.setAttribute('id', 'crossOutSmall')
       svg.innerHTML = `
