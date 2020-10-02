@@ -35,7 +35,8 @@
           class="font-serif text-green text-left text-4xl md:pt-4 md:w-3/5 md:pl-20 w-full md:py-0 py-16"
         >
           <div>We can make your next</div>
-          <div id="switcharoo" class="text-5xl font-semibold"></div>
+          <!-- <div id="switcharoo" class="text-5xl font-semibold"></div> -->
+          <ServicesSwitcher class="text-5xl font-semibold" />
         </div>
       </div>
       <div class="flex pb-24 px-6 md:px-0">
@@ -84,22 +85,20 @@
 </template>
 
 <script>
+import ServicesSwitcher from '~/components/ServicesSwitcher'
+
 export default {
+  components: {
+    ServicesSwitcher,
+  },
+
   mounted() {
     this.scrollAnimate()
-    this.switchArooAnimate()
   },
   data() {
     return {
       clickable: false,
       currentService: null,
-      words: [
-        'web app',
-        'website',
-        'digital strategy',
-        'data pipeline',
-        'ecommerce store',
-      ],
       servicesDetail: [
         {
           key: 'design',
@@ -147,14 +146,6 @@ export default {
         .from(`#${service}-detail`, { opacity: 0, y: -600 }, 'x')
       tl.play()
       this.currentService = service
-    },
-    switchArooAnimate() {
-      let masterTl = gsap.timeline({ repeat: -1 })
-      this.words.forEach((word) => {
-        let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 })
-        tl.to('#switcharoo', { duration: 1, text: word })
-        masterTl.add(tl)
-      })
     },
     scrollAnimate() {
       gsap.registerPlugin(ScrollTrigger)
