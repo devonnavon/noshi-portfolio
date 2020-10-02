@@ -39,6 +39,6 @@ export default {}
 }
 
 .bigtext {
-  font-size: 7rem;
+  font-size: 8rem;
 }
 </style>
