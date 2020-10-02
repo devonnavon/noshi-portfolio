@@ -105,7 +105,7 @@ export default {
   right: 400px;
 }
 #summary {
-  min-height: 500px;
+  min-height: 600px;
 }
 
 #smallCrossout {
