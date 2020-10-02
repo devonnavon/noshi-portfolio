@@ -12,13 +12,13 @@
     <div id="product" class="bigtext font-serif pr-20 text-right">
       <ServicesSwitcher />
     </div>
-    <div class="flex pt-20 px-20">
+    <div class="flex pt-20 pl-20">
       <div class="font-display text-2xl text-justify w-2/5 pt-12">
         From digital strategy, interactive design and full-stack development,
         our complete range of expertise makes us key players in implementing
         digital solutions for small to large-scale web projects.
       </div>
-      <ServicesCompact class="w-3/5 pl-10" />
+      <ServicesCompact class="w-3/5 px-10" />
     </div>
   </section>
 </template>

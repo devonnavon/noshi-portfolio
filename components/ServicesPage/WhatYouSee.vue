@@ -1,6 +1,6 @@
 <template>
   <div class="bg-pink">
-    <div class="pl-20 flex">
+    <div class="pl-20 pb-40 flex">
       <div
         id="whatusee"
         class="bigtextx w-5/12 font-serif text-green text-justify"
