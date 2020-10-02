@@ -1,8 +1,8 @@
 <template>
-  <section id="experience" class="bg-pink pt-24">
+  <section id="experience" class="bg-pink pt-24 px-6 md:px-0">
     <div>
-      <div class="flex">
-        <div class="w-2/5 pl-16">
+      <div class="flex md:flex-row flex-col">
+        <div class="md:w-2/5 md:pl-16 w-2/3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="461"
@@ -23,24 +23,24 @@
           </svg>
         </div>
       </div>
-      <div class="logo flex flex-row flex-wrap justify-center px-16">
+      <div class="logo flex md:flex-row flex-wrap justify-center md:px-16 px-6">
         <div
-          class="w-1/4 transition duration-500 ease-in-out opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
+          class="md:w-1/4 w-1/2 transition duration-500 ease-in-out md:opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
         >
-          <img src="~/static/img/nfl.png" class="w-1/4" alt="" />
+          <img src="~/static/img/nfl.png" class="w-1/4 w-1/2" alt="" />
         </div>
         <div
-          class="w-1/4 transition duration-500 ease-in-out opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
+          class="md:w-1/4 w-1/2 transition duration-500 ease-in-out md:opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
         >
           <img src="~/static/img/dimensional.png" class="w-3/5" alt="" />
         </div>
         <div
-          class="w-1/4 transition duration-500 ease-in-out opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
+          class="md:w-1/4 w-1/2 transition duration-500 ease-in-out md:opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
         >
           <img src="~/static/img/fandango.png" class="w-1/3" alt="" />
         </div>
         <div
-          class="w-1/4 transition duration-500 ease-in-out opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
+          class="md:w-1/4 w-1/2 transition duration-500 ease-in-out md:opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
         >
           <img src="~/static/img/icx.png" class="w-3/5" alt="" />
         </div>
@@ -50,22 +50,22 @@
           <img src="~/static/img/rent.png" class="w-3/4" alt="" />
         </div> -->
         <div
-          class="w-1/4 transition duration-500 ease-in-out opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
+          class="md:w-1/4 w-1/2 transition duration-500 ease-in-out md:opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
         >
           <img src="~/static/img/field.png" class="w-1/3" alt="" />
         </div>
         <div
-          class="w-1/4 transition duration-500 ease-in-out opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
+          class="md:w-1/4 w-1/2 transition duration-500 ease-in-out md:opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
         >
           <img src="~/static/img/carmax.png" class="w-3/5" alt="" />
         </div>
         <div
-          class="w-1/4 transition duration-500 ease-in-out opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
+          class="md:w-1/4 w-1/2 transition duration-500 ease-in-out md:opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
         >
           <img src="~/static/img/millcross.png" class="w-3/5" alt="" />
         </div>
         <div
-          class="w-1/4 transition duration-500 ease-in-out opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
+          class="md:w-1/4 w-1/2 transition duration-500 ease-in-out md:opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
         >
           <img src="~/static/img/GLI.png" alt="" />
         </div>
