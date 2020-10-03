@@ -1,15 +1,15 @@
 <template>
   <div id="#container" class="xl:container mx-auto bg-pink md:px-6">
-    <Contact />
+    <ComingSoon />
   </div>
 </template>
 
 <script>
-import Contact from '~/components/ContactPage/Contact'
+import ComingSoon from '~/components/WorkPage/ComingSoon'
 
 export default {
   components: {
-    Contact,
+    ComingSoon,
   },
 }
 </script>
