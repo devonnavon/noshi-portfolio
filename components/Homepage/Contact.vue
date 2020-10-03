@@ -157,7 +157,7 @@ export default {
   display: inline;
   margin-right: 30px;
 }
-#news li::before {
-  //   content: '● ';
-}
+// #news li::before {
+//   //   content: '● ';
+// }
 </style>

@@ -22,6 +22,21 @@ export default {
         'design product consulting',
         '"????" studio...',
       ],
+      svgDict: {
+        small:
+          '<svg width="240" height="107" viewBox="0 0 162 71" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="smallPath" d="M2 51C14.5887 46.1148 28.2203 44.1957 41.4444 41.7778C79.2446 34.8662 117.187 28.8573 154.833 21.1111C184.283 15.0514 213.677 8.51624 243 2" stroke="#F7941E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        design:
+          '<svg width="268" height="81" viewBox="0 0 268 81" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="designPath" d="M2 65.9999C4.17308 55.3759 9.02107 46.0156 12.7778 35.8888C14.2474 31.9273 16.0713 28.1057 17.4444 24.111C18.5369 20.9329 18.6447 20.0979 19.5556 23.611C21.2446 30.1259 21.8254 36.9999 22.7778 43.6666C23.0994 45.9177 25.9347 56.0061 26 55.7777C28.8185 45.913 33.4278 36.5226 38.0556 27.3888C41.3995 20.7889 44.498 14.0751 47.7778 7.44436C48.9307 5.11346 50.6295 -0.798985 52.2222 4.33325C57.8095 22.3368 61.3232 41.2536 64.9444 59.7221C66.1435 65.8374 67.0687 71.9974 68.2222 78.111C68.8184 81.2708 69.1549 72.8431 69.2222 72.2221C70.5621 59.8656 73.6948 47.5953 76.2222 35.4444C77.0645 31.395 77.5858 27.2448 78.5 23.2221C78.6283 22.6575 78.9158 20.2406 79.1111 20.7777C84.2217 34.8317 86.7072 50.6417 89.5556 65.3333C89.9839 67.5427 90.1569 69.7812 91 71.8888C91.5403 73.2395 92.4465 67.4186 92.6111 66.8333C96.4531 53.1729 100.153 39.58 104.5 26.0555C106.519 19.7747 108.79 13.6581 111.556 7.66658C114.411 1.48023 115.499 11.8468 116.222 14.4444C121.138 32.0956 124.756 50.0129 129.889 67.611C130.34 69.158 130.725 73.279 132.222 70.111C135.507 63.1631 136.391 55.1222 138.444 47.7777C140.776 39.4382 142.97 30.8937 146 22.7777C146.778 20.6935 149.015 12.1271 151.556 11.111C152.036 10.9188 162.028 48.3675 163 51.3888C164.628 56.4457 166.061 61.829 168.556 66.5555C169.523 68.3884 171.766 58.63 172 57.7777C175.433 45.286 179.518 28.5638 187.889 18.3333C191.783 13.5735 196.788 33.4771 197.444 35.4999C199.621 42.2047 201.321 49.0195 204 55.5555C204.268 56.2091 207.211 64.7817 208 63.111C209.786 59.3292 210 54.4682 211.056 50.4444C212.816 43.7309 215.125 37.3305 218.444 31.2221C222.961 22.911 223.606 25.543 226 33.8888C228.812 43.6912 231.427 53.6297 233.778 63.5555C235.053 68.9387 237.497 55.6677 238 53.9444C238.533 52.1173 243.066 34.5729 245 40.6666C247.366 48.1205 251.103 70.3092 253 62.7221C254.977 54.8126 253.712 46.2872 254.056 38.2221C254.494 27.93 256.359 17.7062 257 7.44436C257.803 -5.40354 262.878 57.4885 266 44.9999" stroke="#F7941E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        product:
+          '<svg width="359" height="85" viewBox="0 0 359 85" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="productPath" d="M3.99991 52.9999C15.8572 30.5118 39.348 16.8291 60.2221 3.72209C70.8906 -2.97669 60.7655 15.5607 58.7777 18.9999C47.7219 38.1282 34.4758 55.181 18.2777 70.2221C17.5107 70.9343 3.87629 83.9805 2.66657 82.111C0.638537 78.9767 11.6648 68.0783 13.1666 66.3888C20.4691 58.1735 28.6937 51.5886 37.4444 44.9999C45.335 39.0587 52.5288 31.8765 60.7777 26.4443C62.0455 25.6094 70.1483 20.8896 70.8888 24.2221C71.7732 28.2019 70.9123 33.3325 69.9999 37.2221C67.3726 48.4229 59.2429 59.7983 53.0555 69.3888C52.2086 70.7014 48.1719 78.4637 51.6666 73.7776C57.1071 66.4825 63.0243 59.8301 69.8332 53.7776C73.3589 50.6438 119.238 13.8737 121.778 18.4443C125.87 25.8098 108.025 43.3404 104 47.7776C99.7616 52.4494 95.1213 56.5684 90.4444 60.7776C88.5353 62.4958 82.6729 69.1992 86.7221 62.3332C91.8839 53.5807 100.42 46.2732 107.778 39.4443C118.247 29.7274 130.39 21.2526 142.611 13.8888C144.077 13.0053 153.401 6.85063 155.389 9.72209C157.367 12.5801 155.617 18.837 154.555 21.6665C148.044 39.0306 131.035 53.4274 117.667 65.5554C115.113 67.8719 108.266 75.2615 109.667 72.111C113.226 64.1024 123.001 56.8351 129.055 51.111C140.327 40.4539 152.559 31.0195 166.667 24.4443C168.893 23.4065 197.457 9.1223 197.944 14.7221C198.968 26.4927 189.013 38.568 182 46.9999C177.57 52.3263 172.778 57.3379 168.222 62.5554C161.636 70.097 168.138 63.341 171.611 60.4999C193.184 42.8489 217.751 27.0097 244.889 19.6665C248.751 18.6216 256.554 15.5101 256.944 21.5554C257.301 27.0882 253.736 31.9676 250.555 36.2221C245.203 43.3824 238.082 49.4729 231.778 55.7776C225.091 62.4642 218.593 69.3952 211.222 75.3332C205.235 80.1565 208.599 75.5165 211.444 71.9999C218.159 63.7003 226.675 56.7575 235.167 50.3888C246.098 42.1904 257.055 35.3557 269.778 30.2221C271.825 29.3959 288.41 21.8921 290.778 25.4443C295.166 32.0272 282.572 44.8587 279 48.7776C275.482 52.638 270.97 55.1925 267.222 58.7776C264.026 61.8343 263.789 61.3647 266.722 57.8888C280.381 41.7009 299.322 27.9943 319 20.2776C327.538 16.9294 323.94 28.0598 321.778 32.7776C316.767 43.7093 307.406 55.4947 299.222 64.3332C291.916 72.2236 315.505 50.2403 324.222 43.9443C330.208 39.6214 339.647 31.6691 347.333 30.6665C349.934 30.3273 349.054 38.5723 348.889 40.0554C348.107 47.088 343 54.1341 343 61.2221C343 64.2792 354.289 63.2255 357 63.9999" stroke="#F7941E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        consulting:
+          '<svg width="485" height="70" viewBox="0 0 485 70" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="consultingPath" d="M2 29.0003C43.8879 21.0216 86.4229 15.782 128.389 8.00028C137.081 6.38844 145.756 4.85562 154.5 3.55583C154.629 3.53669 163.213 2.20221 162.556 3.00028C158.877 7.46719 151.443 9.24616 146.444 11.5003C136.786 15.8559 126.29 19.0752 116.389 22.9447C94.5747 31.4698 72.3101 38.2812 49.8889 45.0003C41.5857 47.4885 33.3259 50.184 25.3333 53.5558C23.3201 54.4052 17.5892 56.4707 19.7222 56.9447C27.7146 58.7208 39.211 52.9185 46.6667 51.0003C108.304 35.1421 171.231 25.1136 233.944 14.6114C246.838 12.4521 259.729 10.1547 272.722 8.66694C276.685 8.21325 279.849 7.96054 283.722 7.55583C285.178 7.40376 289.075 6.34338 288.111 7.44472C286.598 9.17346 282.783 9.69514 280.778 10.4447C274.42 12.8207 268.3 15.5436 261.778 17.5003C243.699 22.9239 225.481 28.2182 207.222 33.0003C199.525 35.0163 191.769 36.8361 184.111 39.0003C179.463 40.3139 173.114 41.3115 168.944 43.9447C161.695 48.5236 186.093 42.4997 194.444 40.5558C222.028 34.1354 249.566 28.3124 277.5 23.5003C308.639 18.136 340.077 13.4955 371.5 10.1114C373.194 9.92893 394.129 9.39282 393.556 10.0003C389.299 14.5072 380.318 16.4229 374.778 18.5003C354.721 26.0216 332.79 29.1816 311.889 33.4447C284.546 39.0218 257.04 43.2243 229.556 48.0003C220.002 49.6604 210.404 51.1284 200.889 53.0003C196.724 53.8196 184.382 54.9152 188.5 55.9447C191.233 56.628 195.349 55.3611 197.944 54.8892C209.436 52.7999 220.953 50.8674 232.444 48.7781C269.842 41.9785 307.328 37.8808 345 33.0003C370.138 29.7435 395.396 26.244 420.667 24.1669C430.54 23.3555 426.11 27.9817 420.333 31.2225C406.12 39.196 390.409 43.7587 375.389 49.8892C359.962 56.1859 344.043 61.02 328.333 66.5558C324.257 67.9924 326.526 68.0003 329.222 68.0003C336.524 68.0003 343.727 66.9318 350.944 65.9447C378.698 62.1493 406.369 57.8472 434.111 54.0003C445.797 52.3798 457.543 50.8371 469.333 50.2225C469.712 50.2027 482.461 49.9982 482.222 50.5558C481.622 51.9575 478.505 53.0003 482 53.0003" stroke="#F7941E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        '"????"': `
+            <svg width="208" height="23" viewBox="0 0 208 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="q1Path" d="M2 10C70.1621 10 137.854 2 206 2" stroke="#F7941E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path id="q2Path" d="M14 21C47.7454 20.8156 81.9651 19.2484 115.556 15.9444C126.462 14.8717 137.049 14 148 14" stroke="#F7941E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>`,
+      },
     }
   },
   methods: {
@@ -34,41 +49,14 @@ export default {
         let pauseFlag = false
         let tl = gsap.timeline()
         let duration = 0.1
-        if (i == 0) {
-          //we need to split out the first one into seperate words so we can pause
-          let words = phrase.split(' ')
-          words.forEach((word, j) => {
-            //create spans to fill with each word (otherwise it just replaces)
-            let line = document.getElementById(`phrase_${i}`)
-            let span = document.createElement('span')
-            if (word === 'small') {
-              let innerSpan = document.createElement('span')
-              span.setAttribute('id', `smallCrossout`)
-              innerSpan.setAttribute('id', `word${i}_${j}`)
-              span.appendChild(innerSpan)
-            } else span.setAttribute('id', `word${i}_${j}`)
-            line.appendChild(span)
-            //select each span and fill with word
-            tl.to(`#word${i}_${j}`, {
-              duration: duration * word.length,
-              text: word + ' ',
-            })
-            if (word === 'small') {
-              //here we need to add the crossout animation
-              let smallCrossSvg = this.crossOutSmall('full', 'full')
-              span.prepend(smallCrossSvg)
-              let path = document.querySelector('#smallPath')
-              let l = path.getTotalLength()
-              gsap.set(path, { opacity: 0 })
-              tl.set(path, { strokeDasharray: l, opacity: 100 })
-              tl.fromTo(
-                path,
-                0.5,
-                { strokeDashoffset: l },
-                { strokeDashoffset: 0 }
-              )
-            }
-          })
+        if ([0, 2, 3].includes(i)) {
+          this.splitWords(phrase, tl, i, duration, [
+            'small',
+            'design',
+            'product',
+            'consulting',
+            '"????"',
+          ])
         } else {
           tl.to(`#phrase_${i}`, {
             duration: duration * phrase.length,
@@ -77,21 +65,67 @@ export default {
         }
         masterTl.add(tl)
       })
+
       ScrollTrigger.create({
         animation: masterTl,
         trigger: '#phrases',
         start: 'top center',
       })
     },
-    getRelativePosition(elem1, elem2) {},
-    crossOutSmall(width, height) {
+    splitWords(phrase, tl, i, duration, keywords) {
+      //we need to split out the first one into seperate words so we can pause
+      let words = phrase.split(' ')
+      words.forEach((word, j) => {
+        //create spans to fill with each word (otherwise it just replaces)
+        let line = document.getElementById(`phrase_${i}`)
+        let span = document.createElement('span')
+        if (keywords.includes(word)) this.createSvgContainer(i, j, span)
+        else span.setAttribute('id', `word${i}_${j}`)
+        line.appendChild(span)
+        //select each span and fill with word
+        tl.to(`#word${i}_${j}`, {
+          duration: duration * word.length,
+          text: word + ' ',
+        })
+        console.log(word)
+        if (keywords.includes(word)) {
+          console.log(word)
+          let svg = this.svgCrossOut(word)
+          span.prepend(svg)
+          if (word === '"????"') {
+            this.drawSvgAnimation(`#q1Path`, 0.5, tl)
+            this.drawSvgAnimation(`#q2Path`, 0.5, tl)
+          } else this.drawSvgAnimation(`#${word}Path`, 0.5, tl)
+        }
+      })
+    },
+    createSvgContainer(i, j, span) {
+      let innerSpan = document.createElement('span')
+      span.setAttribute('id', `word${i}_${j}_container`)
+      span.style.position = 'relative'
+      innerSpan.setAttribute('id', `word${i}_${j}`)
+      span.appendChild(innerSpan)
+    },
+    drawSvgAnimation(path, duration, tl) {
+      let p = document.querySelector(path)
+      let l = p.getTotalLength()
+      gsap.set(p, { opacity: 0 })
+      tl.set(p, { strokeDasharray: l, opacity: 100 })
+      tl.fromTo(p, duration, { strokeDashoffset: l }, { strokeDashoffset: 0 })
+    },
+    svgCrossOut(word) {
       const svg = document.createElement('span')
-      svg.setAttribute('id', 'crossOutSmall')
-      svg.innerHTML = `
-        <svg width="240" height="107" viewBox="0 0 162 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path id="smallPath" d="M2 51C14.5887 46.1148 28.2203 44.1957 41.4444 41.7778C79.2446 34.8662 117.187 28.8573 154.833 21.1111C184.283 15.0514 213.677 8.51624 243 2" stroke="#F7941E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        `
+      if (word === '"????"') {
+        svg.setAttribute('id', `$qUnderLine`)
+        svg.style.left = '30px'
+        svg.style.bottom = '-10px'
+      } else {
+        svg.setAttribute('id', `${word}CrossOut`)
+        svg.style.left = '-5px'
+        svg.style.bottom = '0px'
+      }
+      svg.style.position = 'absolute'
+      svg.innerHTML = this.svgDict[word]
       return svg
     },
   },
@@ -99,22 +133,12 @@ export default {
 </script>
 
 <style>
-#twoPerson {
+/* #twoPerson {
   position: absolute;
   top: 50px;
   right: 400px;
-}
+} */
 #summary {
   min-height: 600px;
-}
-
-#smallCrossout {
-  position: relative;
-}
-
-#crossOutSmall {
-  position: absolute;
-  bottom: 0px;
-  left: -5px;
 }
 </style>
