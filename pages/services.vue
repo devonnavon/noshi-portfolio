@@ -7,6 +7,7 @@
     <Engagements />
     <Compensation />
     <Principles />
+    <Contact />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import WhatYouSee from '~/components/ServicesPage/WhatYouSee'
 import Engagements from '~/components/ServicesPage/Engagements'
 import Compensation from '~/components/ServicesPage/Compensation'
 import Principles from '~/components/ServicesPage/Principles'
+import Contact from '~/components/Homepage/Contact'
 
 export default {
   components: {
@@ -28,6 +30,7 @@ export default {
     Engagements,
     Compensation,
     Principles,
+    Contact,
   },
 }
 </script>

@@ -26,7 +26,7 @@
           :key="i"
           class="grid grid-cols-3 gap-8 pt-20 text-green font-display"
         >
-          <div class="text-huge">{{ `0${i}` }}</div>
+          <div class="text-huge">{{ `0${i + 1}` }}</div>
           <TitleParagraphBig
             :title="item.title"
             :paragraph="item.description"
