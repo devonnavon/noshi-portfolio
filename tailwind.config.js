@@ -36,7 +36,9 @@ module.exports = {
     },
     extend: {
       fontSize: {
+        big: '4.5rem',
         huge: '6rem',
+        hugexl: '8rem',
       },
     },
   },

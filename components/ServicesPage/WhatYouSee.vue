@@ -3,7 +3,7 @@
     <div class="pl-20 pb-40 flex">
       <div
         id="whatusee"
-        class="bigtextx w-5/12 font-serif text-green text-justify"
+        class="text-big w-5/12 font-serif text-green text-justify"
       >
         “What you see is what you get”
         <svg
@@ -53,12 +53,4 @@ export default {
 }
 </script>
 
-<style>
-/* #whatusee {
-  width: 580px;
-} */
-
-.bigtextx {
-  font-size: 4.5rem;
-}
-</style>
+<style></style>

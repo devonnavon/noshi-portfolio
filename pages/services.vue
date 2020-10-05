@@ -4,6 +4,7 @@
     <Services />
     <DesignDevelop />
     <WhatYouSee />
+    <Engagements />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import ServicesLanding from '~/components/ServicesPage/ServicesLanding'
 import Services from '~/components/ServicesPage/Services'
 import DesignDevelop from '~/components/ServicesPage/DesignDevelop'
 import WhatYouSee from '~/components/ServicesPage/WhatYouSee'
+import Engagements from '~/components/ServicesPage/Engagements'
 
 export default {
   components: {
@@ -19,6 +21,7 @@ export default {
     Services,
     DesignDevelop,
     WhatYouSee,
+    Engagements,
   },
 }
 </script>
