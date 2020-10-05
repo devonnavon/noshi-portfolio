@@ -1,6 +1,6 @@
 <template>
   <div class="bg-pink">
-    <div class="pl-20 pb-40">
+    <div class="px-20 pb-40">
       <div
         id="engagementsTitle"
         class="text-big w-5/12 font-serif text-green text-justify"
@@ -8,7 +8,7 @@
         Types of Engagement
       </div>
       <div class="flex justify-end">
-        <div class="w-8/12 font-display text-green pr-20">
+        <div class="w-8/12 font-display text-green">
           <svg
             class=""
             width="442"

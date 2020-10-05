@@ -5,6 +5,7 @@
     <DesignDevelop />
     <WhatYouSee />
     <Engagements />
+    <Compensation />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Services from '~/components/ServicesPage/Services'
 import DesignDevelop from '~/components/ServicesPage/DesignDevelop'
 import WhatYouSee from '~/components/ServicesPage/WhatYouSee'
 import Engagements from '~/components/ServicesPage/Engagements'
+import Compensation from '~/components/ServicesPage/Compensation'
 
 export default {
   components: {
@@ -22,6 +24,7 @@ export default {
     DesignDevelop,
     WhatYouSee,
     Engagements,
+    Compensation,
   },
 }
 </script>
