@@ -34,8 +34,11 @@
         <div
           class="flex flex-col font-serif md:text-6xl text-3xl text-green self-center md:px-12 pb-24"
         >
-          <div class="self-center md:pt-24 md:pt-12 pt-16">(something)</div>
-          <div class="self-center font-semibold md:text-4xl text-2xl pt-6">
+          <SomethingSwitcher
+            class="self-center md:pt-24 md:pt-12 pt-16"
+            triggerId="#contact"
+          />
+          <div class="self-center font-semibold md:text-4xl text-2xl pt-6 z-10">
             together
           </div>
         </div>
@@ -101,7 +104,12 @@
 </template>
 
 <script>
+import SomethingSwitcher from '~/components/SomethingSwitcher'
+
 export default {
+  components: {
+    SomethingSwitcher,
+  },
   mounted() {
     this.contactScroll()
     this.gearRotate()
