@@ -6,9 +6,7 @@
           id="nav-text"
           class="absolute flex text-center items-center justify-around"
         >
-          <div class="bg-green px-2 text-pink self-center rounded-full">
-            home
-          </div>
+          <div>home</div>
           <div>work</div>
           <div style="width: 70px"></div>
           <div>services</div>
@@ -38,23 +36,22 @@
   </div>
 </template>
 <script>
-import Logo from '~/components/Logo'
+import { mapState } from 'vuex'
 
 export default {
-  components: {
-    Logo,
-  },
   mounted() {
     window.addEventListener('scroll', this.onScroll)
+    console.log(this.page)
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.onScroll)
   },
   computed: {
+    ...mapState(['page']),
     tween() {
       return gsap.to('#thenav', {
         y: -100,
-        ease: 'elastic.inOut(1, 0.3)',
+        ease: 'elastic.in(1, 0.5)',
         duration: 1.4,
       })
     },
@@ -63,6 +60,7 @@ export default {
     return {
       showNavbar: true,
       lastScrollPosition: 0,
+      selectedClass: 'bg-green px-2 text-pink rounded-full',
     }
   },
   methods: {
@@ -101,7 +99,7 @@ export default {
   margin-bottom: auto;
   div {
     width: 66px;
-    border: 1px black solid;
+    // border: 1px black solid;
   }
 }
 </style>
