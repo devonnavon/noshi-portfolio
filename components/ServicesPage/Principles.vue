@@ -1,8 +1,9 @@
 <template>
-  <div class="bg-pink">
-    <div class="px-20 pb-40">
-      <div>
+  <div class="bg-pink px-6">
+    <div class="md:pb-40 pb-16">
+      <div class="md:-mb-10 -mb-20">
         <svg
+          class="md:w-2/5 w-full h-auto"
           width="697"
           height="314"
           viewBox="0 0 697 314"
@@ -24,13 +25,13 @@
         <div
           v-for="(item, i) in principles"
           :key="i"
-          class="grid grid-cols-3 gap-8 pt-20 text-green font-display"
+          class="grid md:grid-cols-3 grid-cols-6 md:gap-8 gap-0 pt-20 text-green font-display"
         >
-          <div class="text-huge">{{ `0${i + 1}` }}</div>
+          <div class="md:text-huge text-3xl">{{ `0${i + 1}` }}</div>
           <TitleParagraphBig
             :title="item.title"
             :paragraph="item.description"
-            class="col-span-2"
+            class="md:col-span-2 col-span-5"
           />
         </div>
       </div>
