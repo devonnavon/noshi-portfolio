@@ -17,13 +17,17 @@ export default {
   computed: {
     ...mapGetters(['servicesList']),
   },
+  data() {
+    return {
+      next: [0, 0],
+    }
+  },
   methods: {
     animate() {
       let duration = 1
+      let something = document.getElementById('somethingintheway')
 
-      let rect = document
-        .getElementById('somethingintheway')
-        .getBoundingClientRect()
+      let rect = something.getBoundingClientRect()
       let width = rect.right - rect.left
       let height = rect.bottom - rect.top
       console.log(height)
@@ -34,18 +38,16 @@ export default {
       gsap.registerPlugin(ScrollTrigger)
       let tl = gsap.timeline({
         repeat: -1,
+        repeatDelay: 1,
       })
       let id = '#somethingintheway'
 
       tl.to(id, {
+        repeat: 1,
         y: height,
         duration,
         ease: 'none',
-      })
-      tl.to(id, {
-        y: height,
-        duration,
-        ease: 'none',
+        yoyo: true,
       })
 
       ScrollTrigger.create({
