@@ -6,11 +6,19 @@
           id="nav-text"
           class="absolute flex text-center items-center justify-around"
         >
-          <div>home</div>
-          <div>work</div>
+          <div :class="selectedClass('index')">
+            <NuxtLink to="/">home</NuxtLink>
+          </div>
+          <div :class="selectedClass('work')">
+            <NuxtLink to="work">work</NuxtLink>
+          </div>
           <div style="width: 70px"></div>
-          <div>services</div>
-          <div>contact</div>
+          <div :class="selectedClass('services')">
+            <NuxtLink to="services">services</NuxtLink>
+          </div>
+          <div :class="selectedClass('contact')">
+            <NuxtLink to="contact">contact</NuxtLink>
+          </div>
         </div>
         <svg
           width="456"
@@ -20,6 +28,7 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <ellipse cx="228" cy="34.5" rx="29" ry="28.5" fill="#FF6B00" />
+
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -41,7 +50,7 @@ import { mapState } from 'vuex'
 export default {
   mounted() {
     window.addEventListener('scroll', this.onScroll)
-    console.log(this.page)
+    console.log(this.page, 'page')
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.onScroll)
@@ -60,10 +69,12 @@ export default {
     return {
       showNavbar: true,
       lastScrollPosition: 0,
-      selectedClass: 'bg-green px-2 text-pink rounded-full',
     }
   },
   methods: {
+    selectedClass(page) {
+      if (page === this.page) return 'bg-green px-2 text-pink rounded-full'
+    },
     onScroll() {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
@@ -79,10 +90,8 @@ export default {
       this.lastScrollPosition = currentScrollPosition
 
       if (!this.showNavbar) {
-        console.log('play')
         this.tween.play()
       } else {
-        console.log('reverse')
         this.tween.reverse()
       }
     },
@@ -98,7 +107,7 @@ export default {
   margin-top: auto;
   margin-bottom: auto;
   div {
-    width: 66px;
+    width: 70px;
     // border: 1px black solid;
   }
 }
