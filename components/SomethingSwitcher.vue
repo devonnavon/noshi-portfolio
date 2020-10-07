@@ -43,7 +43,7 @@ export default {
 
       gsap.registerPlugin(ScrollTrigger)
       let masterTL = gsap.timeline({
-        delay: 1,
+        delay: 0.2,
         repeat: -1,
       })
 
