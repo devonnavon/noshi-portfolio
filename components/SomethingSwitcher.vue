@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="somethingintheway" class="overflow-hidden">{{ starter }}</div>
+    <div id="somethingintheway" class="overflow-hidden"></div>
     <div id="somethingmask" class="bg-pink absolute"></div>
   </div>
 </template>
@@ -24,7 +24,13 @@ export default {
   },
   methods: {
     animate() {
-      let duration = 1
+      let id = '#somethingintheway'
+      gsap.set(id, { text: this.starter })
+
+      let duration = 0.5
+      let easeHide = 'elastic.in(1, 0.3)'
+      let easeShow = 'elastic.out(1, 0.3)'
+
       let something = document.getElementById('somethingintheway')
 
       let rect = something.getBoundingClientRect()
@@ -32,7 +38,7 @@ export default {
       let height = rect.bottom - rect.top
       console.log(height)
       let mask = document.getElementById('somethingmask')
-      mask.style.width = `${width}px`
+      mask.style.width = `${width * 2}px`
       mask.style.height = `${height}px`
 
       gsap.registerPlugin(ScrollTrigger)
@@ -40,7 +46,6 @@ export default {
         delay: 1,
         repeat: -1,
       })
-      let id = '#somethingintheway'
 
       this.servicesList.forEach((word, i) => {
         let tl = gsap.timeline()
@@ -48,37 +53,36 @@ export default {
           y: height,
           duration,
           delay: 1,
-          ease: 'elastic.in(1, 0.5)',
-        })
-        let hide2 = gsap.to(id, {
-          y: height,
-          duration,
-          delay: 1,
-          ease: 'elastic.in(1, 0.5)',
+          ease: easeHide,
         })
         let show = gsap.to(id, {
           y: 0,
           duration,
-          ease: 'elastic.out(1, 0.5)',
-        })
-        let show2 = gsap.to(id, {
-          y: 0,
-          duration,
-          ease: 'elastic.out(1, 0.5)',
+          ease: easeShow,
         })
         tl.add(hide).set(id, { text: word }).add(show)
-        if (i + 1 === this.servicesList.length) {
-          tl.add(hide2).set(id, { text: this.starter }).add(show2)
-        }
 
         masterTL.add(tl)
       })
+      masterTL
+        .to(id, {
+          y: height,
+          duration,
+          delay: 1,
+          ease: easeHide,
+        })
+        .set(id, { text: this.starter })
+        .to(id, {
+          y: 0,
+          duration,
+          ease: easeShow,
+        })
 
       ScrollTrigger.create({
         animation: masterTL,
         trigger: this.triggerId,
         start: 'top center',
-        markers: true,
+        // markers: true,
       })
     },
   },

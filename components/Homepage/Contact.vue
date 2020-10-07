@@ -32,17 +32,17 @@
           </svg>
         </div>
         <div
-          class="flex flex-col font-serif md:text-6xl text-3xl text-green self-center md:px-12 pb-24"
+          class="flex flex-col font-serif md:text-xl text-xl text-green self-center md:px-12 pb-24"
         >
           <SomethingSwitcher
-            class="self-center md:pt-24 md:pt-12 pt-16"
+            class="self-center md:pt-12 pt-16"
             triggerId="#contact"
           />
           <div class="self-center font-semibold md:text-4xl text-2xl pt-6 z-10">
             together
           </div>
         </div>
-        <div class="self-end w-auto h-auto pt-12">
+        <div class="self-end w-auto h-auto pt-12 z-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="448"
