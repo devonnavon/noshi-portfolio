@@ -1,5 +1,7 @@
 <template>
-  <div class="text-green font-serif bg-pink bigtext text-center py-64">
+  <div
+    class="text-green font-serif bg-pink md:text-hugexl text-5xl text-center md:py-64 py-40 md:font-normal font-bold"
+  >
     <div id="toptext">designers</div>
     <div>are your</div>
     <div id="bottomtext">developers</div>
