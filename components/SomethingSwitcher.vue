@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="somethingintheway" class="overflow-hidden">(something)</div>
+    <div id="somethingintheway" class="overflow-hidden">{{ starter }}</div>
     <div id="somethingmask" class="bg-pink absolute"></div>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      next: [0, 0],
+      starter: '(something)',
     }
   },
   methods: {
@@ -36,22 +36,34 @@ export default {
       //   mask.style.height = `${height * 2}px`
 
       gsap.registerPlugin(ScrollTrigger)
-      let tl = gsap.timeline({
+      let masterTL = gsap.timeline({
+        delay: 1,
         repeat: -1,
-        repeatDelay: 1,
       })
       let id = '#somethingintheway'
+      let ease = 'elastic.in(1, 0.5)'
 
-      tl.to(id, {
-        repeat: 1,
-        y: height,
-        duration,
-        ease: 'none',
-        yoyo: true,
+      this.servicesList.forEach((word) => {
+        let tl = gsap.timeline()
+        tl.to(id, {
+          y: height,
+          duration,
+          delay: 1,
+          ease: 'elastic.in(1, 0.5)',
+        })
+          .set(id, {
+            text: word,
+          })
+          .to(id, {
+            y: 0,
+            duration,
+            ease: 'elastic.out(1, 0.5)',
+          })
+        masterTL.add(tl)
       })
 
       ScrollTrigger.create({
-        animation: tl,
+        animation: masterTL,
         trigger: this.triggerId,
         start: 'top center',
         markers: true,
