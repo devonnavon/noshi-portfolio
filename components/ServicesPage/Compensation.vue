@@ -1,12 +1,15 @@
 <template>
-  <div class="bg-pink">
-    <div class="px-20 pb-40">
-      <div class="text-big w-5/12 font-serif text-green text-justify">
+  <div class="bg-pink px-6">
+    <div class="md:pb-40 pb-20">
+      <div
+        class="md:text-6xl text-4xl md:break-normal md:w-5/12 font-serif text-green text-justify md:pr-4 md:pb-0 pb-10"
+      >
         Types of Compensation
       </div>
-      <div class="flex justify-end">
-        <div class="w-7/12 font-display text-green px-20">
+      <div class="flex h-full md:justify-end">
+        <div class="md:w-7/12 h-auto font-display text-green">
           <svg
+            class="w-full"
             width="319"
             height="91"
             viewBox="0 0 319 91"
@@ -28,7 +31,9 @@
           </svg>
         </div>
       </div>
-      <div class="grid grid-cols-3 gap-8 pt-20 text-green font-display">
+      <div
+        class="grid md:grid-cols-3 grid-cols-1 gap-8 md:pt-20 pt-12 text-green font-display"
+      >
         <div v-for="(item, i) in compensationTypes" :key="i">
           <TitleParagraph :title="item.title" :paragraph="item.description" />
         </div>

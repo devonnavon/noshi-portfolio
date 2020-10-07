@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-pink">
-    <div class="pl-20 pb-40 flex">
+  <div class="bg-pink px-6">
+    <div class="pb-40 flex md:flex-row flex-col">
       <div
         id="whatusee"
-        class="text-big w-5/12 font-serif text-green text-justify"
+        class="md:text-6xl text-5xl md:w-5/12 font-serif text-green text-justify md:pr-4 md:pb-0 pb-10"
       >
         “What you see is what you get”
         <svg
@@ -24,7 +24,9 @@
           />
         </svg>
       </div>
-      <div class="w-7/12 font-display text-green text-xl px-20 pt-8">
+      <div
+        class="md:w-7/12 font-display text-green text-xl md:pl-20 pt-8 text-justify"
+      >
         Bringing design and development together isn’t a new concept by any
         means but when your designers are developing the product and your
         developers are designing the product we can ensure:
