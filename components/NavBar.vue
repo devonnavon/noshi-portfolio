@@ -1,6 +1,6 @@
 <template>
   <div class="font-display text-green z-50 text-l">
-    <nav id="thenav" class="thenav flex justify-center pt-6">
+    <nav id="thenav" class="flex justify-center">
       <div class="relative border-solid">
         <div
           id="nav-text"
@@ -52,7 +52,6 @@ import { mapState } from 'vuex'
 export default {
   mounted() {
     window.addEventListener('scroll', this.onScroll)
-    console.log(this.page, 'page')
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.onScroll)
@@ -78,6 +77,13 @@ export default {
       if (page === this.page) return 'bg-green px-2 text-pink rounded-full'
     },
     onScroll() {
+      if (window.innerWidth <= 768) {
+        if (this.showNavbar) return
+        else {
+          this.showNavbar = true
+          this.tween.reverse()
+        }
+      }
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
       if (currentScrollPosition < 0) {
