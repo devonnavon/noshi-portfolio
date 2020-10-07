@@ -8,14 +8,9 @@
 
     <Summary />
     <div class="py-24"></div>
-    <!-- <Divider /> -->
     <Services />
     <Experience />
     <Contact />
-    <!-- <section class="parallax parallax--featured bg-orange">
-      FEATURED SECTION.
-    </section>
-    <section class="parallax parallax--footer bg-pink">FOOTER</section> -->
   </div>
 </template>
 

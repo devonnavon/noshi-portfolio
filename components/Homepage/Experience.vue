@@ -1,5 +1,5 @@
 <template>
-  <section id="experience" class="bg-pink pt-24 px-6 md:px-0">
+  <section id="experience" class="bg-pink pt-24 px-6 md:px-0 md:pb-12">
     <div>
       <div class="flex md:flex-row flex-col">
         <div class="md:w-2/5 md:pl-16 w-2/3">

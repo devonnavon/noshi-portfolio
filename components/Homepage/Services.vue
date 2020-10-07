@@ -36,7 +36,9 @@
         >
           <div>We can make your next</div>
           <!-- <div id="switcharoo" class="text-5xl font-semibold"></div> -->
-          <ServicesSwitcher id="#switcharoo" class="text-5xl font-semibold" />
+          <div id="homeswitch">
+            <ServicesSwitcher class="text-5xl font-semibold" />
+          </div>
         </div>
       </div>
       <ServicesScroller trigger="#whatwedo" class="pb-24 px-6 md:px-0" />
@@ -57,7 +59,7 @@ export default {
 </script>
 
 <style>
-#switcharoo {
-  min-height: 72px;
+#homeswitch {
+  min-height: 77px;
 }
 </style>

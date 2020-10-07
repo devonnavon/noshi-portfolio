@@ -7,21 +7,31 @@
       <div
         id="design"
         class="py-3 pt-16 ml-1 font-minibold cursor-pointer"
-        @click="clickable ? serviceClick('design') : null"
+        @click="
+          clickable && 'design' != currentService
+            ? serviceClick('design')
+            : null
+        "
       >
         design
       </div>
       <div
         id="develop"
         class="py-3 ml-1 font-minisemi cursor-pointer"
-        @click="clickable ? serviceClick('develop') : null"
+        @click="
+          clickable && 'develop' != currentService
+            ? serviceClick('develop')
+            : null
+        "
       >
         develop
       </div>
       <div
         id="etc"
         class="py-3 ml-1 font-minimedium cursor-pointer"
-        @click="clickable ? serviceClick('etc') : null"
+        @click="
+          clickable && 'etc' != currentService ? serviceClick('etc') : null
+        "
       >
         etc.
       </div>
@@ -74,7 +84,6 @@ export default {
       const tl = gsap.timeline()
       tl
         //DESIGN LABEL
-        .add('design')
         .from(
           //design big text comes in
           '#design',
@@ -92,8 +101,8 @@ export default {
           },
           'design'
         )
+        .add('design')
         //DEVELOP LABEL
-        .add('develop')
         .from(
           //develop big text comes in
           '#develop',
@@ -120,8 +129,8 @@ export default {
           },
           'develop'
         )
+        .add('develop')
         //ETC LLABEL
-        .add('etc')
         .from(
           '#etc',
           {
@@ -146,7 +155,7 @@ export default {
           'etc'
         )
         //END LABEL
-        .add('end')
+        .add('etc')
 
       ScrollTrigger.create({
         animation: tl,
@@ -154,20 +163,14 @@ export default {
         start: 'top top',
         end: '+=4000',
         pin: true,
+        scrub: 2,
+        once: true,
         // pinSpacing: false,
-        scrub: 1,
-        // once: true,
-        anticipatePin: 1,
+
         onLeave: (self) => {
           //disable scroll and set current state back
-          self.disable()
-          gsap.set('#etc-detail', {
-            y: 0,
-            opacity: 100,
-          })
-          gsap.set('#design', { x: 0 })
-          gsap.set('#develop', { x: 0 })
-          gsap.set('#etc', { x: 0 })
+          console.log(self)
+          self.revert()
           this.clickable = true //make text clickable
           this.currentService = 'etc'
         },

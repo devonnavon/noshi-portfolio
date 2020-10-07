@@ -29,4 +29,14 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+@media only screen and (max-width: 768px) {
+  #switcharoo {
+    min-height: 310px;
+  }
+}
+
+#switcharoo {
+  min-height: 77px;
+}
+</style>

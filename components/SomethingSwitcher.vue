@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="somethingintheway" class="overflow-hidden"></div>
-    <div id="somethingmask" class="bg-pink absolute"></div>
+    <!-- <div id="somethingmask" class="bg-pink"></div> -->
   </div>
 </template>
 <script>
@@ -27,9 +27,9 @@ export default {
       let id = '#somethingintheway'
       gsap.set(id, { text: this.starter })
 
-      let duration = 0.5
-      let easeHide = 'elastic.in(1, 0.3)'
-      let easeShow = 'elastic.out(1, 0.3)'
+      let duration = 1.5
+      let easeHide = 'elastic.in(1, 0.5)'
+      let easeShow = 'elastic.out(1, 0.5)'
 
       let something = document.getElementById('somethingintheway')
 
@@ -37,9 +37,9 @@ export default {
       let width = rect.right - rect.left
       let height = rect.bottom - rect.top
       console.log(height)
-      let mask = document.getElementById('somethingmask')
-      mask.style.width = `${width * 2}px`
-      mask.style.height = `${height}px`
+      // let mask = document.getElementById('somethingmask')
+      // mask.style.width = `${width * 1}px`
+      // mask.style.height = `${height}px`
 
       gsap.registerPlugin(ScrollTrigger)
       let masterTL = gsap.timeline({
