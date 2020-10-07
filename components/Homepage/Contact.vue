@@ -4,7 +4,7 @@
       <div
         class="font-serif md:text-6xl text-4xl text-green self-center pb-12 text-center"
       >
-        So,let's make your next
+        So, let's make your next
       </div>
       <div class="flex flex-row w-full justify-between">
         <div class="flex flex-col w-auto h-auto">
