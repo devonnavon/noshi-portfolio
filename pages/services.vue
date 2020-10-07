@@ -1,16 +1,16 @@
 <template>
-  <div id="#container" class="w-full bg-pink">
-    <div class="xl:container mx-auto">
-      <ServicesLanding />
-      <Services />
-      <DesignDevelop />
-      <WhatYouSee />
-      <Engagements />
-      <Compensation />
-      <Principles />
+  <div id="#container" class="xl:container mx-auto bg-pink md:px-6">
+    <!-- <div class="xl:container mx-auto"> -->
+    <ServicesLanding />
+    <Services />
+    <DesignDevelop />
+    <WhatYouSee />
+    <Engagements />
+    <Compensation />
+    <Principles />
 
-      <Contact />
-    </div>
+    <Contact />
+    <!-- </div> -->
   </div>
 </template>
 

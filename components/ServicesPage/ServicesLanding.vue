@@ -1,6 +1,6 @@
 <template>
-  <section class="bg-pink font-display mt-8">
-    <div class="flex justify-center">
+  <section class="bg-pink font-display">
+    <div class="flex justify-center md:pt-20">
       <svg
         width="792"
         height="758"

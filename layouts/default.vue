@@ -1,6 +1,9 @@
 <template>
   <div id="container" class="bg-pink bg-auto mx-auto h-full w-full">
-    <NavBar id="nav" class="fixed inset-x-0 md:top-0 bottom-0 md:pt-6 pb-1" />
+    <NavBar
+      id="nav"
+      class="fixed w-screen inset-x-0 md:top-0 bottom-0 md:pt-6 pb-1"
+    />
     <Nuxt id="body" class="mx-auto w-full" />
   </div>
 </template>
