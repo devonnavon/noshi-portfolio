@@ -32,8 +32,8 @@ export default {
       let height = rect.bottom - rect.top
       console.log(height)
       let mask = document.getElementById('somethingmask')
-      //   mask.style.width = `${width}px`
-      //   mask.style.height = `${height * 2}px`
+      mask.style.width = `${width}px`
+      mask.style.height = `${height * 2}px`
 
       gsap.registerPlugin(ScrollTrigger)
       let masterTL = gsap.timeline({
@@ -41,24 +41,25 @@ export default {
         repeat: -1,
       })
       let id = '#somethingintheway'
-      let ease = 'elastic.in(1, 0.5)'
 
-      this.servicesList.forEach((word) => {
+      this.servicesList.forEach((word, i) => {
         let tl = gsap.timeline()
-        tl.to(id, {
+        let hide = gsap.to(id, {
           y: height,
           duration,
           delay: 1,
           ease: 'elastic.in(1, 0.5)',
         })
-          .set(id, {
-            text: word,
-          })
-          .to(id, {
-            y: 0,
-            duration,
-            ease: 'elastic.out(1, 0.5)',
-          })
+        let show = gsap.to(id, {
+          y: 0,
+          duration,
+          ease: 'elastic.out(1, 0.5)',
+        })
+        tl.add(hide).set(id, { text: word }).add(show)
+        if (i + 1 === this.servicesList.length) {
+          tl.add(hide).set(id, { text: this.starter }).add(show)
+        }
+
         masterTL.add(tl)
       })
 
