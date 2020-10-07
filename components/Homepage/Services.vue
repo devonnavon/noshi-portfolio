@@ -37,7 +37,7 @@
           <div>We can make your next</div>
           <!-- <div id="switcharoo" class="text-5xl font-semibold"></div> -->
           <div id="homeswitch">
-            <ServicesSwitcher class="text-5xl font-semibold" />
+            <ServicesSwitcher class="text-5xl font-semibold a" />
           </div>
         </div>
       </div>
