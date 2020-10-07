@@ -35,18 +35,19 @@
           class="font-serif text-green text-left text-4xl md:pt-4 md:w-3/5 md:pl-20 w-full md:py-0 py-16"
         >
           <div>We can make your next</div>
-          <!-- <div id="switcharoo" class="text-5xl font-semibold"></div> -->
           <div id="homeswitch">
             <ServicesSwitcher class="text-5xl font-semibold" />
           </div>
         </div>
       </div>
-      <ServicesScroller
-        trigger="#whatwedo"
-        class="md:flex hidden pb-24 px-6 md:px-0"
-      />
       <ServicesCompact
-        class="md:hidden block font-display text-2xl text-justify flex-col pt-12 pb-16 text-green"
+        v-if="isMobile()"
+        class="block font-display text-2xl text-justify flex-col pt-12 pb-16 text-green"
+      />
+      <ServicesScroller
+        v-else
+        trigger="#whatwedo"
+        class="flex pb-24 px-6 md:px-0"
       />
     </div>
   </section>
@@ -55,11 +56,19 @@
 <script>
 import ServicesSwitcher from '~/components/ServicesSwitcher'
 import ServicesScroller from '~/components/ServicesScroller'
+import ServicesCompact from '~/components/ServicesCompact'
 
 export default {
   components: {
     ServicesSwitcher,
     ServicesScroller,
+    ServicesCompact,
+  },
+  methods: {
+    isMobile() {
+      console.log(this.window)
+      return false
+    },
   },
 }
 </script>
