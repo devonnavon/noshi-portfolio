@@ -6,19 +6,21 @@
           id="nav-text"
           class="absolute flex text-center items-center justify-around"
         >
-          <div :class="selectedClass('index')">
-            <NuxtLink to="/">home</NuxtLink>
-          </div>
-          <div :class="selectedClass('work')">
-            <NuxtLink to="work">work</NuxtLink>
-          </div>
-          <div style="width: 70px"></div>
-          <div :class="selectedClass('services')">
-            <NuxtLink to="services">services</NuxtLink>
-          </div>
-          <div :class="selectedClass('contact')">
-            <NuxtLink to="contact">contact</NuxtLink>
-          </div>
+          <NuxtLink to="/"
+            ><div :class="selectedClass('index')">home</div></NuxtLink
+          >
+          <NuxtLink to="work">
+            <div :class="selectedClass('work')">work</div></NuxtLink
+          >
+          <NuxtLink to="/"
+            ><div style="width: 65px; height: 65px"></div
+          ></NuxtLink>
+          <NuxtLink to="services"
+            ><div :class="selectedClass('services')">services</div></NuxtLink
+          >
+          <NuxtLink to="contact"
+            ><div :class="selectedClass('contact')">contact</div></NuxtLink
+          >
         </div>
         <svg
           width="456"
