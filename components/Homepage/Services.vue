@@ -22,12 +22,12 @@
             />
           </svg>
           <div
-            class="text-green ml-2 pr-3 md:-mt-16 font-display text-sm text-justify w-full"
+            class="text-green ml-2 pr-3 md:-mt-16 font-display text-md text-justify w-full"
           >
             From digital strategy, interactive design and full-stack
             development, our complete range of expertise makes us key players in
             implementing digital solutions for small to large-scale web
-            projects. <br />
+            projects. <br /><br />
             <span class="underline">Learn more here.</span>
           </div>
         </div>
@@ -41,7 +41,13 @@
           </div>
         </div>
       </div>
-      <ServicesScroller trigger="#whatwedo" class="pb-24 px-6 md:px-0" />
+      <ServicesScroller
+        trigger="#whatwedo"
+        class="md:flex hidden pb-24 px-6 md:px-0"
+      />
+      <ServicesCompact
+        class="md:hidden block font-display text-2xl text-justify flex-col pt-12 pb-16 text-green"
+      />
     </div>
   </section>
 </template>
