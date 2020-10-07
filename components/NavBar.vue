@@ -107,7 +107,7 @@ export default {
   margin-top: auto;
   margin-bottom: auto;
   div {
-    width: 70px;
+    width: 75px;
     // border: 1px black solid;
   }
 }
