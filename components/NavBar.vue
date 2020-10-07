@@ -1,10 +1,13 @@
 <template>
-  <div class="font-display text-green z-50 text-l">
-    <nav id="thenav" class="flex justify-center">
-      <div class="relative border-solid text-center">
+  <div>
+    <nav
+      id="thenav"
+      class="flex justify-center font-display text-green z-50 text-l border-dotted border-2"
+    >
+      <div class="relative border-2 border-solid border-green md:px-0 px-4">
         <div
           id="nav-text"
-          class="absolute flex text-center items-center justify-around w-full"
+          class="absolute flex text-center items-center justify-around border-2 w-full"
         >
           <NuxtLink to="/"
             ><div :class="selectedClass('index')">home</div></NuxtLink
@@ -28,7 +31,7 @@
           viewBox="0 0 456 68"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="md:w-auto"
+          class=""
         >
           <ellipse cx="228" cy="34.5" rx="29" ry="28.5" fill="#FF6B00" />
 
@@ -109,15 +112,15 @@ export default {
 </script>
 <style lang="scss">
 #nav-text {
-  width: 456px;
-  height: 42px;
+  // width: 456px;
+  // height: 42px;
   top: 0;
   bottom: 0;
   margin-top: auto;
   margin-bottom: auto;
   div {
     width: 75px;
-    // border: 1px black solid;
+    border: 1px black solid;
   }
 }
 </style>
