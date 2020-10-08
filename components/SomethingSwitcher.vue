@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <div id="somethingintheway" class="overflow-hidden"></div>
-    <!-- <div id="somethingmask" class="bg-pink"></div> -->
-  </div>
+  <div id="somethingintheway"></div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -34,12 +31,7 @@ export default {
       let something = document.getElementById('somethingintheway')
 
       let rect = something.getBoundingClientRect()
-      let width = rect.right - rect.left
       let height = rect.bottom - rect.top
-      console.log(height)
-      // let mask = document.getElementById('somethingmask')
-      // mask.style.width = `${width * 1}px`
-      // mask.style.height = `${height}px`
 
       gsap.registerPlugin(ScrollTrigger)
       let masterTL = gsap.timeline({
@@ -90,7 +82,7 @@ export default {
 </script>
 
 <style scoped>
-/* #somethingmask {
-  z-index: 1;
-} */
+#somethingintheway {
+  overflow: hidden;
+}
 </style>
