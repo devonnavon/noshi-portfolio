@@ -120,8 +120,9 @@ export default {
         scrollTrigger: {
           trigger: '#whatusee',
           start: 'top center',
-          end: '+=400',
+          end: '+=700',
           scrub: true,
+          // markers: true,
         },
       })
       tl.to('#blinkingeyes', {

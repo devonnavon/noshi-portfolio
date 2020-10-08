@@ -10,7 +10,7 @@
       </div>
     </div>
     <div
-      id="product"
+      id="productwecanbuild"
       class="md:text-hugexl text-4xl font-serif md:pr-20 text-right"
     >
       <ServicesSwitcher />
@@ -39,7 +39,7 @@ export default {}
 #yournext {
   float: left;
 }
-#product {
+#productwecanbuild {
   clear: left;
 }
 

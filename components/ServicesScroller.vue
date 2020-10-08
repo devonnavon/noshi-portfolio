@@ -5,7 +5,7 @@
       class="flex flex-col justify-center text-green text-5xl w-2/5 md:pl-16 pb-16 font-semibold"
     >
       <div
-        id="design"
+        id="designscroll"
         class="py-3 pt-16 ml-1 font-minibold cursor-pointer"
         @click="
           clickable && 'design' != currentService
@@ -16,7 +16,7 @@
         design
       </div>
       <div
-        id="develop"
+        id="developscroll"
         class="py-3 ml-1 font-minisemi cursor-pointer"
         @click="
           clickable && 'develop' != currentService
@@ -27,7 +27,7 @@
         develop
       </div>
       <div
-        id="etc"
+        id="etcscroll"
         class="py-3 ml-1 font-minimedium cursor-pointer"
         @click="
           clickable && 'etc' != currentService ? serviceClick('etc') : null
@@ -86,7 +86,7 @@ export default {
         //DESIGN LABEL
         .from(
           //design big text comes in
-          '#design',
+          '#designscroll',
           {
             x: -400,
           },
@@ -105,7 +105,7 @@ export default {
         //DEVELOP LABEL
         .from(
           //develop big text comes in
-          '#develop',
+          '#developscroll',
           {
             x: -400,
           },
@@ -132,7 +132,7 @@ export default {
         .add('develop')
         //ETC LLABEL
         .from(
-          '#etc',
+          '#etcscroll',
           {
             x: -400,
           },
