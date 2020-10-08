@@ -115,11 +115,22 @@ export default {
   },
   methods: {
     animate() {
-      gsap.to('#blinkingeyes', {
-        repeat: -1,
+      gsap.registerPlugin(ScrollTrigger)
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#whatusee',
+          start: 'top center',
+          end: '+=400',
+          scrub: true,
+        },
+      })
+      tl.to('#blinkingeyes', {
         x: -1445,
-        duration: 5,
         ease: 'steps(5)',
+      })
+      tl.to('#blinkingeyes', {
+        x: 0,
+        ease: 'steps(1)',
       })
     },
   },
