@@ -62,7 +62,7 @@
       </div>
     </nav>
   </div> -->
-  <nav id="thenav" class="text-center">
+  <nav id="thenav" class="">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="456"
@@ -96,58 +96,60 @@
             stroke-width="2"
           />
         </g>
-        <NuxtLink to="services" :class="selectedClass('services')">
-          <text
-            id="services"
-            fill="#006838"
-            xml:space="preserve"
-            style="white-space: pre"
-            font-family="Karrik"
-            font-size="18"
-            letter-spacing="0em"
-          >
-            <tspan x="110.129" y="41.3">services</tspan>
-          </text>
-        </NuxtLink>
-        <NuxtLink to="contact" :class="selectedClass('contact')">
-          <text
-            id="contact"
-            fill="#006838"
-            xml:space="preserve"
-            style="white-space: pre"
-            font-family="Karrik"
-            font-size="18"
-            letter-spacing="0em"
-          >
-            <tspan x="359.135" y="41.3">contact</tspan>
-          </text>
-        </NuxtLink>
-        <NuxtLink to="work" :class="selectedClass('work')">
-          <text
-            id="work"
-            fill="#006838"
-            xml:space="preserve"
-            style="white-space: pre"
-            font-family="Karrik"
-            font-size="18"
-            letter-spacing="0em"
-          >
-            <tspan x="292.304" y="41.3">work</tspan>
-          </text>
-        </NuxtLink>
-        <NuxtLink to="/" :class="selectedClass('index')">
-          <text
-            id="home"
-            fill="#006838"
-            xml:space="preserve"
-            style="white-space: pre"
-            font-family="Karrik"
-            font-size="18"
-            letter-spacing="0em"
-          >
-            <tspan x="39.0713" y="41.3">home</tspan>
-          </text>
-        </NuxtLink>
+        <g id="nav-text">
+          <NuxtLink to="services" :class="selectedClass('services')">
+            <text
+              id="services"
+              fill="#006838"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Karrik"
+              font-size="18"
+              letter-spacing="0em"
+            >
+              <tspan x="110.129" y="41.3">services</tspan>
+            </text>
+          </NuxtLink>
+          <NuxtLink to="contact" :class="selectedClass('contact')">
+            <text
+              id="contact"
+              fill="#006838"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Karrik"
+              font-size="18"
+              letter-spacing="0em"
+            >
+              <tspan x="359.135" y="41.3">contact</tspan>
+            </text>
+          </NuxtLink>
+          <NuxtLink to="work" :class="selectedClass('work')">
+            <text
+              id="work"
+              fill="#006838"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Karrik"
+              font-size="18"
+              letter-spacing="0em"
+            >
+              <tspan x="292.304" y="41.3">work</tspan>
+            </text>
+          </NuxtLink>
+          <NuxtLink to="/" :class="selectedClass('index')">
+            <text
+              id="home"
+              fill="#006838"
+              xml:space="preserve"
+              style="white-space: pre"
+              font-family="Karrik"
+              font-size="18"
+              letter-spacing="0em"
+            >
+              <tspan x="39.0713" y="41.3">home</tspan>
+            </text>
+          </NuxtLink>
+        </g>
       </g>
     </svg>
   </nav>
