@@ -2,15 +2,7 @@
   <div id="container" class="bg-pink bg-auto mx-auto h-full w-full">
     <NavBar
       id="nav"
-<<<<<<< HEAD
-<<<<<<< HEAD
       class="fixed inset-x-0 md:top-0 bottom-0 md:pt-6 pb-1 h-24 z-40"
-=======
-      class="fixed w-screen inset-x-0 md:top-0 bottom-0 md:pt-6 pb-1 z-50"
->>>>>>> 8088fdd3a0aee84b149c77a21840e63811b4eea1
-=======
-      class="fixed w-screen inset-x-0 md:top-0 bottom-0 md:pt-6 pb-1 z-50"
->>>>>>> 8088fdd3a0aee84b149c77a21840e63811b4eea1
     />
     <Nuxt id="body" class="mx-auto w-full" />
   </div>

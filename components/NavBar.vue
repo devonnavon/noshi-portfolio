@@ -1,6 +1,4 @@
 <template>
-<<<<<<< HEAD
-<<<<<<< HEAD
   <!-- <div class="font-display text-green z-50 text-l">
     
     <nav id="thenav" class="flex justify-center">
