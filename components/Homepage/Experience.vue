@@ -27,7 +27,7 @@
         <div
           class="md:w-1/4 w-1/2 transition duration-500 ease-in-out md:opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
         >
-          <img src="~/static/img/nfl.png" class="w-1/4 w-1/2" alt="" />
+          <img src="~/static/img/nfl.png" class="w-1/2" alt="" />
         </div>
         <div
           class="md:w-1/4 w-1/2 transition duration-500 ease-in-out md:opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"
