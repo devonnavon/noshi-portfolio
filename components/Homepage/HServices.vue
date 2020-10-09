@@ -28,7 +28,9 @@
             development, our complete range of expertise makes us key players in
             implementing digital solutions for small to large-scale web
             projects. <br /><br />
-            <span class="underline">Learn more here.</span>
+            <NuxtLink to="services"
+              ><span class="underline">Learn more here.</span></NuxtLink
+            >
           </div>
         </div>
         <div

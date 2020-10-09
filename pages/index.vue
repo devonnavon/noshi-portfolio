@@ -16,11 +16,11 @@
 
 <script>
 import Growing from '~/components/Growing'
-import Services from '~/components/Homepage/Services'
+import Services from '~/components/Homepage/HServices'
 import Divider from '~/components/Homepage/Divider'
 import Summary from '~/components/Homepage/Summary'
 import Experience from '~/components/Homepage/Experience'
-import Contact from '~/components/Homepage/Contact'
+import Contact from '~/components/Homepage/HContact'
 
 export default {
   components: { Growing, Services, Divider, Summary, Experience, Contact },
