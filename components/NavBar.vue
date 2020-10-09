@@ -188,6 +188,8 @@ import { mapState } from 'vuex'
 
 export default {
   mounted() {
+    console.log(this.page)
+    this.runWordTween(this.page)
     window.addEventListener('scroll', this.onScroll)
   },
   beforeDestroy() {
@@ -209,15 +211,29 @@ export default {
       lastScrollPosition: 0,
     }
   },
+  watch: {
+    page(newVal, oldVal) {
+      console.log('page changed!!!!!!!!! from ', oldVal, ' to ', newVal)
+      if (oldVal) this.stopWordTween(oldVal)
+      this.runWordTween(newVal)
+    },
+  },
   methods: {
+    gradientId(pageName) {
+      return `#${pageName}-gradient stop`
+    },
+    textId(pageName) {
+      return `#nav-${pageName}`
+    },
     runWordTween(pageName) {
-      let tl = gsap.timeline()
+      let tl = gsap.timeline({ id: pageName })
 
-      tl.to(`#${this.pageName}-gradient stop`, {
+      tl.to(this.gradientId(pageName), {
         attr: { offset: '0%' },
+
         ease: 'none',
       })
-      tl.to(`#nav-${this.pageName}`, {
+      tl.to(this.textId(pageName), {
         yoyo: true,
         repeat: -1,
         duration: 0.5,
@@ -227,7 +243,12 @@ export default {
         ease: Linear.easeNone,
       })
     },
-    stopWordTween(pageName) {},
+    stopWordTween(pageName) {
+      if (gsap.isTweening(this.textId(pageName))) {
+        let timeline = gsap.getById(pageName)
+        timeline.reverse(1)
+      }
+    },
     onScroll() {
       if (window.innerWidth <= 768) {
         if (this.showNavbar) return
