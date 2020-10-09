@@ -236,7 +236,6 @@ export default {
   },
   watch: {
     page(newVal, oldVal) {
-      console.log('page changed!!!!!!!!! from ', oldVal, ' to ', newVal)
       if (oldVal) this.stopWordTween(oldVal)
       this.runWordTween(newVal)
     },
