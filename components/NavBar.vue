@@ -38,16 +38,23 @@
           fill="#006838"
         />
         <g id="nav-text">
+          <defs>
+            <linearGradient id="theGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="100%" stop-color="#006838" />
+              <stop offset="100%" stop-color="#FF6B00" />
+            </linearGradient>
+          </defs>
           <NuxtLink to="services" :class="selectedClass('services')">
             <text
               id="nav-services"
-              fill="#006838"
+              fill="url(#theGradient)"
               xml:space="preserve"
               style="white-space: pre"
               font-family="Minipax"
               font-size="18"
               font-weight="bold"
               letter-spacing="0em"
+              @mouseover="fillText"
             >
               <tspan x="107.158" y="44.5">services</tspan>
             </text>
@@ -105,7 +112,6 @@ import { mapState } from 'vuex'
 export default {
   mounted() {
     window.addEventListener('scroll', this.onScroll)
-    // this.hoverState()
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.onScroll)
@@ -127,15 +133,27 @@ export default {
     }
   },
   methods: {
-    hoverState() {
-      // var tl = new TimelineLite({ paused: true })
-      // tl.to('#nav-services', 3, { fill: 'FF6B00' }, 0)
-      // var hoverArea = '#nav-services'
-      // hoverArea.on('mouseenter', function () {
-      //   tl.play()
-      // })
-      // hoverArea.on('mouseleave', function () {
-      //   tl.reverse()
+    fillText() {
+      console.log('yo')
+      gsap.to('#theGradient stop', 0.7, {
+        attr: { offset: '0%' },
+        ease: 'none',
+      })
+      gsap.to('#nav-services', 1.0, {
+        delay: 0.7,
+        yoyo: true,
+        repeat: -1,
+        duration: 5.0,
+        rotation: '-=3',
+        transformOrigin: 'bottom bottom',
+        ease: Linear.easeNone,
+      })
+      // gsap.to('#theGradient stop', 1.0, {
+      //   attr: { offset: '+=5%' },
+      //   ease: 'back.out(1.7)',
+      //   yoyo: true,
+      //   repeat: -1,
+      //   delay: 2.5,
       // })
     },
     selectedClass(page) {
@@ -172,16 +190,4 @@ export default {
 }
 </script>
 <style lang="scss">
-#nav-text {
-  // width: 456px;
-  // height: 42px;
-  top: 0;
-  bottom: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-  div {
-    width: 75px;
-    border: 1px black solid;
-  }
-}
 </style>
