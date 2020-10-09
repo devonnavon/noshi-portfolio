@@ -81,9 +81,13 @@
             </linearGradient>
           </defs>
           <NuxtLink to="services">
-            <g id="service-group" class="cursor-pointer">
-              <!-- @mouseover="mousedText('services')"
-              @mouseleave="unMouseText('services')" -->
+            <g
+              id="service-group"
+              class="cursor-pointer"
+              @mouseover="hoverText('services')"
+              @mouseleave="removeHover('services')"
+              @click="runWordTween('services')"
+            >
               <rect
                 id="services-rect"
                 x="105"
@@ -107,7 +111,13 @@
             </g>
           </NuxtLink>
           <NuxtLink to="contact">
-            <g id="contact-group" class="cursor-pointer">
+            <g
+              id="contact-group"
+              class="cursor-pointer"
+              @mouseover="hoverText('contact')"
+              @mouseleave="removeHover('contact')"
+              @click="runWordTween('contact')"
+            >
               <rect
                 id="contact-rect"
                 x="391"
@@ -131,7 +141,14 @@
             </g>
           </NuxtLink>
           <NuxtLink to="work">
-            <g id="work-group" class="cursor-pointer">
+            <g
+              id="work-group"
+              class="cursor-pointer"
+              @mouseover="hoverText('work')"
+              @mouseleave="removeHover('work')"
+              @click="runWordTween('work')"
+            >
+              >
               <rect
                 id="work-rect"
                 x="303"
@@ -155,7 +172,13 @@
             </g>
           </NuxtLink>
           <NuxtLink to="/">
-            <g id="index-group" class="cursor-pointer">
+            <g
+              id="index-group"
+              class="cursor-pointer"
+              @mouseover="hoverText('index')"
+              @mouseleave="removeHover('index')"
+              @click="runWordTween('index')"
+            >
               <rect
                 id="index-rect"
                 x="17"
@@ -188,7 +211,7 @@ import { mapState } from 'vuex'
 
 export default {
   mounted() {
-    console.log(this.page)
+    //run tween initially, will run one changed with watch after
     this.runWordTween(this.page)
     window.addEventListener('scroll', this.onScroll)
   },
@@ -225,12 +248,25 @@ export default {
     textId(pageName) {
       return `#nav-${pageName}`
     },
+    hoverText(pageName) {
+      this.runWordTween(pageName)
+    },
+    removeHover(pageName) {
+      if (pageName === this.page) return
+      this.stopWordTween(pageName)
+    },
     runWordTween(pageName) {
+      if (
+        gsap.isTweening(this.textId(pageName)) ||
+        gsap.isTweening(this.gradientId(pageName))
+      )
+        return
+
       let tl = gsap.timeline({ id: pageName })
 
       tl.to(this.gradientId(pageName), {
         attr: { offset: '0%' },
-
+        duration: 0.5,
         ease: 'none',
       })
       tl.to(this.textId(pageName), {
@@ -244,9 +280,12 @@ export default {
       })
     },
     stopWordTween(pageName) {
-      if (gsap.isTweening(this.textId(pageName))) {
+      if (
+        gsap.isTweening(this.textId(pageName)) ||
+        gsap.isTweening(this.gradientId(pageName))
+      ) {
         let timeline = gsap.getById(pageName)
-        timeline.reverse(1)
+        timeline.reverse(0.8)
       }
     },
     onScroll() {
