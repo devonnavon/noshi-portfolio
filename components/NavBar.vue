@@ -39,7 +39,19 @@
         />
         <g id="nav-text">
           <defs>
-            <linearGradient id="theGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <linearGradient id="servicesGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="100%" stop-color="#006838" />
+              <stop offset="100%" stop-color="#FF6B00" />
+            </linearGradient>
+            <linearGradient id="contactGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="100%" stop-color="#006838" />
+              <stop offset="100%" stop-color="#FF6B00" />
+            </linearGradient>
+            <linearGradient id="workGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="100%" stop-color="#006838" />
+              <stop offset="100%" stop-color="#FF6B00" />
+            </linearGradient>
+            <linearGradient id="indexGradient" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="100%" stop-color="#006838" />
               <stop offset="100%" stop-color="#FF6B00" />
             </linearGradient>
@@ -47,14 +59,15 @@
           <NuxtLink to="services" :class="selectedClass('services')">
             <text
               id="nav-services"
-              fill="url(#theGradient)"
+              fill="url(#servicesGradient)"
               xml:space="preserve"
               style="white-space: pre"
               font-family="Minipax"
               font-size="18"
-              font-weight="bold"
+                font-weight="bold"
               letter-spacing="0em"
-              @mouseover="fillText"
+              @mouseover="fillText('#nav-services', '#servicesGradient')"
+              @mouseleave="unfillText()"
             >
               <tspan x="107.158" y="44.5">services</tspan>
             </text>
@@ -62,13 +75,15 @@
           <NuxtLink to="contact" :class="selectedClass('contact')">
             <text
               id="nav-contact"
-              fill="#006838"
+              fill="url(#contactGradient)"
               xml:space="preserve"
               style="white-space: pre"
               font-family="Minipax"
               font-size="18"
               font-weight="bold"
               letter-spacing="0em"
+              @mouseover="fillText('#nav-contact', '#contactGradient')"
+              @mouseleave="unfillText()"
             >
               <tspan x="395.172" y="44.5">contact</tspan>
             </text>
@@ -76,13 +91,15 @@
           <NuxtLink to="work" :class="selectedClass('work')">
             <text
               id="nav-work"
-              fill="#006838"
+              fill="url(#workGradient)"
               xml:space="preserve"
               style="white-space: pre"
               font-family="Minipax"
               font-size="18"
               font-weight="bold"
               letter-spacing="0em"
+              @mouseover="fillText('#nav-work', '#workGradient')"
+              @mouseleave="unfillText()"
             >
               <tspan x="306.333" y="44.5">work</tspan>
             </text>
@@ -90,13 +107,15 @@
           <NuxtLink to="/" :class="selectedClass('index')">
             <text
               id="nav-home"
-              fill="#006838"
+              fill="url(#indexGradient)"
               xml:space="preserve"
               style="white-space: pre"
               font-family="Minipax"
               font-size="18"
               font-weight="bold"
               letter-spacing="0em"
+              @mouseover="fillText('#nav-home', '#indexGradient')"
+              @mouseleave="unfillText()"
             >
               <tspan x="23.7148" y="45.5">home</tspan>
             </text>
@@ -118,43 +137,70 @@ export default {
   },
   computed: {
     ...mapState(['page']),
-    tween() {
+    navTween() {
       return gsap.to('nav', {
         y: -100,
         ease: 'elastic.in(1, 0.5)',
         duration: 1.4,
       })
     },
+    hoverTween(){
+      let tl = gsap.timeline()
+      
+      tl.to(`${this.gradient} stop`, {
+        attr: { offset: '0%' },
+        ease: 'none',
+      })
+      tl.to(this.hoveredText, {
+        // delay: 0.7,
+        yoyo: true,
+        repeat: -1,
+        duration: .5,
+        y: 3,
+        rotation: -6,
+        transformOrigin: 'middle middle',
+        ease: Linear.easeNone,
+      })
+      return tl
+    }
   },
   data() {
     return {
       showNavbar: true,
       lastScrollPosition: 0,
+      hoveredText: null,
+      gradient:null
     }
   },
   methods: {
-    fillText() {
-      console.log('yo')
-      gsap.to('#theGradient stop', 0.7, {
-        attr: { offset: '0%' },
-        ease: 'none',
-      })
-      gsap.to('#nav-services', 1.0, {
-        delay: 0.7,
-        yoyo: true,
-        repeat: -1,
-        duration: 5.0,
-        rotation: '-=3',
-        transformOrigin: 'bottom bottom',
+
+    setHoveredText(id, gradientId){
+      this.hoveredText=id
+      this.gradient = gradientId
+    },
+    fillText(id, gradientId){
+      this.setHoveredText(id, gradientId)
+      this.hoverTween.restart()
+    },
+    unfillText(){
+      this.hoverTween.pause()
+      let tl = gsap.timeline()
+      
+      tl.to(this.hoveredText, {
+        // delay: 0.7,
+        duration: .5,
+        y: 0,
+        rotation: 0,
+        transformOrigin: 'middle middle',
         ease: Linear.easeNone,
       })
-      // gsap.to('#theGradient stop', 1.0, {
-      //   attr: { offset: '+=5%' },
-      //   ease: 'back.out(1.7)',
-      //   yoyo: true,
-      //   repeat: -1,
-      //   delay: 2.5,
-      // })
+      
+      tl.to(`${this.gradient} stop`, {
+        attr: { offset: '100%' },
+        ease: 'none',
+      })
+      // this.hoverTween.time(0)
+
     },
     selectedClass(page) {
       if (page === this.page) return 'bg-green px-2 text-pink rounded-full'
@@ -164,7 +210,7 @@ export default {
         if (this.showNavbar) return
         else {
           this.showNavbar = true
-          this.tween.reverse()
+          this.navTween.reverse()
         }
       }
       const currentScrollPosition =
@@ -181,9 +227,9 @@ export default {
       this.lastScrollPosition = currentScrollPosition
 
       if (!this.showNavbar) {
-        this.tween.play()
+        this.navTween.play()
       } else {
-        this.tween.reverse()
+        this.navTween.reverse()
       }
     },
   },
