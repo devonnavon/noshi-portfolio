@@ -37,88 +37,164 @@
           d="M241.016 21.2468C241.946 20.6858 242.878 20.1238 243.671 19.3629C244.719 20.3669 245.956 20.5772 247.381 20.8195L247.608 20.858C250.73 21.4467 251.861 23.6655 253.037 26.3823C254.576 29.9595 257.879 31.3632 261.68 31.4991C262.042 31.4991 262.358 31.1368 262.223 30.7746C261.535 29.0017 261.543 27.1669 261.551 25.3244C261.556 24.0141 261.562 22.7 261.318 21.4014C260.852 19.0352 259.677 17.2084 258.444 15.2916C258.12 14.7874 257.792 14.277 257.472 13.7489C256.521 12.2094 256.34 10.8057 256.386 8.99442C256.389 8.89696 256.393 8.79949 256.398 8.70205L256.398 8.70132L256.398 8.70058L256.398 8.69984L256.398 8.6991C256.443 7.62053 256.487 6.54515 256.114 5.50778C255.3 3.37958 253.309 3.01733 251.318 2.70036C251.176 2.67846 251.033 2.65921 250.892 2.64004C250.448 2.57995 250.01 2.52072 249.599 2.38339C248.844 2.16312 248.395 1.76791 247.903 1.33453C247.687 1.14428 247.463 0.946669 247.2 0.753277C246.522 0.255186 246.024 -0.107062 245.119 0.0287806C243.128 0.391029 240.64 2.8362 239.78 4.55688C238.83 6.36812 238.875 8.36049 240.142 9.9906C240.504 10.448 240.954 10.8412 241.407 11.2378L241.407 11.2378C242.032 11.7834 242.664 12.3355 243.083 13.0697C243.869 14.4252 244.276 16.9629 243.162 18.2773C243.12 18.3005 243.078 18.3304 243.037 18.3677C242.21 19.1956 241.222 19.8011 240.229 20.41C239.32 20.9668 238.407 21.5266 237.608 22.2619C235.979 23.7109 234.712 25.6579 233.852 27.6503C231.771 32.2237 231.183 37.2499 231.816 42.2308C232.16 44.8531 232.86 47.3835 233.559 49.9093C234.333 52.7045 235.105 55.4941 235.391 58.3961C235.707 61.5205 235.888 64.8713 235.255 67.9504C234.884 69.7467 234.263 71.4712 233.639 73.2029C233.272 74.2214 232.904 75.2425 232.585 76.2821C232.404 76.916 233.309 77.2783 233.626 76.7349C233.652 76.6832 233.674 76.6347 233.694 76.588L233.716 76.5991C234.038 75.5374 234.416 74.4916 234.793 73.4484C235.316 72 235.837 70.5565 236.205 69.0824C236.838 66.5467 236.884 63.9657 236.748 61.3847C236.547 57.4249 235.625 53.7884 234.682 50.0697C234.353 48.7706 234.021 47.4614 233.716 46.125C232.449 40.6912 232.314 35.1217 234.214 29.8238C235.119 27.3333 236.477 24.8882 238.422 23.0769C239.198 22.3441 240.106 21.7959 241.016 21.2468L241.016 21.2468Z"
           fill="#006838"
         />
-        <g id="nav-text">
+        <g xmlns="http://www.w3.org/2000/svg" id="nav-text">
           <defs>
-            <linearGradient id="servicesGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <linearGradient
+              id="services-gradient"
+              x1="0%"
+              y1="0%"
+              x2="0%"
+              y2="100%"
+            >
               <stop offset="100%" stop-color="#006838" />
               <stop offset="100%" stop-color="#FF6B00" />
             </linearGradient>
-            <linearGradient id="contactGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <linearGradient
+              id="contact-gradient"
+              x1="0%"
+              y1="0%"
+              x2="0%"
+              y2="100%"
+            >
               <stop offset="100%" stop-color="#006838" />
               <stop offset="100%" stop-color="#FF6B00" />
             </linearGradient>
-            <linearGradient id="workGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <linearGradient
+              id="work-gradient"
+              x1="0%"
+              y1="0%"
+              x2="0%"
+              y2="100%"
+            >
               <stop offset="100%" stop-color="#006838" />
               <stop offset="100%" stop-color="#FF6B00" />
             </linearGradient>
-            <linearGradient id="indexGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <linearGradient
+              id="index-gradient"
+              x1="0%"
+              y1="0%"
+              x2="0%"
+              y2="100%"
+            >
               <stop offset="100%" stop-color="#006838" />
               <stop offset="100%" stop-color="#FF6B00" />
             </linearGradient>
           </defs>
           <NuxtLink to="services" :class="selectedClass('services')">
-            <text
-              id="nav-services"
-              fill="url(#servicesGradient)"
-              xml:space="preserve"
-              style="white-space: pre"
-              font-family="Minipax"
-              font-size="18"
-                font-weight="bold"
-              letter-spacing="0em"
-              @mouseover="fillText('#nav-services', '#servicesGradient')"
+            <g
+              id="service-group"
+              class="cursor-pointer"
+              @mouseover="fillText('services')"
               @mouseleave="unfillText()"
             >
-              <tspan x="107.158" y="44.5">services</tspan>
-            </text>
+              <rect
+                id="services-rect"
+                x="105"
+                y="20"
+                width="81"
+                height="40"
+                fill="#D8CBCF"
+              />
+              <text
+                id="nav-services"
+                fill="url(#services-gradient)"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Minipax"
+                font-size="18"
+                font-weight="bold"
+                letter-spacing="0em"
+              >
+                <tspan x="106.423" y="44.5">services</tspan>
+              </text>
+            </g>
           </NuxtLink>
           <NuxtLink to="contact" :class="selectedClass('contact')">
-            <text
-              id="nav-contact"
-              fill="url(#contactGradient)"
-              xml:space="preserve"
-              style="white-space: pre"
-              font-family="Minipax"
-              font-size="18"
-              font-weight="bold"
-              letter-spacing="0em"
-              @mouseover="fillText('#nav-contact', '#contactGradient')"
+            <g
+              id="contact-group"
+              @mouseover="fillText('contact')"
               @mouseleave="unfillText()"
+              class="cursor-pointer"
             >
-              <tspan x="395.172" y="44.5">contact</tspan>
-            </text>
+              <rect
+                id="contact-rect"
+                x="391"
+                y="20"
+                width="82"
+                height="40"
+                fill="#D8CBCF"
+              />
+              <text
+                id="nav-contact"
+                fill="url(#contact-gradient)"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Minipax"
+                font-size="18"
+                font-weight="bold"
+                letter-spacing="0em"
+              >
+                <tspan x="394.437" y="44.5">contact</tspan>
+              </text>
+            </g>
           </NuxtLink>
           <NuxtLink to="work" :class="selectedClass('work')">
-            <text
-              id="nav-work"
-              fill="url(#workGradient)"
-              xml:space="preserve"
-              style="white-space: pre"
-              font-family="Minipax"
-              font-size="18"
-              font-weight="bold"
-              letter-spacing="0em"
-              @mouseover="fillText('#nav-work', '#workGradient')"
+            <g
+              id="work-group"
+              @mouseover="fillText('work')"
               @mouseleave="unfillText()"
+              class="cursor-pointer"
             >
-              <tspan x="306.333" y="44.5">work</tspan>
-            </text>
+              <rect
+                id="work-rect"
+                x="303"
+                y="20"
+                width="60"
+                height="40"
+                fill="#D8CBCF"
+              />
+              <text
+                id="nav-work"
+                fill="url(#work-gradient)"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Minipax"
+                font-size="18"
+                font-weight="bold"
+                letter-spacing="0em"
+              >
+                <tspan x="305.598" y="44.5">work</tspan>
+              </text>
+            </g>
           </NuxtLink>
           <NuxtLink to="/" :class="selectedClass('index')">
-            <text
-              id="nav-home"
-              fill="url(#indexGradient)"
-              xml:space="preserve"
-              style="white-space: pre"
-              font-family="Minipax"
-              font-size="18"
-              font-weight="bold"
-              letter-spacing="0em"
-              @mouseover="fillText('#nav-home', '#indexGradient')"
+            <g
+              id="index-group"
+              @mouseover="fillText('index')"
               @mouseleave="unfillText()"
+              class="cursor-pointer"
             >
-              <tspan x="23.7148" y="45.5">home</tspan>
-            </text>
+              <rect
+                id="index-rect"
+                x="17"
+                y="20"
+                width="70"
+                height="40"
+                fill="#D8CBCF"
+              />
+              <text
+                id="nav-index"
+                fill="url(#index-gradient)"
+                xml:space="preserve"
+                style="white-space: pre"
+                font-family="Minipax"
+                font-size="18"
+                font-weight="bold"
+                letter-spacing="0em"
+              >
+                <tspan x="22.9795" y="45.5">home</tspan>
+              </text>
+            </g>
           </NuxtLink>
         </g>
       </g>
@@ -144,66 +220,80 @@ export default {
         duration: 1.4,
       })
     },
-    hoverTween(){
+    hoverTween() {
       let tl = gsap.timeline()
-      
-      tl.to(`${this.gradient} stop`, {
+
+      tl.to(`#${this.hoveredPage}-gradient stop`, {
         attr: { offset: '0%' },
         ease: 'none',
       })
-      tl.to(this.hoveredText, {
-        // delay: 0.7,
+      tl.to(`#nav-${this.hoveredPage}`, {
         yoyo: true,
         repeat: -1,
-        duration: .5,
+        duration: 0.5,
         y: 3,
         rotation: -6,
         transformOrigin: 'middle middle',
         ease: Linear.easeNone,
       })
       return tl
-    }
+    },
+    selectedTween() {
+      let tl = gsap.timeline()
+
+      tl.to(`#${this.page}-gradient stop`, {
+        attr: { offset: '0%' },
+        ease: 'none',
+      })
+      tl.to(`#nav-${this.page}`, {
+        yoyo: true,
+        repeat: -1,
+        duration: 0.5,
+        y: 3,
+        rotation: -6,
+        transformOrigin: 'middle middle',
+        ease: Linear.easeNone,
+      })
+      return tl
+    },
   },
   data() {
     return {
       showNavbar: true,
       lastScrollPosition: 0,
-      hoveredText: null,
-      gradient:null
+      hoveredPage: null,
     }
   },
   methods: {
-
-    setHoveredText(id, gradientId){
-      this.hoveredText=id
-      this.gradient = gradientId
+    setHoveredText(page) {
+      this.hoveredPage = page
     },
-    fillText(id, gradientId){
-      this.setHoveredText(id, gradientId)
+    fillText(page) {
+      this.setHoveredText(page)
       this.hoverTween.restart()
     },
-    unfillText(){
+    unfillText() {
       this.hoverTween.pause()
       let tl = gsap.timeline()
-      
-      tl.to(this.hoveredText, {
-        // delay: 0.7,
-        duration: .5,
+
+      tl.to(`#nav-${this.hoveredPage}`, {
+        duration: 0.2,
         y: 0,
         rotation: 0,
         transformOrigin: 'middle middle',
         ease: Linear.easeNone,
       })
-      
-      tl.to(`${this.gradient} stop`, {
+
+      tl.to(`#${this.hoveredPage}-gradient stop`, {
         attr: { offset: '100%' },
         ease: 'none',
       })
-      // this.hoverTween.time(0)
-
+      this.hoveredPage = null
     },
     selectedClass(page) {
-      if (page === this.page) return 'bg-green px-2 text-pink rounded-full'
+      if (page === this.page) {
+      }
+      return ''
     },
     onScroll() {
       if (window.innerWidth <= 768) {
@@ -236,4 +326,7 @@ export default {
 }
 </script>
 <style lang="scss">
+tspan {
+  pointer-events: none;
+}
 </style>
