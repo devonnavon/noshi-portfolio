@@ -184,19 +184,4 @@ export default {
     border: 1px black solid;
   }
 }
-
-tspan {
-  transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(90deg, #0300e2, #0300e2 50%, #080808 0);
-  background-size: 200% 100%;
-  background-position: 100%;
-  color: #080808;
-  &:hover {
-    background-position: 0;
-    color: #0300e2;
-  }
-}
 </style>
