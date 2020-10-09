@@ -80,13 +80,10 @@
               <stop offset="100%" stop-color="#FF6B00" />
             </linearGradient>
           </defs>
-          <NuxtLink to="services" :class="selectedClass('services')">
-            <g
-              id="service-group"
-              class="cursor-pointer"
-              @mouseover="fillText('services')"
-              @mouseleave="unfillText()"
-            >
+          <NuxtLink to="services">
+            <g id="service-group" class="cursor-pointer">
+              <!-- @mouseover="mousedText('services')"
+              @mouseleave="unMouseText('services')" -->
               <rect
                 id="services-rect"
                 x="105"
@@ -109,13 +106,8 @@
               </text>
             </g>
           </NuxtLink>
-          <NuxtLink to="contact" :class="selectedClass('contact')">
-            <g
-              id="contact-group"
-              @mouseover="fillText('contact')"
-              @mouseleave="unfillText()"
-              class="cursor-pointer"
-            >
+          <NuxtLink to="contact">
+            <g id="contact-group" class="cursor-pointer">
               <rect
                 id="contact-rect"
                 x="391"
@@ -138,13 +130,8 @@
               </text>
             </g>
           </NuxtLink>
-          <NuxtLink to="work" :class="selectedClass('work')">
-            <g
-              id="work-group"
-              @mouseover="fillText('work')"
-              @mouseleave="unfillText()"
-              class="cursor-pointer"
-            >
+          <NuxtLink to="work">
+            <g id="work-group" class="cursor-pointer">
               <rect
                 id="work-rect"
                 x="303"
@@ -167,13 +154,8 @@
               </text>
             </g>
           </NuxtLink>
-          <NuxtLink to="/" :class="selectedClass('index')">
-            <g
-              id="index-group"
-              @mouseover="fillText('index')"
-              @mouseleave="unfillText()"
-              class="cursor-pointer"
-            >
+          <NuxtLink to="/">
+            <g id="index-group" class="cursor-pointer">
               <rect
                 id="index-rect"
                 x="17"
@@ -220,81 +202,32 @@ export default {
         duration: 1.4,
       })
     },
-    hoverTween() {
-      let tl = gsap.timeline()
-
-      tl.to(`#${this.hoveredPage}-gradient stop`, {
-        attr: { offset: '0%' },
-        ease: 'none',
-      })
-      tl.to(`#nav-${this.hoveredPage}`, {
-        yoyo: true,
-        repeat: -1,
-        duration: 0.5,
-        y: 3,
-        rotation: -6,
-        transformOrigin: 'middle middle',
-        ease: Linear.easeNone,
-      })
-      return tl
-    },
-    selectedTween() {
-      let tl = gsap.timeline()
-
-      tl.to(`#${this.page}-gradient stop`, {
-        attr: { offset: '0%' },
-        ease: 'none',
-      })
-      tl.to(`#nav-${this.page}`, {
-        yoyo: true,
-        repeat: -1,
-        duration: 0.5,
-        y: 3,
-        rotation: -6,
-        transformOrigin: 'middle middle',
-        ease: Linear.easeNone,
-      })
-      return tl
-    },
   },
   data() {
     return {
       showNavbar: true,
       lastScrollPosition: 0,
-      hoveredPage: null,
     }
   },
   methods: {
-    setHoveredText(page) {
-      this.hoveredPage = page
-    },
-    fillText(page) {
-      this.setHoveredText(page)
-      this.hoverTween.restart()
-    },
-    unfillText() {
-      this.hoverTween.pause()
+    runWordTween(pageName) {
       let tl = gsap.timeline()
 
-      tl.to(`#nav-${this.hoveredPage}`, {
-        duration: 0.2,
-        y: 0,
-        rotation: 0,
+      tl.to(`#${this.pageName}-gradient stop`, {
+        attr: { offset: '0%' },
+        ease: 'none',
+      })
+      tl.to(`#nav-${this.pageName}`, {
+        yoyo: true,
+        repeat: -1,
+        duration: 0.5,
+        y: 3,
+        rotation: -6,
         transformOrigin: 'middle middle',
         ease: Linear.easeNone,
       })
-
-      tl.to(`#${this.hoveredPage}-gradient stop`, {
-        attr: { offset: '100%' },
-        ease: 'none',
-      })
-      this.hoveredPage = null
     },
-    selectedClass(page) {
-      if (page === this.page) {
-      }
-      return ''
-    },
+    stopWordTween(pageName) {},
     onScroll() {
       if (window.innerWidth <= 768) {
         if (this.showNavbar) return
