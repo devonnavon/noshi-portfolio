@@ -106,10 +106,11 @@ export default {
   data() {
     return {
       list: [
-        'functional designs',
-        'accurate estimates',
-        'low friction',
-        'fast projects',
+        'functional and beautiful user interfaces',
+        'no missings pieces in the final product',
+        'accurate cost and timeline estimates',
+        'fast projects from start to finish',
+        'designs that truly come to life',
       ],
     }
   },

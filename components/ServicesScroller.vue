@@ -169,7 +169,6 @@ export default {
 
         onLeave: (self) => {
           //disable scroll and set current state back
-          console.log(self)
           self.revert()
           this.clickable = true //make text clickable
           this.currentService = 'etc'
