@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-pink h-auto text-green px-6">
+  <section id="servicesServices" class="bg-pink h-auto text-green px-6 pt-20">
     <div>
       <div
         id="yournext"
@@ -11,11 +11,11 @@
     </div>
     <div
       id="productwecanbuild"
-      class="md:text-hugexl text-4xl font-serif md:pr-20 text-right"
+      class="md:text-huge text-4xl font-serif md:pr-20 text-right py-12"
     >
       <ServicesSwitcher />
     </div>
-    <div class="flex md:flex-row flex-col pt-20 md:pl-20">
+    <div class="flex md:flex-row flex-col md:pt-20 pt:10 md:pl-20">
       <div
         class="font-display text-2xl text-justify md:w-2/5 pt-12 md:pb-0 pb-16"
       >

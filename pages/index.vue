@@ -1,8 +1,16 @@
 <template>
   <div class="xl:container mx-auto">
     <section class="parallax parallax--hero">
-      <div id="growing" class="w-full h-screen mx-auto flex pl-5 xl:container">
-        <Growing class="w-screen h-auto self-center" />
+      <div
+        id="growing"
+        class="w-full h-screen mx-auto flex flex-wrap xl:container justify-center"
+      >
+        <div
+          class="w-screen h-auto flex flex-col justify-items-center self-center md:px-0 px-4"
+        >
+          <Growing class="" />
+          <ScrollAnchor class="self-center justify-self-center text-center" />
+        </div>
       </div>
     </section>
 
@@ -21,9 +29,18 @@ import Divider from '~/components/Homepage/Divider'
 import Summary from '~/components/Homepage/Summary'
 import Experience from '~/components/Homepage/Experience'
 import Contact from '~/components/Homepage/HContact'
+import ScrollAnchor from '~/components/Homepage/ScrollAnchor'
 
 export default {
-  components: { Growing, Services, Divider, Summary, Experience, Contact },
+  components: {
+    Growing,
+    Services,
+    Divider,
+    Summary,
+    Experience,
+    Contact,
+    ScrollAnchor,
+  },
   head() {
     return {
       title: 'noshi',
@@ -35,4 +52,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+#parallax {
+  z-index: '-1';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+</style>

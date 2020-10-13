@@ -170,15 +170,33 @@
       class="border-solid border-t-2 border-b-2 border-l-0 border-r-0 border-green"
     >
       <ul class="topics font-display text-green text-5xl">
-        <li>contact</li>
-        <li>contact</li>
-        <li>contact</li>
-        <li>contact</li>
-        <li>contact</li>
-        <li>contact</li>
-        <li>contact</li>
-        <li>contact</li>
-        <li>contact</li>
+        <NuxtLink to="contact" class="hover:text-orange">
+          <li>contact</li></NuxtLink
+        >
+        <NuxtLink to="contact" class="hover:text-orange">
+          <li>contact</li></NuxtLink
+        >
+        <NuxtLink to="contact" class="hover:text-orange">
+          <li>contact</li></NuxtLink
+        >
+        <NuxtLink to="contact" class="hover:text-orange">
+          <li>contact</li></NuxtLink
+        >
+        <NuxtLink to="contact" class="hover:text-orange">
+          <li>contact</li></NuxtLink
+        >
+        <NuxtLink to="contact" class="hover:text-orange">
+          <li>contact</li></NuxtLink
+        >
+        <NuxtLink to="contact" class="hover:text-orange">
+          <li>contact</li></NuxtLink
+        >
+        <NuxtLink to="contact" class="hover:text-orange">
+          <li>contact</li></NuxtLink
+        >
+        <NuxtLink to="contact" class="hover:text-orange">
+          <li>contact</li></NuxtLink
+        >
       </ul>
     </div>
   </section>

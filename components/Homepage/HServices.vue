@@ -30,7 +30,9 @@
             plan at all, we can help you execute and scale your next web
             project.<br /><br />
             <NuxtLink to="services"
-              ><span class="underline">Learn more here.</span></NuxtLink
+              ><span class="underline hover:no-underline"
+                >Learn more here.</span
+              ></NuxtLink
             >
           </div>
         </div>

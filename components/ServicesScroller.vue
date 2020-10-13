@@ -6,8 +6,8 @@
     >
       <div
         id="designscroll"
-        class="py-3 pt-16 ml-1 font-minibold cursor-pointer text-green hover:text-opacity-50"
-        :class="currentService === 'design' ? 'text-opacity-50' : ''"
+        class="py-3 pt-16 ml-1 font-minibold cursor-pointer text-green hover:text-opacity-100"
+        :class="currentService !== 'design' ? 'text-opacity-50' : ''"
         @click="
           clickable && 'design' != currentService
             ? serviceClick('design')
@@ -18,8 +18,8 @@
       </div>
       <div
         id="developscroll"
-        class="py-3 ml-1 font-minisemi cursor-pointer text-green hover:text-opacity-50"
-        :class="currentService === 'develop' ? 'text-opacity-50' : ''"
+        class="py-3 ml-1 font-minisemi cursor-pointer text-green hover:text-opacity-100"
+        :class="currentService !== 'develop' ? 'text-opacity-50' : ''"
         @click="
           clickable && 'develop' != currentService
             ? serviceClick('develop')
@@ -30,8 +30,8 @@
       </div>
       <div
         id="etcscroll"
-        class="py-3 ml-1 font-minimedium cursor-pointer text-green hover:text-opacity-50"
-        :class="currentService === 'etc' ? 'text-opacity-50' : ''"
+        class="py-3 ml-1 font-minimedium cursor-pointer text-green hover:text-opacity-100"
+        :class="currentService !== 'etc' ? 'text-opacity-50' : ''"
         @click="
           clickable && 'etc' != currentService ? serviceClick('etc') : null
         "

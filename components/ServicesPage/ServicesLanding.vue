@@ -1,6 +1,6 @@
 <template>
   <section class="bg-pink font-display">
-    <div class="flex justify-center md:pt-20">
+    <div class="flex justify-center md:pt-40">
       <svg
         width="792"
         height="758"
@@ -145,14 +145,32 @@
         </g>
       </svg>
     </div>
-    <div class="text-display text-l text-green flex justify-center pt-20 pb-40">
+    <!-- <NuxtLink to="#servicesServices"> -->
+    <div
+      id="comefindoutservices"
+      @click="gotoid('servicesServices')"
+      class="text-display text-l text-green flex justify-center pt-20 pb-40 hover:underline cursor-pointer"
+    >
       COME FIND OUT
     </div>
+    <!-- </NuxtLink> -->
   </section>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    gotoid(id) {
+      const element = document.getElementById(id)
+      const topPos = element.getBoundingClientRect().top + window.pageYOffset
+
+      window.scrollTo({
+        top: topPos, // scroll so that the element is at the top of the view
+        behavior: 'smooth', // smooth scroll
+      })
+    },
+  },
+}
 </script>
 
 <style></style>
