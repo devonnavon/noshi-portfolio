@@ -55,12 +55,12 @@ export default {
         {
           title: 'DATA DRIVEN',
           description:
-            'We belive analytics should be at the core of any digital strategy or product as it allows us to make more informed and effective business decisions.',
+            'We belive analytics should be at the core of any digital strategy as it leads to more informed and effective business decisions. We keep this in mind when making design or product decisions, and ensure clients have continued access to analytical insights.',
         },
         {
           title: 'HUMAN MADE',
           description:
-            'Products built by humans for humans. We know that the end users of our products our every day people and we keep that in mind every step of the way. We empathize with our users and build straightforward products full of personality.',
+            'Products built by humans for humans. We know that the end users of our products are every day people and we keep that in mind every step of the way. We empathize with our users and build straightforward products full of personality.',
         },
         {
           title: 'GOOD FOR THE HEART',

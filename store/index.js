@@ -12,8 +12,8 @@ export const state = () => ({
       key: 'design',
       details: [
         'ux/ui design',
-        'prototyping',
         'graphic design',
+        'prototyping',
         'package design',
         'creative direction',
       ],
@@ -21,9 +21,9 @@ export const state = () => ({
     {
       key: 'develop',
       details: [
+        'web app',
+        'mobile app',
         'website',
-        'application',
-        'desktop',
         'mobile',
         'vuejs',
         'nodejs',

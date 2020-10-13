@@ -64,12 +64,12 @@ export default {
         {
           title: 'ongoing partnership',
           description:
-            'Usually starting with a small project, we continuously collaborate with clients and build a digital presence through incremental engagements and a less structured approach.',
+            'We continuously collaborate with clients on key issues and build solutions through incremental engagements and a less structured approach.',
         },
         {
           title: 'consulting',
           description:
-            'Often a precursor to a more engaging relationship, we offer advice to clients seeking to improve their user experience, tech stack, brand, or business analytics.',
+            'We offer advice to clients seeking to improve their user experience, tech stack, brand, or business analytics.',
         },
         {
           title: 'workshops',
