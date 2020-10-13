@@ -1,7 +1,7 @@
 <template>
   <section id="whatwedo" class="bg-pink">
     <div class="relative h-auto my-auto">
-      <div class="flex md:flex-row flex-col pt-20 px-6 md:px-0">
+      <div class="flex md:flex-row flex-col md:pt-20 px-6 md:px-0">
         <div class="md:w-2/5 md:pl-16 w-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"

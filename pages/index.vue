@@ -15,7 +15,7 @@
     </section>
 
     <Summary />
-    <div class="py-24"></div>
+    <div class="md:py-24"></div>
     <Services />
     <Experience />
     <Contact />

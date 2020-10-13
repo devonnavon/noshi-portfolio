@@ -4,7 +4,7 @@
     id="homeanchor"
     class="font-display text-l text-green hover:underline text-center h-12 cursor-pointer"
   >
-    COME FIND OUT
+    take a look
   </div>
 </template>
 
