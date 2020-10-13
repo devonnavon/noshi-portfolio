@@ -5,8 +5,10 @@
 </template>
 <script>
 export default {
-  asyncData() {
-    return {}
+  head() {
+    return {
+      title: 'about noshi',
+    }
   },
   mounted() {
     this.$nextTick(() => {

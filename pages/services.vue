@@ -25,6 +25,11 @@ import Principles from '~/components/ServicesPage/Principles'
 import Contact from '~/components/Homepage/HContact'
 
 export default {
+  head() {
+    return {
+      title: 'noshi services',
+    }
+  },
   components: {
     ServicesLanding,
     Services,

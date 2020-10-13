@@ -8,6 +8,11 @@
 import Contact from '~/components/ContactPage/Contact'
 
 export default {
+  head() {
+    return {
+      title: 'contact us',
+    }
+  },
   components: {
     Contact,
   },

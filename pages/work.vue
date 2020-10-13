@@ -8,6 +8,11 @@
 import ComingSoon from '~/components/WorkPage/ComingSoon'
 
 export default {
+  head() {
+    return {
+      title: 'coming soon...',
+    }
+  },
   components: {
     ComingSoon,
   },
