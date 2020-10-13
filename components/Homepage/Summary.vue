@@ -87,9 +87,7 @@ export default {
           duration: duration * word.length,
           text: word + ' ',
         })
-        console.log(word)
         if (keywords.includes(word)) {
-          console.log(word)
           let svg = this.svgCrossOut(word)
           span.prepend(svg)
           if (word === '"????"') {
