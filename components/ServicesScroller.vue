@@ -89,6 +89,7 @@ export default {
           '#designscroll',
           {
             x: -400,
+            opacity: 0,
           },
           'design'
         )
@@ -108,6 +109,7 @@ export default {
           '#developscroll',
           {
             x: -400,
+            opacity: 0,
           },
           'develop'
         )
@@ -135,6 +137,7 @@ export default {
           '#etcscroll',
           {
             x: -400,
+            opacity: 0,
           },
           'etc'
         )
