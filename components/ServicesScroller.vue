@@ -1,12 +1,13 @@
 <template>
-  <div class="flex">
+  <div id="servicesscroller" class="flex">
     <div
       id="services"
       class="flex flex-col justify-center text-green text-5xl w-2/5 md:pl-16 pb-16 font-semibold"
     >
       <div
         id="designscroll"
-        class="py-3 pt-16 ml-1 font-minibold cursor-pointer"
+        class="py-3 pt-16 ml-1 font-minibold cursor-pointer text-green hover:text-opacity-50"
+        :class="currentService === 'design' ? 'text-opacity-50' : ''"
         @click="
           clickable && 'design' != currentService
             ? serviceClick('design')
@@ -17,7 +18,8 @@
       </div>
       <div
         id="developscroll"
-        class="py-3 ml-1 font-minisemi cursor-pointer"
+        class="py-3 ml-1 font-minisemi cursor-pointer text-green hover:text-opacity-50"
+        :class="currentService === 'develop' ? 'text-opacity-50' : ''"
         @click="
           clickable && 'develop' != currentService
             ? serviceClick('develop')
@@ -28,7 +30,8 @@
       </div>
       <div
         id="etcscroll"
-        class="py-3 ml-1 font-minimedium cursor-pointer"
+        class="py-3 ml-1 font-minimedium cursor-pointer text-green hover:text-opacity-50"
+        :class="currentService === 'etc' ? 'text-opacity-50' : ''"
         @click="
           clickable && 'etc' != currentService ? serviceClick('etc') : null
         "
@@ -71,11 +74,12 @@ export default {
   methods: {
     serviceClick(service) {
       //i should probably do this without a timeline huh?
-      gsap.set(`#${service}-detail`, { opacity: 100, y: 0 }, 'x')
+      gsap.set(`#${service}-detail`, { opacity: 100, x: 0, y: 0 }, 'x')
       const tl = gsap.timeline()
       tl.add('x')
-        .to(`#${this.currentService}-detail`, { opacity: 0, y: 600 }, 'x')
-        .from(`#${service}-detail`, { opacity: 0, y: -600 }, 'x')
+        .to(`#${this.currentService}-detail`, { opacity: 0, x: 600 }, 'x')
+
+        .from(`#${service}-detail`, { opacity: 0, x: -600 }, 'x')
       tl.play()
       this.currentService = service
     },
@@ -188,4 +192,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+#servicesscroller {
+  overflow: hidden;
+}
+</style>
