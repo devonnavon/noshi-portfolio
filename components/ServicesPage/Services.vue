@@ -19,9 +19,10 @@
       <div
         class="font-display text-2xl text-justify md:w-2/5 pt-12 md:pb-0 pb-16"
       >
-        From digital strategy, interactive design and full-stack development,
-        our complete range of expertise makes us key players in implementing
-        digital solutions for small to large-scale web projects.
+        From ux design to full-stack development, our team excels in providing a
+        full range of solutions throughout the digital realm. Whether you're a
+        small or large company with a specific plan or no plan at all, we can
+        help you execute and scale your next web project.
       </div>
       <ServicesCompact class="md:w-3/5 md:pl-20 flex-col md:flex-row" />
     </div>

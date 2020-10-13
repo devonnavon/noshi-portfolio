@@ -57,24 +57,24 @@ export default {
     return {
       engagementTypes: [
         {
-          title: 'ongoing partnership',
-          description:
-            'In collaborative partnerships we work on key business issues in an iterative manner.',
-        },
-        {
           title: 'project-based',
           description:
-            'Projects start at around three months, while average project is around six months and large-scale projects take up to 12 months.',
+            "After agreeing on a timeline and deliverable (website, app, etc.), we work closely with the client to ensure we hand them a product they're excited to own.",
+        },
+        {
+          title: 'ongoing partnership',
+          description:
+            'We continuously collaborate with clients on key issues and build solutions through incremental engagements and a less structured approach.',
         },
         {
           title: 'consulting',
           description:
-            'For clients who are looking for pure advice on user experience, branding, marketing strategies or technology stacks.',
+            'We offer advice to clients seeking to improve their user experience, tech stack, brand, or business analytics.',
         },
         {
           title: 'workshops',
           description:
-            'We conduct workshops to help clients to innovate, educate and inspire across digital products, marketing and branding.',
+            'With a focus on innovation and expansion we conduct workshops to help clients reimagine their business model or brand',
         },
       ],
     }

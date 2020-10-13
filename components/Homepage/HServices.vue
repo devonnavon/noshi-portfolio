@@ -24,10 +24,11 @@
           <div
             class="text-green ml-2 pr-3 md:-mt-16 font-display text-md text-justify w-full"
           >
-            From digital strategy, interactive design and full-stack
-            development, our complete range of expertise makes us key players in
-            implementing digital solutions for small to large-scale web
-            projects. <br /><br />
+            From ux design to full-stack development, our team excels in
+            providing a full range of solutions throughout the digital realm.
+            Whether you're a small or large company with a specific plan or no
+            plan at all, we can help you execute and scale your next web
+            project.<br /><br />
             <NuxtLink to="services"
               ><span class="underline">Learn more here.</span></NuxtLink
             >

@@ -53,17 +53,17 @@ export default {
         {
           title: 'fee',
           description:
-            'The usual and most common form of cooperation between a client and us: we get ‘paid-for-time’ or agree on a fixed price for a specific scope.',
+            'Before any significant work begins we agree upon a fixed price and fixed project scope. Some is payed before we start and the rest upon delivery.',
         },
         {
           title: 'performance based',
           description:
-            'Used as an incentive program we offer models where we reduce the classic fee structure in order to participate in the impact and results our work generates.',
+            'Usually mixed with a typical project fee, we reduce our normal cost and recieve compensation based on the business impact of our work.',
         },
         {
           title: 'equity',
           description:
-            'If the opportunity arises and it’s attractive enough we also offer an equity-for-service type of model where part of our compensation is paid in shares.',
+            'Typically in an ongoing partnership, we offer a compensation model in which we are paid for our services in shares.',
         },
       ],
     }
