@@ -50,22 +50,22 @@ export default {
         {
           title: 'FROM START TO FINISH',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco lab',
+            "We are fully engaged with our clients throughout the project lifecycle. We want to ensure that when we hand a product to a client they are excited to own it. Our work ends when the client understands what we've built as well as we do.",
         },
         {
           title: 'DATA DRIVEN',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco lab',
+            'We belive analytics should be at the core of any digital strategy or product as it allows us to make more informed and effective business decisions.',
         },
         {
           title: 'HUMAN MADE',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco lab',
+            'Products built by humans for humans. We know that the end users of our products our every day people and we keep that in mind every step of the way. We empathize with our users and build straightforward products full of personality.',
         },
         {
           title: 'GOOD FOR THE HEART',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco lab',
+            "We don't work with just anyone. When we take on new clients we place extreme importance on their values and mission. It's our belief that business can and should have a positive impact. We hold ourselves and our clients to this standard.",
         },
       ],
     }
