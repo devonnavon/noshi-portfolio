@@ -5,7 +5,7 @@
   >
     <div
       id="phrases"
-      class="relative text-green md:text-huge text-4xl md:pl-16 px-6"
+      class="relative text-green md:text-huge text-3xl md:pl-16 px-3 md:px-6"
     >
       <div v-for="(phrase, i) in phrases" :key="i" :id="`phrase_${i}`"></div>
     </div>
