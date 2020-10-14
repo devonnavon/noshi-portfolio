@@ -1,7 +1,7 @@
 <template>
   <section
     id="summary"
-    class="bg-pink relative font-display w-screen md:w-auto pt-0 md:pt-14 flex flex-col justify-center align-center"
+    class="bg-pink relative font-display w-full md:w-auto pt-0 md:pt-14 flex flex-col justify-center align-center"
   >
     <div
       id="phrases"
