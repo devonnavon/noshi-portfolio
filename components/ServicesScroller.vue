@@ -72,14 +72,20 @@ export default {
     return { clickable: false, currentService: null }
   },
   methods: {
+    revertPosition(ids) {
+      //pass array
+      ids.forEach((id) => {
+        gsap.set(id, { x: 0, y: 0, opacity: 100 })
+      })
+    },
     serviceClick(service) {
       //i should probably do this without a timeline huh?
       gsap.set(`#${service}-detail`, { opacity: 100, x: 0, y: 0 }, 'x')
       const tl = gsap.timeline()
       tl.add('x')
-        .to(`#${this.currentService}-detail`, { opacity: 0, x: 600 }, 'x')
+        .to(`#${this.currentService}-detail`, { opacity: 0, x: 1000 }, 'x')
 
-        .from(`#${service}-detail`, { opacity: 0, x: -600 }, 'x')
+        .from(`#${service}-detail`, { opacity: 0, x: -1000 }, 'x')
       tl.play()
       this.currentService = service
     },
@@ -171,12 +177,21 @@ export default {
         end: '+=4000',
         pin: true,
         scrub: 2,
-        once: true,
+        toggleActions: 'play none none none',
+        // once: true,
         // pinSpacing: false,
 
         onLeave: (self) => {
           //disable scroll and set current state back
-          self.revert()
+          self.disable(true)
+          this.revertPosition([
+            '#designscroll',
+            '#developscroll',
+            '#etcscroll',
+            '#etc-detail',
+          ])
+
+          // console.log(self.toggleActions, 'actions')
           this.clickable = true //make text clickable
           this.currentService = 'etc'
         },
