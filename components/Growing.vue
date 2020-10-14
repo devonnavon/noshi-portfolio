@@ -6,10 +6,11 @@
     height="608"
     viewBox="0 0 802 608"
     fill="none"
-    class="w-full"
+    class="w-full opacity-0"
+    id="plantflicker"
   >
     <g id="Group 2">
-      <g xmlns="http://www.w3.org/2000/svg" id="logo">
+      <g xmlns="http://www.w3.org/2000/svg" id="logo" class="opacity-0">
         <text
           id="noshi"
           fill="#006838"
@@ -162,8 +163,12 @@ export default {
   },
   methods: {
     animate() {
+      gsap.set('#plantflicker', { autoAlpha: 1 })
       gsap.set('#mask', { y: '+=500' })
       gsap.set('#sun', { scale: 0.5, opacity: 0 })
+      gsap.set('#logo', {
+        y: +800,
+      })
       gsap.to('#sun', {
         delay: 0.5,
         scale: 1.0,
@@ -207,20 +212,17 @@ export default {
         transformOrigin: 'bottom bottom',
         ease: Linear.easeNone,
       })
-      gsap.set('.menu', {
-        y: -600,
-        opacity: 0,
-      })
-      gsap.set('#logo', {
-        y: +800,
-        opacity: 0,
-      })
+      // gsap.set('.menu', {
+      //   y: -600,
+      //   opacity: 0,
+      // })
+
       gsap.to('#logo', {
         opacity: 100,
-        delay: 2.0,
-        duration: 2.5,
+        delay: 1.75,
+        duration: 3.0,
         y: 0,
-        ease: 'elastic.inOut(1, 1)',
+        ease: 'elastic.out(1, 0.75)',
       })
       gsap.to('.menu', {
         opacity: 100,
