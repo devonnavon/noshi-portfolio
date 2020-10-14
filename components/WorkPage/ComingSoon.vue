@@ -3,7 +3,7 @@
     id="comingsoon"
     class="bg-pink mx-6 h-screen flex flex-col justify-between"
   >
-    <div class="flex flex-col font-serif text-green w-full md:py-0 py-16">
+    <div class="flex flex-col font-serif text-green w-full md:py-0">
       <div
         id="newsone"
         class="news border-solid border-t-2 border-b-2 border-l-0 border-r-0 border-green"
@@ -18,7 +18,7 @@
         id="newstwo"
         class="news border-solid border-t-2 border-b-2 border-l-0 border-r-0 border-green"
       >
-        <ul class="topicstwo font-display text-green text-5xl">
+        <ul class="topicstwo font-display text-green md:text-5xl text-4xl">
           <li>UNDER CONSTRUCTION</li>
           <li>UNDER CONSTRUCTION</li>
         </ul>
@@ -58,7 +58,7 @@
         id="newsfive"
         class="news border-solid border-t-2 border-b-2 border-l-0 border-r-0 border-green"
       >
-        <ul class="topicsfive font-display text-green text-5xl">
+        <ul class="topicsfive font-display text-green md:text-5xl text-4xl">
           <li>UNDER CONSTRUCTION</li>
           <li>UNDER CONSTRUCTION</li>
         </ul>

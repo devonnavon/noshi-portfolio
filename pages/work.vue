@@ -1,5 +1,5 @@
 <template>
-  <div id="#container" class="xl:container mx-auto bg-pink md:px-6">
+  <div id="#container" class="xl:container h-screen mx-auto bg-pink md:px-6">
     <ComingSoon />
   </div>
 </template>
