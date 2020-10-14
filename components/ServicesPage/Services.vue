@@ -11,13 +11,13 @@
     </div>
     <div
       id="productwecanbuild"
-      class="md:text-huge text-4xl font-serif md:pr-20 text-right py-12"
+      class="md:text-huge text-4xl font-serif text-right pt-12"
     >
       <ServicesSwitcher />
     </div>
-    <div class="flex md:flex-row flex-col md:pt-20 pt:10 md:pl-20">
+    <div class="flex md:flex-row flex-col md:pl-20">
       <div
-        class="font-display text-2xl text-justify md:w-2/5 pt-12 md:pb-0 pb-16"
+        class="font-display text-2xl text-justify md:w-2/5 md:pt-12 md:pb-0 pb-16"
       >
         From ux design to full-stack development, our team excels in providing a
         full range of solutions throughout the digital realm. Whether you're a
@@ -40,8 +40,16 @@ export default {}
 #yournext {
   float: left;
 }
+
 #productwecanbuild {
   clear: left;
+  min-height: 204px;
+}
+
+@media only screen and (min-width: 768px) {
+  #productwecanbuild {
+    min-height: 384px;
+  }
 }
 
 .bigtext {

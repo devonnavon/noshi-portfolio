@@ -47,7 +47,7 @@
       </div>
       <ServicesCompact
         v-if="isMobile"
-        class="block font-display text-2xl text-justify flex-col pt-12 pb-16 text-green"
+        class="block font-display text-2xl text-justify flex-col md:py-12 text-green"
       />
       <ServicesScroller
         v-else
@@ -91,6 +91,12 @@ export default {
 
 <style>
 #homeswitch {
-  min-height: 77px;
+  min-height: 144px;
+}
+
+@media only screen and (min-width: 768px) {
+  #homeswitch {
+    min-height: 384px;
+  }
 }
 </style>
