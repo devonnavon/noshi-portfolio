@@ -6,7 +6,7 @@
         class="w-full h-screen mx-auto flex flex-wrap xl:container justify-center"
       >
         <div
-          class="w-screen h-auto flex flex-col justify-items-center self-center md:px-0 px-4 md:-mt-0 -mt-16"
+          class="w-screen h-auto flex flex-col justify-items-center self-center md:px-0 px-4 md:-mt-0 -mt-48"
         >
           <Growing class="" />
           <ScrollAnchor class="self-center justify-self-center text-center" />
