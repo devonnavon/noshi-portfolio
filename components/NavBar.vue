@@ -236,7 +236,9 @@ export default {
   },
   watch: {
     page(newVal, oldVal) {
-      if (oldVal) this.stopWordTween(oldVal)
+      if (oldVal) {
+        this.stopWordTween(oldVal)
+      }
       this.runWordTween(newVal)
     },
   },
@@ -248,44 +250,42 @@ export default {
       return `#nav-${pageName}`
     },
     hoverText(pageName) {
-      this.runWordTween(pageName)
+      if (pageName !== this.page) this.runWordTween(pageName)
     },
     removeHover(pageName) {
-      if (pageName === this.page) return
-      this.stopWordTween(pageName)
+      if (pageName !== this.page) this.stopWordTween(pageName)
     },
     runWordTween(pageName) {
-      if (
-        gsap.isTweening(this.textId(pageName)) ||
-        gsap.isTweening(this.gradientId(pageName))
-      )
-        return
+      let tl = gsap.getById(pageName)
+      if (tl) {
+        tl.play()
+      } else {
+        let tl = gsap.timeline({ id: pageName })
 
-      let tl = gsap.timeline({ id: pageName })
-
-      tl.to(this.gradientId(pageName), {
-        attr: { offset: '0%' },
-        duration: 0.5,
-        ease: 'none',
-      })
-      tl.to(this.textId(pageName), {
-        yoyo: true,
-        repeat: -1,
-        duration: 0.5,
-        y: 3,
-        rotation: -6,
-        transformOrigin: 'middle middle',
-        ease: Linear.easeNone,
-      })
+        tl.to(this.gradientId(pageName), {
+          attr: { offset: '0%' },
+          duration: 0.5,
+          ease: 'none',
+        })
+        tl.to(this.textId(pageName), {
+          yoyo: true,
+          repeat: -1,
+          duration: 0.5,
+          y: 3,
+          rotation: -6,
+          transformOrigin: 'middle middle',
+          ease: Linear.easeNone,
+        })
+      }
     },
     stopWordTween(pageName) {
-      if (
-        gsap.isTweening(this.textId(pageName)) ||
-        gsap.isTweening(this.gradientId(pageName))
-      ) {
-        let timeline = gsap.getById(pageName)
-        timeline.reverse(0.8)
-      }
+      // if (
+      //   gsap.isTweening(this.textId(pageName)) ||
+      //   gsap.isTweening(this.gradientId(pageName))
+      // ) {
+      let timeline = gsap.getById(pageName)
+      if (timeline) timeline.reverse(0.8)
+      // }
     },
     onScroll() {
       if (window.innerWidth <= 768) {
