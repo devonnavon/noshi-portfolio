@@ -4,7 +4,7 @@
     id="homeanchor"
     class="hover:underline text-center h-12 cursor-pointer"
   >
-    <slot>scroll to {{}}</slot>
+    <slot>scroll to {{ anchor }}</slot>
   </div>
 </template>
 
@@ -23,10 +23,12 @@ export default {
       const element = document.getElementById(id)
       const topPos = element.getBoundingClientRect().top + window.pageYOffset
 
-      window.scrollTo({
-        top: topPos, // scroll so that the element is at the top of the view
-        behavior: 'smooth', // smooth scroll
-      })
+      setTimeout(function () {
+        window.scrollTo({
+          top: topPos, // scroll so that the element is at the top of the view
+          behavior: 'smooth', // smooth scroll
+        })
+      }, 100)
     },
   },
 }
