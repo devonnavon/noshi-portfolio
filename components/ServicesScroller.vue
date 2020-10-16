@@ -90,6 +90,9 @@ export default {
       this.currentService = service
     },
     scrollAnimate() {
+      let y = 375
+      let x = 400
+
       gsap.registerPlugin(ScrollTrigger)
       const tl = gsap.timeline()
       tl
@@ -98,7 +101,7 @@ export default {
           //design big text comes in
           '#designscroll',
           {
-            x: -400,
+            x: -x,
             opacity: 0,
           },
           'design'
@@ -108,7 +111,7 @@ export default {
           {
             //design detail comes in
             opacity: 0,
-            y: -600,
+            y: -y,
           },
           'design'
         )
@@ -118,7 +121,7 @@ export default {
           //develop big text comes in
           '#developscroll',
           {
-            x: -400,
+            x: -x,
             opacity: 0,
           },
           'develop'
@@ -128,7 +131,7 @@ export default {
           '#design-detail',
           {
             opacity: 0,
-            y: 600,
+            y: y,
           },
           'develop'
         )
@@ -137,7 +140,7 @@ export default {
           {
             //develop detail comes in
             opacity: 0,
-            y: -600,
+            y: -y,
           },
           'develop'
         )
@@ -146,7 +149,7 @@ export default {
         .from(
           '#etcscroll',
           {
-            x: -400,
+            x: -x,
             opacity: 0,
           },
           'etc'
@@ -155,7 +158,7 @@ export default {
           '#develop-detail',
           {
             opacity: 0,
-            y: 600,
+            y: y,
           },
           'etc'
         )
@@ -163,7 +166,7 @@ export default {
           '#etc-detail',
           {
             opacity: 0,
-            y: -600,
+            y: -y,
           },
           'etc'
         )
@@ -174,13 +177,10 @@ export default {
         animation: tl,
         trigger: this.trigger,
         start: 'top top',
-        end: '+=4000',
+        end: '+=3000',
         pin: true,
         scrub: 2,
         toggleActions: 'play none none none',
-        // once: true,
-        // pinSpacing: false,
-
         onLeave: (self) => {
           //disable scroll and set current state back
           self.disable(true)

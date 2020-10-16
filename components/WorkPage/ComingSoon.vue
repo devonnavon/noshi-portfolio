@@ -85,7 +85,6 @@ export default {
   },
   mounted() {
     this.contactScroll()
-    // this.contactScrollTwo()
   },
   data() {
     return {
