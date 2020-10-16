@@ -5,7 +5,7 @@
   >
     <div
       id="phrases"
-      class="relative text-green sm:text-4xl sm:px-6 xl:text-huge text-3xl md:pl-16 px-3 md:px-6"
+      class="relative text-green sm:text-5xl sm:px-6 xl:text-huge text-3xl md:pl-16 px-4 md:px-6"
     >
       <div v-for="(phrase, i) in phrases" :key="i" :id="`phrase_${i}`"></div>
     </div>
@@ -20,7 +20,8 @@ export default {
   data() {
     return {
       phrases: [
-        'noshi is a small (two person)',
+        'noshi is a small',
+        '(two person)',
         'los angeles based',
         'design product consulting',
         '"????" studio...',
@@ -52,7 +53,7 @@ export default {
         let pauseFlag = false
         let tl = gsap.timeline()
         let duration = 0.1
-        if ([0, 2, 3].includes(i)) {
+        if ([0, 3, 4].includes(i)) {
           this.splitWords(phrase, tl, i, duration, [
             'small',
             'design',
@@ -139,7 +140,21 @@ export default {
   top: 50px;
   right: 400px;
 } */
+
+@media only screen and (min-width: 640px) {
+  #summary {
+    min-height: 225px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #summary {
+    min-height: 360px;
+    max-height: 400px;
+  }
+}
+
 #summary {
-  min-height: 600px;
+  min-height: 720px;
 }
 </style>
