@@ -40,8 +40,7 @@
       <div class="md:text-3xl text-xl">
         Say hello to see our work in the mean time
       </div>
-      <div class="md:text-huge text-4xl self-center">(hey@noshi.cx)</div>
-      <!-- <div class="self-end font-bold text-4xl">together.</div> -->
+      <EmailContact class="md:text-huge text-4xl self-center" />
     </div>
     <div class="flex flex-col font-serif text-green w-full md:py-0 py-16">
       <div
@@ -78,7 +77,12 @@
 </template>
 
 <script>
+import EmailContact from '~/components/EmailContact'
+
 export default {
+  components: {
+    EmailContact,
+  },
   mounted() {
     this.contactScroll()
     // this.contactScrollTwo()
