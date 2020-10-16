@@ -72,7 +72,7 @@ export default {
 
       ScrollTrigger.create({
         animation: masterTl,
-        trigger: '#phrases',
+        trigger: '#summary',
         start: 'top center',
       })
     },
