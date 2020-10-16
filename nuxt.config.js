@@ -97,6 +97,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/markdownit',
     'nuxt-clipboard2',
+    'smoothscroll-polyfill',
   ],
   /*
    ** Axios module configuration

@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import smoothscroll from 'smoothscroll-polyfill'
+
 export default {
   props: { anchor: String },
   mounted() {
@@ -20,15 +22,13 @@ export default {
       gsap.to('#homeanchor', { delay: 4, y: 0, opacity: 100 })
     },
     gotoid(id) {
+      smoothscroll.polyfill()
       const element = document.getElementById(id)
       const topPos = element.getBoundingClientRect().top + window.pageYOffset
-
-      setTimeout(function () {
-        window.scrollTo({
-          top: topPos, // scroll so that the element is at the top of the view
-          behavior: 'smooth', // smooth scroll
-        })
-      }, 100)
+      window.scrollTo({
+        top: topPos, // scroll so that the element is at the top of the view
+        behavior: 'smooth', // smooth scroll
+      })
     },
   },
 }

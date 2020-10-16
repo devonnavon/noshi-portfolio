@@ -158,9 +158,12 @@
 </template>
 
 <script>
+import smoothscroll from 'smoothscroll-polyfill'
+
 export default {
   methods: {
     gotoid(id) {
+      smoothscroll.polyfill()
       const element = document.getElementById(id)
       const topPos = element.getBoundingClientRect().top + window.pageYOffset
 
