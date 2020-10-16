@@ -10,8 +10,10 @@
         >
           <Growing class="" />
           <ScrollAnchor
-            class="self-center justify-self-center text-center sm:mt-auto -mt-24"
-          />
+            anchor="summary"
+            class="self-center justify-self-center text-center sm:mt-auto -mt-24 font-display text-l text-green"
+            >scroll to
+          </ScrollAnchor>
         </div>
       </div>
     </section>

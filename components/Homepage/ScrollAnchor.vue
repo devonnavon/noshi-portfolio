@@ -2,14 +2,15 @@
   <div
     @click="gotoid('summary')"
     id="homeanchor"
-    class="font-display text-l text-green hover:underline text-center h-12 cursor-pointer"
+    class="hover:underline text-center h-12 cursor-pointer"
   >
-    take a look
+    <slot>scroll to {{}}</slot>
   </div>
 </template>
 
 <script>
 export default {
+  props: { anchor: String },
   mounted() {
     this.animate()
   },
