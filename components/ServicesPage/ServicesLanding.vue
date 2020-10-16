@@ -1,6 +1,6 @@
 <template>
   <section class="bg-pink font-display">
-    <div class="flex justify-center md:pt-40 pt-0 -mt-32">
+    <div class="flex justify-center md:pt-40 pt-0 md:mt-0">
       <svg
         width="792"
         height="758"
@@ -149,7 +149,7 @@
     <div
       id="comefindoutservices"
       @click="gotoid('servicesServices')"
-      class="text-display text-l text-green flex justify-center md:pt-20 pt-0 pb-40 hover:underline cursor-pointer"
+      class="text-display text-l text-green flex justify-center md:pt-20 pt-0 pb-40 hover:underline cursor-pointer sm:mt-auto -mt-24"
     >
       COME FIND OUT
     </div>

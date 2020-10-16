@@ -33,7 +33,7 @@
           </svg>
         </div>
         <div
-          class="col-span-8 row-span-5 justify-self-center self-center font-serif md:text-6xl text-4xl text-green w-full h-32"
+          class="col-span-8 row-span-5 justify-self-center self-center font-serif md:text-6xl text-4xl text-green w-full h-32 md:pt-0 pt-4"
         >
           <SomethingSwitcher
             class="self-center switcher text-center md:font-normal font-bold"
@@ -164,10 +164,9 @@
         </div>
       </div> -->
     </div>
-    <div class="md:py-24 py-12"></div>
     <div
       id="news"
-      class="border-solid border-t-2 border-b-2 border-l-0 border-r-0 border-green"
+      class="border-solid border-t-2 border-b-2 border-l-0 border-r-0 border-green md:mt-48 mt-24"
     >
       <ul class="topics font-display text-green text-5xl">
         <NuxtLink to="contact" class="hover:text-orange">

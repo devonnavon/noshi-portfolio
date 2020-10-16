@@ -9,7 +9,9 @@
           class="w-screen h-auto flex flex-col justify-items-center self-center md:px-0 px-4 md:-mt-0 -mt-48"
         >
           <Growing class="" />
-          <ScrollAnchor class="self-center justify-self-center text-center" />
+          <ScrollAnchor
+            class="self-center justify-self-center text-center sm:mt-auto -mt-24"
+          />
         </div>
       </div>
     </section>
