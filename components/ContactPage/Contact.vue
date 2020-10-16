@@ -3,7 +3,9 @@
     id="whatwedo"
     class="bg-pink mx-6 h-screen flex flex-col justify-center"
   >
-    <div class="flex flex-col font-serif text-green text-left w-full md:py-0">
+    <div
+      class="flex flex-col font-serif text-green text-left w-full md:py-0 -mt-40 md:-mt-0"
+    >
       <div class="md:text-6xl text-4xl">Let's make your next</div>
       <div id="switcharooo" class="md:text-huge text-5xl font-semibold"></div>
       <div class="self-end font-bold md:text-5xl text-3xl pt-16">together.</div>
