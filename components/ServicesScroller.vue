@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
   mounted() {
@@ -66,12 +66,14 @@ export default {
     trigger: String,
   },
   computed: {
+    ...mapState(['lastScrollPosition']),
     ...mapGetters(['servicesDetail']),
   },
   data() {
     return { clickable: false, currentService: null }
   },
   methods: {
+    ...mapActions(['updateAutoScrolling', 'updateLastScrollPosition']),
     revertPosition(ids) {
       //pass array
       ids.forEach((id) => {
@@ -181,6 +183,12 @@ export default {
         pin: true,
         scrub: 2,
         toggleActions: 'play none none none',
+        onEnter: (self) => {
+          this.updateAutoScrolling(true)
+        },
+        onLeaveBack: (self) => {
+          this.updateAutoScrolling(false)
+        },
         onLeave: (self) => {
           //disable scroll and set current state back
           self.disable(true)
@@ -190,6 +198,8 @@ export default {
             '#etcscroll',
             '#etc-detail',
           ])
+          this.updateAutoScrolling(false)
+          this.updateLastScrollPosition(this.lastScrollPosition - 3000) //make up for change in scrollposition
 
           // console.log(self.toggleActions, 'actions')
           this.clickable = true //make text clickable

@@ -207,7 +207,7 @@
   </nav>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   mounted() {
@@ -219,7 +219,7 @@ export default {
     window.removeEventListener('scroll', this.onScroll)
   },
   computed: {
-    ...mapState(['page']),
+    ...mapState(['page', 'lastScrollPosition', 'autoScrolling']),
     navTween() {
       return gsap.to('nav', {
         y: -100,
@@ -231,7 +231,6 @@ export default {
   data() {
     return {
       showNavbar: true,
-      lastScrollPosition: 0,
     }
   },
   watch: {
@@ -243,6 +242,7 @@ export default {
     },
   },
   methods: {
+    ...mapActions(['updateLastScrollPosition']),
     gradientId(pageName) {
       return `#${pageName}-gradient stop`
     },
@@ -289,8 +289,10 @@ export default {
     },
     onScroll() {
       if (window.innerWidth <= 768) {
+        //disable on mobile
         if (this.showNavbar) return
         else {
+          //if its not showing we show it
           this.showNavbar = true
           this.navTween.reverse()
         }
@@ -302,11 +304,14 @@ export default {
       }
       // Stop executing this function if the difference between
       // current scroll position and last scroll position is less than some offset
-      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+      if (
+        Math.abs(currentScrollPosition - this.lastScrollPosition) < 60 ||
+        this.autoScrolling
+      ) {
         return
       }
       this.showNavbar = currentScrollPosition < this.lastScrollPosition
-      this.lastScrollPosition = currentScrollPosition
+      this.updateLastScrollPosition(currentScrollPosition)
 
       if (!this.showNavbar) {
         this.navTween.play()

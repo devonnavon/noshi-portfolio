@@ -1,4 +1,6 @@
 export const state = () => ({
+  autoScrolling: false,
+  lastScrollPosition:0,
   page: 'index',
   servicesList: [
     'web app',
@@ -49,8 +51,23 @@ export const getters = {
   servicesDetail: (state) => state.servicesDetail,
 }
 
+export const actions = {
+  updateAutoScrolling({ commit }, isAutoscrolling) { 
+    commit('switchAutoScrolling', isAutoscrolling)
+  },
+  updateLastScrollPosition({ commit }, num) { 
+    commit('changeLastScrollPosition', num)
+  }
+}
+
 export const mutations = {
   updatePage(state, pageName) {
     state.page = pageName
   },
+  changeLastScrollPosition(state, num) {
+    state.lastScrollPosition = num
+   },
+  switchAutoScrolling(state, isAutoscrolling) { 
+    state.autoScrolling = isAutoscrolling
+  }
 }
