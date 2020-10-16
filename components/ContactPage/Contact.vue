@@ -13,14 +13,18 @@
       class="flex flex-col font-serif text-green text-center md:pt-4 md:w-2/3 w-full mx-auto md:py-0 py-16"
     >
       <div class="md:text-3xl text-xl">Say hello</div>
-      <div class="md:text-huge text-4xl self-center">(hey@noshi.cx)</div>
-      <!-- <div class="self-end font-bold text-4xl">together.</div> -->
+      <EmailContact class="md:text-huge text-4xl self-center" />
     </div>
   </section>
 </template>
 
 <script>
+import EmailContact from '~/components/EmailContact'
+
 export default {
+  components: {
+    EmailContact,
+  },
   mounted() {
     this.switchArooAnimate()
   },
