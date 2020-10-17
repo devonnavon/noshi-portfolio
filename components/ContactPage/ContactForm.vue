@@ -64,6 +64,7 @@
           <button
             class="bg-green hover:bg-orange text-white hover:text-green font-bold py-2 px-4 rounded"
             type="submit"
+            action="/"
           >
             get in touch
           </button>
