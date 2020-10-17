@@ -1,6 +1,7 @@
 <template>
-  <div class="xl:container mx-auto">
+  <div class="xl:container mx-auto h-full">
     <section class="parallax parallax--hero">
+      <div class="h-20"></div>
       <div
         id="growing"
         class="w-full h-screen mx-auto flex flex-wrap xl:container justify-center"

@@ -4,6 +4,13 @@
 
 /* custom css */
 
+html,
+body {
+  font-size: 100%;
+  background: #d8cbcf;
+  background-repeat: repeat;
+}
+
 @font-face {
   font-family: 'Karrik-Regular';
   src: url('~assets/fonts/Karrik-Regular.woff2') format('woff2'),

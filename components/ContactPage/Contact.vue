@@ -1,10 +1,16 @@
 <template>
-  <section class="bg-pink mx-6 h-screen flex flex-col justify-center">
+  <section
+    class="mx-6 h-full flex flex-col justify-center bg-pink bg-repeat pt-32"
+  >
     <div
-      class="flex flex-col font-serif text-green text-left w-full md:pt-40 md:py-0 -mt-40 md:-mt-0"
+      class="flex flex-col font-serif text-green text-left w-full md:py-0 md:mt-auto"
     >
+      <!-- <div class="flex-shrink h-20"></div> -->
       <div class="md:text-6xl text-4xl">Let's make your next</div>
-      <ServiceSwitcher class="md:text-huge text-5xl font-semibold" />
+      <ServiceSwitcher
+        class="md:text-huge text-5xl font-semibold"
+        id="contactSwitcher"
+      />
       <div class="self-end font-bold md:text-5xl text-3xl pt-16">together.</div>
     </div>
     <div class="md:py-12 py-0"></div>
@@ -14,9 +20,9 @@
       <div class="md:text-3xl text-xl">Say hello</div>
       <EmailContact class="md:text-huge text-4xl self-center" />
     </div>
-    <div class="flex justify-center text-5xl font-semibold text-green pt-40">
+    <!-- <div class="flex justify-center text-5xl font-semibold text-green pt-40">
       or
-    </div>
+    </div> -->
   </section>
 </template>
 
@@ -38,7 +44,18 @@ export default {
 </script>
 
 <style>
-#switcharooo {
+/* @media only screen and (min-width: 640px) {
+  #contactSwitcher {
+    min-height: 258px;
+  }
+} */
+
+#contactSwitcher {
   min-height: 144px;
+}
+@media only screen and (min-width: 768px) {
+  #contactSwitcher {
+    min-height: 288px;
+  }
 }
 </style>
