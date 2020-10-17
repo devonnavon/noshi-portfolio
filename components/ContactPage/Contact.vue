@@ -1,10 +1,7 @@
 <template>
-  <section
-    id="whatwedo"
-    class="bg-pink mx-6 h-screen flex flex-col justify-center"
-  >
+  <section class="bg-pink mx-6 h-screen flex flex-col justify-center">
     <div
-      class="flex flex-col font-serif text-green text-left w-full md:py-0 -mt-40 md:-mt-0"
+      class="flex flex-col font-serif text-green text-left w-full md:pt-40 md:py-0 -mt-40 md:-mt-0"
     >
       <div class="md:text-6xl text-4xl">Let's make your next</div>
       <ServiceSwitcher class="md:text-huge text-5xl font-semibold" />
@@ -16,6 +13,9 @@
     >
       <div class="md:text-3xl text-xl">Say hello</div>
       <EmailContact class="md:text-huge text-4xl self-center" />
+    </div>
+    <div class="flex justify-center text-5xl font-semibold text-green pt-40">
+      or
     </div>
   </section>
 </template>
