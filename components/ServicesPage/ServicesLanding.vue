@@ -1,12 +1,17 @@
 <template>
-  <section class="bg-pink font-display">
-    <div class="flex justify-center md:pt-40 -mt-40 md:mt-0">
+  <section
+    class="bg-pink font-display h-screen w-full flex flex-wrap justify-center"
+  >
+    <div
+      class="w-screen h-auto flex flex-col justify-items-center self-center md:px-0 px-4 md:mt-auto -mt-48 md:pt-12 pt-auto"
+    >
       <svg
         width="792"
         height="758"
         viewBox="0 0 792 758"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        class="w-full"
       >
         <g id="Group 16">
           <g>
