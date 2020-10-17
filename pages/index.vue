@@ -1,13 +1,13 @@
 <template>
   <div class="xl:container mx-auto h-full">
-    <section class="parallax parallax--hero">
-      <div class="h-20"></div>
+    <section class="parallax parallax--hero h-full">
+      <!-- <div class="md:h-20"></div> -->
       <div
         id="growing"
-        class="w-full h-screen mx-auto flex flex-wrap xl:container justify-center"
+        class="w-full h-full mx-auto flex flex-wrap xl:container justify-center"
       >
         <div
-          class="w-screen h-auto flex flex-col justify-items-center self-center md:px-0 px-4 md:-mt-0 -mt-48"
+          class="w-screen h-full flex flex-col justify-items-center self-center sm:py-48 mx-6"
         >
           <Growing class="" />
           <ScrollAnchor
