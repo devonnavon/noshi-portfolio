@@ -13,25 +13,27 @@ export const state = () => ({
     {
       key: 'design',
       details: [
-        'ux/ui design',
+        'ux design',
+        'product design',
         'creative direction',
         'graphic design',
         'web design',
         'prototyping',
-        'package design',
-        'branding'
+        'interactive',
+        'brand identity'
       ],
     },
     {
       key: 'develop',
       details: [
-        'web app',
-        'mobile app',
-        'website',
+        'web/mobile app',
+        'ecommerce',
+        'cms',
         'responsive',
+        'full stack',
         'vuejs',
         'nodejs',
-        'JAMstack',
+        'pwa'
       ],
     },
     {
@@ -43,7 +45,8 @@ export const state = () => ({
         'SEO',
         'analytics',
         'data science',
-        'machine learning',
+        'user research',
+        'machine learning'
       ],
     },
   ],

@@ -31,7 +31,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   created() {
-    let shown = 4
+    let shown = 4 //half of the length
     this.shown = this.servicesDetail.map((element) => {
       return { key: element.key, details: element.details.slice(0, shown) }
     })
@@ -53,13 +53,28 @@ export default {
   },
   methods: {
     animate() {
-      let tl = gsap.timeline({ repeat: -1, yoyo: true })
+      let tl = gsap.timeline({ repeat: -1 })
+      let len = 0.5
       this.queue.forEach((service) => {
         service.details.forEach((detail, i) => {
           let key = `#serviceCompact_${service.key}_${i}`
-          tl.to(key, { opacity: 0, duration: 0.3 })
-          tl.to(key, { text: detail, duration: 0 })
-          tl.to(key, { opacity: 100, duration: 0.3 })
+          let tlQ = gsap.timeline()
+          tlQ
+            .to(key, { opacity: 0, duration: len })
+            .to(key, { text: detail, duration: 0 })
+            .to(key, { opacity: 1, duration: len })
+          tl.add(tlQ)
+        })
+      })
+      this.shown.forEach((service) => {
+        service.details.forEach((detail, i) => {
+          let key = `#serviceCompact_${service.key}_${i}`
+          let tlS = gsap.timeline()
+          tlS
+            .to(key, { opacity: 0, duration: len })
+            .to(key, { text: detail, duration: 0 })
+            .to(key, { opacity: 1, duration: len })
+          tl.add(tlS)
         })
       })
     },
