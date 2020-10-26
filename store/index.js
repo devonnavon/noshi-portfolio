@@ -14,10 +14,12 @@ export const state = () => ({
       key: 'design',
       details: [
         'ux/ui design',
+        'creative direction',
         'graphic design',
+        'web design',
         'prototyping',
         'package design',
-        'creative direction',
+        'branding'
       ],
     },
     {
@@ -26,7 +28,7 @@ export const state = () => ({
         'web app',
         'mobile app',
         'website',
-        'mobile',
+        'responsive',
         'vuejs',
         'nodejs',
         'JAMstack',
@@ -38,6 +40,7 @@ export const state = () => ({
         'ux strategy',
         'innovation workshops',
         'business model design',
+        'SEO',
         'analytics',
         'data science',
         'machine learning',

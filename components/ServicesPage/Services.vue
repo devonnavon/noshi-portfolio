@@ -24,7 +24,7 @@
         small or large company with a specific plan or no plan at all, we can
         help you execute and scale your next web project.
       </div>
-      <ServicesCompact class="md:w-3/5 md:pl-20 flex-col md:flex-row" />
+      <ServicesCompact class="md:w-3/5 md:pl-10 flex-col md:flex-row" />
     </div>
   </section>
 </template>

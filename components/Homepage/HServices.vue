@@ -46,22 +46,21 @@
         </div>
       </div>
       <ServicesCompact
-        v-if="isMobile"
-        class="block font-display text-2xl text-justify flex-col md:py-12 text-green"
+        class="md:pl-16 block font-display text-2xl text-justify flex-col md:pb-12 md:pt-4 text-green md:flex-row"
       />
-      <ServicesScroller
+      <!-- <ServicesScroller
         v-else
         trigger="#whatwedo"
         class="flex pb-24 px-6 md:px-0"
-      />
+      /> -->
     </div>
   </section>
 </template>
 
 <script>
 import ServicesSwitcher from '~/components/ServicesSwitcher'
-import ServicesScroller from '~/components/ServicesScroller'
 import ServicesCompact from '~/components/ServicesCompact'
+// import ServicesScroller from '~/components/ServicesScroller'
 
 // import resolveConfig from 'tailwindcss/resolveConfig'
 import { theme } from '~/tailwind.config'
@@ -69,19 +68,24 @@ import { theme } from '~/tailwind.config'
 export default {
   components: {
     ServicesSwitcher,
-    ServicesScroller,
     ServicesCompact,
+    // ServicesScroller,
   },
   mounted() {
     this.windowWidth = window.innerWidth
+    this.windowHeight = window.innerHeight
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth
+      this.windowHeight = window.innerHeight
     })
   },
   computed: {
-    isMobile() {
-      return this.windowWidth <= 768
-    },
+    // isMobile() {
+    //   return this.windowWidth <= 768
+    // },
+    // isShort() {
+    //   return this.windowHeight < 1100
+    // },
   },
   data() {
     return { windowWidth: 0 }
