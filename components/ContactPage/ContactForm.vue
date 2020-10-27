@@ -33,6 +33,7 @@
             type="text"
             placeholder="Hayao Miyazaki"
             name="name"
+            @input="(ev) => (form.name = ev.target.value)"
           />
           <!-- <p class="text-orange text-xs italic">Please fill out this field.</p> -->
         </div>
@@ -50,6 +51,7 @@
             id="email"
             type="email"
             name="email"
+            @input="(ev) => (form.email = ev.target.value)"
             placeholder="hayao@studioghibli.com"
           />
         </div>
@@ -67,6 +69,7 @@
             id="message"
             type="text"
             name="message"
+            @input="(ev) => (form.message = ev.target.value)"
             placeholder="I'd like to discuss a digital experience for my new film..."
           ></textarea>
         </div>
@@ -90,7 +93,14 @@ import axios from 'axios'
 
 export default {
   data() {
-    return { shown: true }
+    return {
+      shown: true,
+      form: {
+        name: '',
+        email: '',
+        message: '',
+      },
+    }
   },
   methods: {
     encode(data) {
