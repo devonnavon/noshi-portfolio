@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="bg-pink py-24 md:px-0 px-6">
+  <section id="contact" class="bg-pink py-24 px-6">
     <div class="flex flex-col flex-wrap justify-center">
       <div
         class="font-serif md:text-big text-4xl text-green self-center pb-12 text-center"
@@ -122,7 +122,7 @@
             together
           </div>
         </div>
-        <div class="self-end pt-12 z-10">
+        <div class="self-end pt-12 z-10 w-auto h-auto">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="448"
