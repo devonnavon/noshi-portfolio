@@ -1,9 +1,9 @@
 <template>
   <section
-    class="bg-pink font-display h-screen w-full flex flex-wrap justify-center"
+    class="bg-pink font-display h-auto w-full flex flex-wrap justify-center"
   >
     <div
-      class="w-screen h-auto flex flex-col justify-items-center self-center md:px-0 px-4 md:mt-auto -mt-48 md:pt-12 pt-auto"
+      class="w-screen h-auto flex flex-col justify-items-center self-center md:px-0 px-4 md:mt-auto -mt-48 md:pt-40 pt-auto"
     >
       <svg
         width="792"
