@@ -13,9 +13,12 @@
       class="w-full max-w-lg"
       name="contact"
       method="POST"
-      data-netlify="true"
+      netlify
+      netlify-honeypot="bot-field"
       v-show="shown"
+      @submit.prevent="handleSubmit"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full px-3">
           <label
@@ -73,7 +76,6 @@
           <input
             class="bg-green hover:bg-orange text-white hover:text-green font-bold py-2 px-4 rounded"
             type="submit"
-            @click="submit"
             value="get in touch"
           />
         </div>
@@ -84,13 +86,32 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data() {
     return { shown: true }
   },
   methods: {
-    submit(e) {
-      e.preventDefault()
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
+    },
+    handleSubmit() {
+      const axiosConfig = {
+        header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      }
+      axios.post(
+        '/',
+        this.encode({
+          'form-name': 'contact',
+          ...this.form,
+        }),
+        axiosConfig
+      )
       this.shown = false
     },
   },
