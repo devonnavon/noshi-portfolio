@@ -87,7 +87,7 @@
           </svg>
         </div>
       </div>
-      <!-- <div class="flex flex-row w-full justify-between">
+      <!-- <div class="flex flex-row w-full justify-betwe en">
         <div class="flex flex-col w-auto h-auto">
           <svg
             xmlns="http://www.w3.org/2000/svg"
