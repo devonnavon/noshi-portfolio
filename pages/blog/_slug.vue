@@ -1,9 +1,13 @@
 <template>
   <div>
+    <div class="h-32"></div>
     <h2>{{ post.title }}</h2>
     <!-- <div>{{post.body}}</div> -->
     <!-- <div v-html="post.body"></div> -->
-    <div v-html="$md.render(post.body)" class="page__content markdown pt-4 md:pt-6 md:pb-24" />
+    <div
+      v-html="$md.render(post.body)"
+      class="page__content markdown pt-4 md:pt-6 md:pb-24"
+    />
     <!-- <nuxt-content :document="post" /> -->
   </div>
 </template>
