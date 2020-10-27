@@ -7,8 +7,8 @@
         So, let's make your next
       </div>
 
-      <div class="grid grid-cols-8 grid-rows-7 gap-4">
-        <div class="col-span-8 row-span-1 self-start md:h-56 h-40">
+      <!-- <div class="grid grid-cols-8 grid-rows-7 gap-4 gear-grid">
+        <div class="col-span-8 row-span-1 self-start">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="460"
@@ -45,9 +45,7 @@
             together
           </div>
         </div>
-        <div
-          class="col-span-8 row-span-1 self-start justify-self-end md:h-56 h-40"
-        >
+        <div class="col-span-8 row-span-1 self-start justify-self-end">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="448"
@@ -86,16 +84,17 @@
             </g>
           </svg>
         </div>
-      </div>
-      <!-- <div class="flex flex-row w-full justify-betwe en">
-        <div class="flex flex-col w-auto h-auto">
+      </div> -->
+
+      <div class="flex flex-col w-full justify-between">
+        <div class="flex flex-row w-auto h-auto">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="460"
             height="460"
             viewBox="0 0 460 460"
             fill="none"
-            class="md:w-1/4 w-full h-auto self-end"
+            class="md:w-48 w-32 md:h-56 h-40 self-end"
             id="gearOne"
           >
             <path
@@ -113,24 +112,24 @@
           </svg>
         </div>
         <div
-          class="flex flex-col font-serif md:text-6xl text-4xl text-green self-center md:px-12 pb-24"
+          class="flex flex-col font-serif md:text-6xl text-4xl text-green self-center md:px-12"
         >
           <SomethingSwitcher
             class="self-center md:pt-12 pt-16 switcher text-center"
             triggerId="#contact"
           />
-          <div class="self-center font-semibold md:text-4xl text-2xl pt-6 z-10">
+          <div class="self-center font-semibold md:text-4xl text-2xl pt-8 z-10">
             together
           </div>
         </div>
-        <div class="self-end w-auto h-auto pt-12 z-10">
+        <div class="self-end pt-12 z-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="448"
             height="503"
             viewBox="0 0 448 503"
             fill="none"
-            class="md:w-1/4 w-full self-end h-auto mt-12"
+            class="md:w-48 w-32 md:h-56 h-40"
           >
             <g id="smallGear">
               <path
@@ -162,7 +161,7 @@
             </g>
           </svg>
         </div>
-      </div> -->
+      </div>
     </div>
     <div
       id="news"
@@ -262,6 +261,9 @@ export default {
 #news li {
   display: inline;
   margin-right: 30px;
+}
+
+.gear-grid {
 }
 // #news li::before {
 //   //   content: '● ';
