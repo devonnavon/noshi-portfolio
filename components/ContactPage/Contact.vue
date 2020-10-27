@@ -20,9 +20,6 @@
       <div class="md:text-3xl text-xl">Say hello</div>
       <EmailContact class="md:text-huge text-4xl self-center" />
     </div>
-    <!-- <div class="flex justify-center text-5xl font-semibold text-green pt-40">
-      or
-    </div> -->
   </section>
 </template>
 

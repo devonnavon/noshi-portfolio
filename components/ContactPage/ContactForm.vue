@@ -1,14 +1,23 @@
 <template>
   <!--from  https://tailwindcomponents.com/component/basic-contact-form -->
   <div class="flex justify-center py-40 font-display text-green px-3 md:px-0">
+    <div class="form-submitted w-full max-w-lg" v-show="!shown">
+      <div
+        class="flex flex-col justify-center font-serif text-l border-green border-dashed border-4 w-full text-center h-40"
+      >
+        <div class="text-center">thank you!</div>
+        <div>we'll be in touch shortly...</div>
+      </div>
+    </div>
     <form
       class="w-full max-w-lg"
       name="contact"
       method="POST"
       data-netlify="true"
+      v-show="shown"
     >
       <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3 mb-6">
+        <div class="w-full px-3">
           <label
             class="block tracking-wide text-gray-700 text-sm font-bold mb-2"
             for="grid-name"
@@ -60,14 +69,13 @@
         </div>
       </div>
       <div class="md:flex md:items-center">
-        <div class="md:w-1/3">
-          <button
+        <div>
+          <input
             class="bg-green hover:bg-orange text-white hover:text-green font-bold py-2 px-4 rounded"
             type="submit"
-            action="/"
-          >
-            get in touch
-          </button>
+            @click="submit"
+            value="get in touch"
+          />
         </div>
         <div class="md:w-2/3"></div>
       </div>
@@ -76,7 +84,21 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return { shown: true }
+  },
+  methods: {
+    submit(e) {
+      e.preventDefault()
+      this.shown = false
+    },
+  },
+}
 </script>
 
-<style></style>
+<style scoped>
+.form-submitted {
+  height: 519px;
+}
+</style>
