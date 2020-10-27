@@ -55,6 +55,8 @@ export default {
     animate() {
       let tl = gsap.timeline({ repeat: -1 })
       let len = 0.5
+      let arrTo = []
+      let arrFrom = []
       this.queue.forEach((service) => {
         service.details.forEach((detail, i) => {
           let key = `#serviceCompact_${service.key}_${i}`
@@ -63,7 +65,7 @@ export default {
             .to(key, { opacity: 0, duration: len })
             .to(key, { text: detail, duration: 0 })
             .to(key, { opacity: 1, duration: len })
-          tl.add(tlQ)
+          arrTo.push(tlQ)
         })
       })
       this.shown.forEach((service) => {
@@ -74,9 +76,23 @@ export default {
             .to(key, { opacity: 0, duration: len })
             .to(key, { text: detail, duration: 0 })
             .to(key, { opacity: 1, duration: len })
-          tl.add(tlS)
+          arrFrom.push(tlS)
         })
       })
+      this.shuffleArray(arrTo)
+      this.shuffleArray(arrFrom)
+      arrTo.forEach((e) => {
+        tl.add(e)
+      })
+      arrFrom.forEach((e) => {
+        tl.add(e)
+      })
+    },
+    shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[array[i], array[j]] = [array[j], array[i]]
+      }
     },
   },
 }
