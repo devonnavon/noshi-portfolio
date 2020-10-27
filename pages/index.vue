@@ -1,5 +1,5 @@
 <template>
-  <div class="xl:container mx-auto h-full">
+  <div class="xl:container mx-auto h-auto md:h-full">
     <section class="parallax parallax--hero h-full">
       <!-- <div class="md:h-20"></div> -->
       <div
