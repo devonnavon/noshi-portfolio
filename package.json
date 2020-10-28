@@ -7,6 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "local-cms": "npx netlify-cms-proxy-server",
     "test": "jest"
   },
   "dependencies": {
