@@ -1,5 +1,8 @@
 <template>
-  <div class="flex flex-col font-display text-green md:py-8 py-4">
+  <div
+    class="flex flex-col font-display text-green md:py-8 py-4"
+    :class="active ? 'orange-gradient' : ''"
+  >
     <div class="flex flex-row text-2xl opacity-50 pb-2 hidden md:inline-block">
       {{ work.client }}
     </div>
@@ -20,10 +23,14 @@
           {{ work.description }}
         </div>
       </div>
-      <div class="text-3xl md:text-big self-center pl-4">
+      <div
+        class="text-3xl md:text-big self-center pl-4"
+        @click="active = !active"
+      >
         <IconifyIcon class="" :icon="icons.sharpExpandMore" />
       </div>
     </div>
+    <div v-show="active">this shows up on click</div>
   </div>
 </template>
 
@@ -44,9 +51,14 @@ export default {
       icons: {
         sharpExpandMore,
       },
+      active: false,
     }
   },
 }
 </script>
 
-<style></style>
+<style>
+.orange-gradient {
+  background: linear-gradient(180deg, #f7941e 0%, #d8cbcf 25.52%);
+}
+</style>
