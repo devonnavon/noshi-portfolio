@@ -10,14 +10,7 @@
       </div>
     </div>
     <div class="xl:container mx-auto md:px-6 px-3">
-      <CaseCard
-        v-for="(work, i) in works"
-        :key="i"
-        :title="work.title"
-        :client="work.client"
-        :description="work.description"
-        :thumbnail="work.thumbnail"
-      />
+      <CaseCard v-for="(work, i) in works" :key="i" :work="work" />
     </div>
   </div>
 </template>
