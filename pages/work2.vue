@@ -10,13 +10,20 @@
       </div>
     </div>
     <div class="xl:container mx-auto md:px-6 px-3">
-      <CaseList />
+      <CaseCard
+        v-for="(work, i) in works"
+        :key="i"
+        :title="work.title"
+        :client="work.client"
+        :description="work.description"
+        :thumbnail="work.thumbnail"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import CaseList from '~/components/WorkPage/CaseList'
+import CaseCard from '~/components/WorkPage/CaseCard'
 
 export default {
   head() {
@@ -24,8 +31,14 @@ export default {
       title: 'work',
     }
   },
+  async asyncData({ $content }) {
+    const works = await $content('work').fetch()
+    return {
+      works,
+    }
+  },
   components: {
-    CaseList,
+    CaseCard,
   },
 }
 </script>
