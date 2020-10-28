@@ -10,6 +10,11 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: 'blog',
+    }
+  },
   async asyncData({ $content }) {
     const posts = await $content('blog').fetch()
     return {

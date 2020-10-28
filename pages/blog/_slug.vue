@@ -14,6 +14,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.post.title,
+    }
+  },
   async asyncData({ $content, params, error }) {
     let post
     try {
