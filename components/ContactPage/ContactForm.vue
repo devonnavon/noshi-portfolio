@@ -35,7 +35,9 @@
             name="name"
             @input="(ev) => (form.name = ev.target.value)"
           />
-          <!-- <p class="text-orange text-xs italic">Please fill out this field.</p> -->
+          <p class="text-orange text-xs italic" v-show="messages.name">
+            {{ messages.name }}
+          </p>
         </div>
       </div>
       <div class="flex flex-wrap -mx-3 mb-6">
@@ -54,6 +56,9 @@
             @input="(ev) => (form.email = ev.target.value)"
             placeholder="hayao@studioghibli.com"
           />
+          <p class="text-orange text-xs italic" v-show="messages.email">
+            {{ messages.email }}
+          </p>
         </div>
       </div>
       <div class="flex flex-wrap -mx-3 mb-6">
@@ -72,6 +77,9 @@
             @input="(ev) => (form.message = ev.target.value)"
             placeholder="I'd like to discuss a digital experience for my new film..."
           ></textarea>
+          <p class="text-orange text-xs italic" v-show="messages.message">
+            {{ messages.message }}
+          </p>
         </div>
       </div>
       <div class="md:flex md:items-center">
@@ -100,6 +108,11 @@ export default {
         email: '',
         message: '',
       },
+      messages: {
+        name: false,
+        email: false,
+        message: false,
+      },
     }
   },
   methods: {
@@ -111,18 +124,37 @@ export default {
         .join('&')
     },
     handleSubmit() {
-      const axiosConfig = {
-        header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      let valid = this.checkform()
+      if (valid) {
+        const axiosConfig = {
+          header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        }
+        axios.post(
+          '/',
+          this.encode({
+            'form-name': 'contact',
+            ...this.form,
+          }),
+          axiosConfig
+        )
+        this.shown = false
       }
-      axios.post(
-        '/',
-        this.encode({
-          'form-name': 'contact',
-          ...this.form,
-        }),
-        axiosConfig
-      )
-      this.shown = false
+    },
+    checkform() {
+      if (this.form.name === '')
+        this.messages.name = 'please enter a valid name'
+      else this.messages.name = false
+      if (this.form.email === '')
+        this.messages.email = 'please enter a valid email'
+      else this.messages.email = false
+      if (this.form.message === '')
+        this.messages.message = 'please enter a valid message'
+      else this.messages.message = false
+
+      for (const key in this.messages) {
+        if (this.messages[key]) return false
+      }
+      return true
     },
   },
 }
