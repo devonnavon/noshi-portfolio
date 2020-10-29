@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     animate() {
-      gsap.set('#homeanchor', { y: '15', opacity: 0 })
+      gsap.set('#homeanchor', { y: '15', opacity: 0, autoAlpha: 1 })
       gsap.to('#homeanchor', { delay: 3.5, y: 0, opacity: 100 })
     },
     gotoid(id) {
