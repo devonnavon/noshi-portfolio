@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="gradient-background md:pb-24 pb-10">
-      <div id="work-container" class="xl:container mx-auto md:px-8 px-3">
+      <div id="work-container" class="xl:container mx-auto md:px-8 px-8">
         <div
           class="relative text-green font-display sm:text-big lg:text-hugexl text-5xl md:pt-32 pt-16 leading-tight"
         >

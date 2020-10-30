@@ -1,10 +1,14 @@
 <template>
   <!-- test a change -->
-  <div
-    :id="getId('maindiv')"
-    :class="active ? 'orange-gradient' : ''"
-    class="rounded-2xl"
-  >
+  <div :id="getId('maindiv')" class="rounded-lg relative">
+    <button
+      type="button"
+      class="absolute right-0 top-0 transform hover:rotate-180 transition-transform duration-1000 ease-out self-center outline-none focus:outline-none"
+      aria-label="Close modal"
+      v-show="active"
+    >
+      <IconifyIcon :icon="icons.bxX" />
+    </button>
     <div
       class="flex flex-col font-display text-green md:py-8 py-4 px-8 mx-auto"
     >
@@ -54,7 +58,7 @@
           </div>
           <div class="flex flex-col pb-2 md:pb-0">
             <div class="text-3xl md:pb-4 pb-2">Roles</div>
-            <div class="flex flex-row md:flex-col justify-center">
+            <div class="flex flex-row flex-wrap md:flex-col justify-center">
               <div
                 v-for="(role, i) in work.roles"
                 :key="i"
@@ -77,9 +81,6 @@ import sharpExpandMore from '@iconify/icons-ic/sharp-expand-more'
 import bxX from '@iconify/icons-bx/bx-x'
 
 export default {
-  mounted() {
-    console.log(this.work)
-  },
   props: {
     work: Object,
   },
@@ -96,24 +97,36 @@ export default {
     }
   },
   watch: {
-    active(newVal) {
-      this.animateGradient(newVal)
+    active(newState) {
+      let tl = gsap.getById(this.getId('activeTl')) //get the animation timeline
+      tl = tl ? tl : this.getActiveAnimation() //check if tl is defined, if not create it
+      // console.warn(tl)
+      if (newState) {
+        //this means newState = true so case card is active and we play the animation
+        tl.play()
+      } else {
+        tl.reverse(tl.duration()) //reverse fromt the begining
+      }
     },
   },
   methods: {
     getId(element) {
       return `${element}-${this.work.slug}`
     },
-    animateGradient(state) {
-      let id = `#${this.getId('maindiv')}`
-      if (state) {
-        gsap.to(id, {
-          background: 'linear-gradient(180deg, #f7941e 0%, #d8cbcf 90%)',
+    getActiveAnimation() {
+      let activeTl = gsap.timeline({ id: this.getId('activeTl') }) //create a timeline with activeTl id
+      let mainDivId = `#${this.getId('maindiv')}`
+      activeTl.fromTo(
+        mainDivId,
+        {
+          backgroundImage: 'linear-gradient(#f7941e 0%, #d8cbcf 0%)',
+        },
+        {
+          backgroundImage: 'linear-gradient(#f7941e 0%, #d8cbcf 90%)',
           duration: 2,
-        })
-      } else {
-        gsap.to(id, { background: 'none', duration: 1 })
-      }
+        }
+      )
+      return activeTl
     },
   },
 }

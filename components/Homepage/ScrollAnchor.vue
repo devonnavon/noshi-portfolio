@@ -2,7 +2,7 @@
   <div
     @click="gotoid('summary')"
     id="homeanchor"
-    class="hover:underline text-center h-12 cursor-pointer"
+    class="hover:underline text-center h-12 cursor-pointer opacity-0"
   >
     <slot>scroll to {{ anchor }}</slot>
   </div>
@@ -18,8 +18,8 @@ export default {
   },
   methods: {
     animate() {
-      gsap.set('#homeanchor', { y: '15', opacity: 0, autoAlpha: 1 })
-      gsap.to('#homeanchor', { delay: 3.5, y: 0, opacity: 100 })
+      gsap.set('#homeanchor', { y: '15' })
+      gsap.to('#homeanchor', { delay: 3.5, y: 0, opacity: 1 })
     },
     gotoid(id) {
       smoothscroll.polyfill()
