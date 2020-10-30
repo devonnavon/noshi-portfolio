@@ -1,15 +1,16 @@
 <template>
   <!-- test a change -->
-  <div :id="getId('maindiv')" class="rounded-lg relative">
-    <button
-      type="button"
-      class="text-green text-2xl absolute right-0 top-0 transform hover:rotate-180 transition-transform duration-1000 ease-out self-center outline-none focus:outline-none p-2"
-      aria-label="Close modal"
-      v-show="active"
-      @click="active = !active"
-    >
-      <IconifyIcon :icon="icons.bxX" />
-    </button>
+  <div :id="getId('maindiv')" class="rounded-lg relative pb-8">
+    <transition name="fade">
+      <button
+        type="button"
+        class="text-green text-2xl absolute right-0 top-0 transform hover:rotate-180 transition-transform duration-1000 ease-out self-center outline-none focus:outline-none p-2"
+        aria-label="Close modal"
+        v-show="active"
+        @click="active = false"
+      >
+        <IconifyIcon :icon="icons.bxX" /></button
+    ></transition>
     <div
       class="flex flex-col font-display text-green md:py-8 py-4 px-8 mx-auto"
     >
@@ -35,40 +36,58 @@
             {{ work.description }}
           </div>
         </div>
-        <div
-          v-show="!active"
-          class="text-3xl md:text-big self-center pl-4"
-          @click="active = !active"
-        >
-          <IconifyIcon :icon="icons.sharpExpandMore" />
-        </div>
-      </div>
-      <div v-show="active" class="md:pt-12 pt-6 pb-6">
-        <div class="flex md:flex-row flex-col-reverse">
-          <div class="flex flex-col md:w-3/4 w-full pr-12">
-            <div class="text-3xl pb-4">Overview</div>
-            <div>{{ work.overview }}</div>
+        <transition name="fade">
+          <div
+            v-show="!active"
+            class="text-3xl md:text-big self-center pl-4"
+            @click="active = true"
+            :id="getId('expandIcon')"
+          >
+            <IconifyIcon :icon="icons.sharpExpandMore">
+              {{ active ? `Shrink` : `Expand` }}</IconifyIcon
+            >
           </div>
-          <div class="flex flex-col pb-2 md:pb-0">
-            <div class="text-3xl md:pb-4 pb-2">Roles</div>
-            <div class="flex flex-row flex-wrap md:flex-col justify-center">
-              <div
-                v-for="(role, i) in work.roles"
-                :key="i"
-                class="px-2 py-2 md:px-0 md:py-0 md:pb-1"
-              >
-                {{ role }}
+        </transition>
+      </div>
+      <!-- <transition name="expandText"> -->
+      <div class="md:py-4 py-2"></div>
+      <TransitionExpand>
+        <div v-show="active" class="h-auto">
+          <!-- md:mt-12 mt-6 mb-6  -->
+          <div class="flex md:flex-row flex-col-reverse">
+            <div class="flex flex-col md:w-3/4 w-full pr-12">
+              <div class="text-3xl pb-4">Overview</div>
+              <div>{{ work.overview }}</div>
+            </div>
+            <div class="flex flex-col pb-2 md:pb-0">
+              <div class="text-3xl md:pb-4 pb-2">Roles</div>
+              <div class="flex flex-row flex-wrap md:flex-col justify-center">
+                <div
+                  v-for="(role, i) in work.roles"
+                  :key="i"
+                  class="px-2 py-2 md:px-0 md:py-0 md:pb-1"
+                >
+                  {{ role }}
+                </div>
               </div>
+            </div>
+            <div
+              class="text-base flex md:hidden justify-center text-center italic py-4"
+            >
+              {{ work.description }}
             </div>
           </div>
         </div>
-      </div>
+      </TransitionExpand>
+      <!-- </transition> -->
     </div>
   </div>
 </template>
 
 <script>
 import IconifyIcon from '@iconify/vue'
+
+import TransitionExpand from '~/components/TransitionExpand.vue'
 
 import sharpExpandMore from '@iconify/icons-ic/sharp-expand-more'
 import bxX from '@iconify/icons-bx/bx-x'
@@ -79,6 +98,7 @@ export default {
   },
   components: {
     IconifyIcon,
+    TransitionExpand,
   },
   data() {
     return {
@@ -116,7 +136,7 @@ export default {
         },
         {
           backgroundImage: 'linear-gradient(#f7941e 0%, #d8cbcf 90%)',
-          duration: 2,
+          duration: 1,
         }
       )
       return activeTl
@@ -126,8 +146,32 @@ export default {
 </script>
 
 <style>
-/* .orange-gradient {
-  background: linear-gradient(180deg, #f7941e 0%, #d8cbcf 90%);
-  border-radius: 1rem;
+.fade-enter-active {
+  transition: opacity 1s;
+}
+
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.expand-enter-active,
+.expand-leave-active {
+  transition-property: opacity, height;
+}
+.expand-enter,
+.expand-leave-to {
+  opacity: 0;
+}
+/* 
+.expandText-enter-active,
+.expandText-leave-active {
+  transition: height 4s ease-in-out;
+  overflow: hidden;
+}
+.expandText-enter, .expandText-leave-to{
+  height: 0;
 } */
 </style>
