@@ -3,9 +3,10 @@
   <div :id="getId('maindiv')" class="rounded-lg relative">
     <button
       type="button"
-      class="absolute right-0 top-0 transform hover:rotate-180 transition-transform duration-1000 ease-out self-center outline-none focus:outline-none"
+      class="text-green text-2xl absolute right-0 top-0 transform hover:rotate-180 transition-transform duration-1000 ease-out self-center outline-none focus:outline-none p-2"
       aria-label="Close modal"
       v-show="active"
+      @click="active = !active"
     >
       <IconifyIcon :icon="icons.bxX" />
     </button>
@@ -40,14 +41,6 @@
           @click="active = !active"
         >
           <IconifyIcon :icon="icons.sharpExpandMore" />
-        </div>
-
-        <div
-          v-show="active"
-          class="text-3xl md:text-3xl self-start"
-          @click="active = !active"
-        >
-          <IconifyIcon :icon="icons.bxX" />
         </div>
       </div>
       <div v-show="active" class="md:pt-12 pt-6 pb-6">
