@@ -1,6 +1,6 @@
 <template>
   <!-- test a change -->
-  <div :id="getId('maindiv')" class="rounded-lg relative pb-8">
+  <div :id="getId('maindiv')" class="rounded-lg relative pb-8 overflow-hidden">
     <transition name="fade">
       <button
         type="button"
