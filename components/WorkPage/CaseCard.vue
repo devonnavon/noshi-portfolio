@@ -61,6 +61,7 @@
                 v-html="$md.render(work.overview)"
                 class="page__content markdown"
               />
+              <NuxtLink :to="`work/${work.slug}`">Read More</NuxtLink>
             </div>
             <div class="flex flex-col pb-2 md:pb-0">
               <div class="text-3xl md:pb-4 pb-2">Roles</div>
