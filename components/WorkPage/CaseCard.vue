@@ -39,7 +39,7 @@
         <transition name="fade">
           <div
             v-show="!active"
-            class="text-3xl md:text-big self-center pl-4"
+            class="text-3xl md:text-big self-center pl-4 cursor-pointer"
             @click="active = true"
             :id="getId('expandIcon')"
           >
