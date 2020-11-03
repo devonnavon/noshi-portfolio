@@ -57,7 +57,10 @@
           <div class="flex md:flex-row flex-col-reverse">
             <div class="flex flex-col md:w-3/4 w-full pr-12">
               <div class="text-3xl pb-4">Overview</div>
-              <div>{{ work.overview }}</div>
+              <div
+                v-html="$md.render(work.overview)"
+                class="page__content markdown"
+              />
             </div>
             <div class="flex flex-col pb-2 md:pb-0">
               <div class="text-3xl md:pb-4 pb-2">Roles</div>
