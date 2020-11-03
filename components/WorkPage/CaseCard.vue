@@ -173,6 +173,10 @@ export default {
 .expand-leave-to {
   opacity: 0;
 }
+
+table {
+  margin: 0 auto;
+}
 /* 
 .expandText-enter-active,
 .expandText-leave-active {

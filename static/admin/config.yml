@@ -43,6 +43,7 @@ collections:
           widget: 'list',
           default: ['UX Design', 'Full Stack Development'],
         }
+      - { label: 'OverviewImages', name: 'overviewImages', widget: 'image' }
       - {
           label: 'Seo Keywords',
           name: 'seo',
