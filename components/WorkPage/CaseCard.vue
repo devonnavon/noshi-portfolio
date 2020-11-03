@@ -61,11 +61,6 @@
                 v-html="$md.render(work.overview)"
                 class="page__content markdown"
               />
-              <NuxtLink
-                :to="`work/${work.slug}`"
-                v-if="work.details != undefined"
-                >Read More</NuxtLink
-              >
             </div>
             <div class="flex flex-col pb-2 md:pb-0">
               <div class="text-3xl md:pb-4 pb-2">Roles</div>
@@ -84,7 +79,28 @@
             >
               {{ work.description }}
             </div>
+            <!-- <div class="flex flex-col md:flex-row">
+              <img
+                v-for="(image, i) in work.galleryImages"
+                :src="image"
+                :key="i"
+              />
+
+            </div> -->
           </div>
+          <div
+            class="flex flex-col md:flex-row mx-auto md:justify-center items-center w-full md:w-2/3 py-4"
+          >
+            <img
+              v-for="(image, i) in work.galleryImages"
+              :src="image"
+              :key="i"
+              class="w-2/3 px-4"
+            />
+          </div>
+          <NuxtLink :to="`work/${work.slug}`" v-if="work.details != undefined"
+            >Read More</NuxtLink
+          >
         </div>
       </TransitionExpand>
       <!-- </transition> -->
