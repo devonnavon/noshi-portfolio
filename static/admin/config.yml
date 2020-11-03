@@ -44,6 +44,12 @@ collections:
           default: ['UX Design', 'Full Stack Development'],
         }
       - {
+          label: 'Seo Keywords',
+          name: 'seo',
+          widget: 'list',
+          default: ['UX Design', 'Full Stack Development'],
+        }
+      - {
           label: 'Details',
           name: 'details',
           widget: 'markdown',

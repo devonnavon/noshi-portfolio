@@ -80,7 +80,7 @@
               <stop offset="100%" stop-color="#FF6B00" />
             </linearGradient>
           </defs>
-          <NuxtLink to="services">
+          <NuxtLink to="/services">
             <g
               id="service-group"
               class="cursor-pointer"
@@ -110,7 +110,7 @@
               </text>
             </g>
           </NuxtLink>
-          <NuxtLink to="contact">
+          <NuxtLink to="/contact">
             <g
               id="contact-group"
               class="cursor-pointer"
@@ -140,7 +140,7 @@
               </text>
             </g>
           </NuxtLink>
-          <NuxtLink to="work">
+          <NuxtLink to="/work">
             <g
               id="work-group"
               class="cursor-pointer"
