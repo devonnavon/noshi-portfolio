@@ -1,5 +1,8 @@
 <template>
-  <div>{{ work.details }}</div>
+  <div
+    v-html="$md.render(work.details)"
+    class="page__content markdown pt-4 md:pt-6 md:pb-24"
+  />
 </template>
 
 <script>
