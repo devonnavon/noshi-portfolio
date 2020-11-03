@@ -11,9 +11,12 @@
       >
         <IconifyIcon :icon="icons.bxX" /></button
     ></transition>
+
     <div
       class="flex flex-col font-display text-green md:py-8 py-4 px-8 mx-auto"
     >
+      <div v-if="work.client == 'NFL + Verizon'" class=""><Featured2 /></div>
+
       <div class="flex-row text-2xl opacity-50 pb-2 hidden md:flex">
         {{ work.client }}
       </div>
@@ -49,6 +52,8 @@
           </div>
         </transition>
       </div>
+      <div v-if="work.client == 'NFL + Verizon'" class="py-2"><Featured /></div>
+
       <!-- <transition name="expandText"> -->
       <div class="md:py-4 py-2"></div>
       <TransitionExpand>
@@ -112,6 +117,8 @@
 import IconifyIcon from '@iconify/vue'
 
 import TransitionExpand from '~/components/TransitionExpand.vue'
+import Featured from '~/components/Featured.vue'
+import Featured2 from '~/components/Featured2.vue'
 
 import sharpExpandMore from '@iconify/icons-ic/sharp-expand-more'
 import bxX from '@iconify/icons-bx/bx-x'
@@ -123,6 +130,8 @@ export default {
   components: {
     IconifyIcon,
     TransitionExpand,
+    Featured,
+    Featured2,
   },
   data() {
     return {
