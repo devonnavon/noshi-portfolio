@@ -103,9 +103,9 @@
               class="w-2/3 px-4"
             />
           </div>
-          <NuxtLink :to="`work/${work.slug}`" v-if="work.details != undefined"
+          <!-- <NuxtLink :to="`work/${work.slug}`" v-if="work.details != undefined"
             >Read More</NuxtLink
-          >
+          > -->
         </div>
       </TransitionExpand>
       <!-- </transition> -->
