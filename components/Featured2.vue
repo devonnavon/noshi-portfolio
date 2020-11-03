@@ -1,6 +1,6 @@
 <template>
   <div
-    id="featured1"
+    id="featured2"
     class="border-solid border-t-2 border-b-2 border-l-0 border-r-0 border-green"
   >
     <ul class="topics font-display text-green text-2xl">
@@ -29,7 +29,7 @@ export default {
   methods: {
     contactScroll() {
       let topics = document.querySelector('.topics').cloneNode(true)
-      document.getElementById('featured1').appendChild(topics)
+      document.getElementById('featured2').appendChild(topics)
 
       gsap.to('.topics', 30, {
         x: -topics.offsetWidth,
@@ -42,17 +42,17 @@ export default {
 </script>
 
 <style lang="scss">
-#featured1 {
+#featured2 {
   //   border: solid 2px gray;
   white-space: nowrap;
   overflow: hidden;
 }
-#featured1 ul {
+#featured2 ul {
   display: inline-block;
   padding: 0px;
   margin: 0px;
 }
-#featured1 li {
+#featured2 li {
   display: inline;
   margin-right: 30px;
 }
