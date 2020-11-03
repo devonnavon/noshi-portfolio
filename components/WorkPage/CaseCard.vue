@@ -15,7 +15,9 @@
     <div
       class="flex flex-col font-display text-green md:py-8 py-4 px-8 mx-auto"
     >
-      <div v-if="work.client == 'NFL + Verizon'" class=""><Featured2 /></div>
+      <div v-if="work.client == 'NFL + Verizon'" class="pb-2 md:pb-0">
+        <Featured2 />
+      </div>
 
       <div class="flex-row text-2xl opacity-50 pb-2 hidden md:flex">
         {{ work.client }}
