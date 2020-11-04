@@ -74,6 +74,7 @@
     </div>
 
     <div
+      markdown="1"
       v-html="$md.render(work.details)"
       class="page__content markdown overflow-hidden px-8 mx-auto font-display text-base text-green"
     />
@@ -115,5 +116,22 @@ export default {
 h1 {
   font-size: 1.875rem;
   padding-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+iframe {
+  margin: auto;
+}
+
+img {
+  padding: 0.5rem 0.5rem;
+}
+
+.text-left > h2 {
+  text-align: left;
 }
 </style>
