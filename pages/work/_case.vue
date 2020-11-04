@@ -74,9 +74,10 @@
     </div>
 
     <div
+      markdown="1"
       v-html="$md.render(work.details)"
       class="page__content markdown overflow-hidden px-8 mx-auto font-display text-base text-green"
-    />
+    ></div>
   </div>
 </template>
 
@@ -119,8 +120,6 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
   text-align: center;
 }
 </style>
