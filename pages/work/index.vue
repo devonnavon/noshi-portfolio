@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>
-    <div class="xl:container mx-auto">
+    <div class="xl:container mx-auto pb-24 md:pb-0">
       <CaseCard v-for="(work, i) in works" :key="i" :work="work" />
     </div>
   </div>

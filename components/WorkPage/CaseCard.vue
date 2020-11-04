@@ -105,9 +105,14 @@
               class="w-2/3 px-4"
             />
           </div>
-          <!-- <NuxtLink :to="`work/${work.slug}`" v-if="work.details != undefined"
-            >Read More</NuxtLink
-          > -->
+          <div class="mx-auto flex justify-center">
+            <NuxtLink
+              :to="`work/${work.slug}`"
+              v-if="work.details != undefined"
+              class="text-center py-12 underline w-full"
+              >Read More</NuxtLink
+            >
+          </div>
         </div>
       </TransitionExpand>
       <!-- </transition> -->

@@ -35,7 +35,7 @@
       <div class="md:py-4 py-2"></div>
       <div class="h-auto">
         <div class="flex md:flex-row flex-col-reverse">
-          <div class="flex flex-col md:w-3/4 w-full pr-12">
+          <div class="flex flex-col md:w-3/4 w-full md:pr-12 pr-0">
             <div class="text-3xl pb-4">Overview</div>
             <div
               v-html="$md.render(work.overview)"
@@ -133,5 +133,24 @@ img {
 
 .text-left > h2 {
   text-align: left;
+}
+.video-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.video-container::after {
+  padding-top: 56.25%;
+  display: block;
+  content: '';
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>
