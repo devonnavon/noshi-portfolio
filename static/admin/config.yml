@@ -52,13 +52,19 @@ collections:
     format: 'json'
     folder: 'content/blog'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{seo.0}}-{{title}}'
     editor:
       preview: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - {
+          label: 'Seo Keywords',
+          name: 'seo',
+          widget: 'list',
+          default: ['UX Design', 'Full Stack Development'],
+        }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'work'
@@ -66,7 +72,7 @@ collections:
     format: 'json'
     folder: 'content/work'
     create: true
-    slug: '{{title}}-{{year}}{{month}}{{day}}'
+    slug: '{{seo.0}}-{{title}}'
     editor:
       preview: true
     fields:
