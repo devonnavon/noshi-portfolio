@@ -116,4 +116,11 @@ h1 {
   font-size: 1.875rem;
   padding-bottom: 1rem;
 }
+
+h2 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+}
 </style>
