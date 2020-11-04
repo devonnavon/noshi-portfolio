@@ -9,6 +9,44 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - label: Settings
+    name: settings
+    files:
+      - label: General
+        name: general
+        format: json
+        file: 'app/content/settings/general.json'
+        fields:
+          - {
+              label: 'Featured Cases (slug)',
+              name: featuredCases,
+              widget: list,
+              required: false,
+            }
+          - {
+              label: 'SEO Keywords',
+              name: seoKeywords,
+              widget: list,
+              required: false,
+            }
+          - {
+              label: 'SEO Description',
+              name: seoDescription,
+              widget: text,
+              required: false,
+            }
+      # - label: Manifest
+      #   name: manifest
+      #   format: json
+      #   file: 'app/content/settings/manifest.json'
+      #   fields:
+      #     - { label: Name, name: name, widget: string }
+      #     - { label: 'Short name', name: shortName, widget: string }
+      #     - { label: Description, name: description, widget: text }
+      #     - { label: 'Theme color', name: themeColor, widget: string }
+      #     - { label: 'Background color', name: backgroundColor, widget: string }
+      #     - { label: Lang, name: lang, widget: string, default: en }
+
   - name: 'blog'
     label: 'Blog'
     format: 'json'
