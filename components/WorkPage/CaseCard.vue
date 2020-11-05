@@ -21,7 +21,6 @@
           class="font-display text-green text-2xl"
           :length="9"
           :speed="30"
-          path="/home"
           >FEATURED ON APPLE KEYNOTE</SlidingBanner
         >
       </div>
@@ -67,7 +66,6 @@
           class="font-display text-green text-2xl"
           :length="9"
           :speed="30"
-          path="/home"
           >FEATURED ON APPLE KEYNOTE</SlidingBanner
         >
       </div>
@@ -141,8 +139,6 @@ import IconifyIcon from '@iconify/vue'
 
 import TransitionExpand from '~/components/TransitionExpand.vue'
 import SlidingBanner from '~/components/SlidingBanner.vue'
-import Featured from '~/components/Featured.vue'
-import Featured2 from '~/components/Featured2.vue'
 
 import sharpExpandMore from '@iconify/icons-ic/sharp-expand-more'
 import bxX from '@iconify/icons-bx/bx-x'
@@ -154,8 +150,6 @@ export default {
   components: {
     IconifyIcon,
     TransitionExpand,
-    Featured,
-    Featured2,
   },
   data() {
     return {

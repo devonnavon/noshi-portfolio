@@ -4,7 +4,13 @@
       class="flex flex-col font-display text-green md:py-8 py-4 px-8 mx-auto"
     >
       <div v-if="work.client == 'NFL + Verizon'" class="pb-2 md:pb-0">
-        <Featured2 />
+        <SlidingBanner
+          id="featured1"
+          class="font-display text-green text-2xl"
+          :length="9"
+          :speed="30"
+          >FEATURED ON APPLE KEYNOTE</SlidingBanner
+        >
       </div>
 
       <div class="flex-row text-2xl opacity-50 pb-2 hidden md:flex">
@@ -30,7 +36,15 @@
           </div>
         </div>
       </div>
-      <div v-if="work.client == 'NFL + Verizon'" class="py-2"><Featured /></div>
+      <div v-if="work.client == 'NFL + Verizon'" class="py-2">
+        <SlidingBanner
+          id="featured2"
+          class="font-display text-green text-2xl"
+          :length="9"
+          :speed="30"
+          >FEATURED ON APPLE KEYNOTE</SlidingBanner
+        >
+      </div>
 
       <div class="md:py-4 py-2"></div>
       <div class="h-auto">
@@ -82,13 +96,11 @@
 </template>
 
 <script>
-import Featured from '~/components/Featured.vue'
-import Featured2 from '~/components/Featured2.vue'
+import SlidingBanner from '~/components/SlidingBanner.vue'
 
 export default {
   components: {
-    Featured,
-    Featured2,
+    SlidingBanner,
   },
   head() {
     return {

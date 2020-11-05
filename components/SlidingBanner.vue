@@ -4,14 +4,12 @@
     class="border-solid border-t-2 border-b-2 border-l-0 border-r-0 border-green"
   >
     <ul class="topics">
-      <NuxtLink
-        :to="path"
-        class="hover:text-orange"
-        v-for="n in length"
-        :key="n"
-      >
-        <li><slot>xxx</slot></li></NuxtLink
-      >
+      <li v-for="n in length" :key="n">
+        <NuxtLink :to="path" v-if="path != undefined" class="hover:text-orange"
+          ><slot>Banner Text</slot></NuxtLink
+        >
+        <slot v-else>Banner Text</slot>
+      </li>
     </ul>
   </div>
 </template>
