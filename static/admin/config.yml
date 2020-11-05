@@ -15,7 +15,7 @@ collections:
       - label: General
         name: general
         format: json
-        file: 'app/content/settings/general.json'
+        file: 'content/settings/general.json'
         fields:
           - {
               label: 'Featured Cases (slug)',

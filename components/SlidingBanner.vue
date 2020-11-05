@@ -1,9 +1,9 @@
 <template>
   <div
-    :id="getId()"
+    :id="`${this.id}SlidingBanner`"
     class="border-solid border-t-2 border-b-2 border-l-0 border-r-0 border-green"
   >
-    <ul class="topics">
+    <ul :class="`${this.id}topics`">
       <li v-for="n in length" :key="n">
         <NuxtLink
           :to="path"
@@ -36,13 +36,10 @@ export default {
     this.contactScroll()
   },
   methods: {
-    getId() {
-      return `${this.id}SlidingBanner`
-    },
     contactScroll() {
-      let topics = document.querySelector('.topics').cloneNode(true)
+      let topics = document.querySelector(`.${this.id}topics`).cloneNode(true)
       document.getElementById(`${this.id}SlidingBanner`).appendChild(topics)
-      gsap.to('.topics', this.speed, {
+      gsap.to(`.${this.id}topics`, this.speed, {
         x: -topics.offsetWidth,
         repeat: -1,
         ease: Linear.easeNone,

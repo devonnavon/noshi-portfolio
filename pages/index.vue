@@ -22,6 +22,7 @@
     <Summary />
     <div class="md:py-24"></div>
     <Services />
+    <CaseCard v-for="(work, i) in featuredWorks" :key="i" :work="work" />
     <Experience />
     <Contact />
   </div>
@@ -35,6 +36,7 @@ import Summary from '~/components/Homepage/Summary'
 import Experience from '~/components/Homepage/Experience'
 import Contact from '~/components/ContactFooter'
 import ScrollAnchor from '~/components/Homepage/ScrollAnchor'
+import CaseCard from '~/components/WorkPage/CaseCard'
 
 export default {
   components: {
@@ -45,6 +47,7 @@ export default {
     Experience,
     Contact,
     ScrollAnchor,
+    CaseCard,
   },
   head() {
     return {
@@ -52,6 +55,20 @@ export default {
       script: [
         { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
       ],
+    }
+  },
+  mounted() {
+    console.log(this.featuredWorks)
+  },
+  async asyncData({ $content }) {
+    const settings = await $content('settings/general').fetch()
+    const works = await $content('work').fetch()
+    const featuredWorks = works.filter((e) =>
+      settings.featuredCases.includes(e.slug)
+    )
+    return {
+      settings,
+      featuredWorks,
     }
   },
 }
