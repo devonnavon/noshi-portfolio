@@ -85,7 +85,7 @@
       </div>
     </div>
     <SlidingBanner
-      id="homeContact"
+      id="contact"
       class="font-display text-green text-5xl md:mt-48 mt-24"
       :length="9"
       :speed="30"

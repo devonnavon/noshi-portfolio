@@ -5,8 +5,17 @@
   >
     <ul class="topics">
       <li v-for="n in length" :key="n">
-        <NuxtLink :to="path" v-if="path != undefined" class="hover:text-orange"
+        <NuxtLink
+          :to="path"
+          v-if="path != undefined && !external"
+          class="hover:text-orange"
           ><slot>Banner Text</slot></NuxtLink
+        >
+        <a
+          v-else-if="path != undefined && external"
+          :href="path"
+          class="hover:text-orange"
+          ><slot>Banner Text</slot></a
         >
         <slot v-else>Banner Text</slot>
       </li>
@@ -21,6 +30,7 @@ export default {
     path: String,
     length: Number,
     speed: Number,
+    external: { type: Boolean, default: false },
   },
   mounted() {
     this.contactScroll()
@@ -42,9 +52,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 div {
-  //   border: solid 2px gray;
   white-space: nowrap;
   overflow: hidden;
 }
