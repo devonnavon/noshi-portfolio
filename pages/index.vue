@@ -33,7 +33,7 @@ import Services from '~/components/Homepage/HServices'
 import Divider from '~/components/Homepage/Divider'
 import Summary from '~/components/Homepage/Summary'
 import Experience from '~/components/Homepage/Experience'
-import Contact from '~/components/Homepage/HContact'
+import Contact from '~/components/ContactFooter'
 import ScrollAnchor from '~/components/Homepage/ScrollAnchor'
 
 export default {

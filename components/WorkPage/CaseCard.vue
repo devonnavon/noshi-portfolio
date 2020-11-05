@@ -16,7 +16,14 @@
       class="flex flex-col font-display text-green md:py-8 py-4 px-8 mx-auto"
     >
       <div v-if="work.client == 'NFL + Verizon'" class="pb-2 md:pb-0">
-        <Featured2 />
+        <SlidingBanner
+          id="featured1"
+          class="font-display text-green text-2xl"
+          :length="9"
+          :speed="30"
+          path="/home"
+          >FEATURED ON APPLE KEYNOTE</SlidingBanner
+        >
       </div>
 
       <div class="flex-row text-2xl opacity-50 pb-2 hidden md:flex">
@@ -54,7 +61,16 @@
           </div>
         </transition>
       </div>
-      <div v-if="work.client == 'NFL + Verizon'" class="py-2"><Featured /></div>
+      <div v-if="work.client == 'NFL + Verizon'" class="py-2">
+        <SlidingBanner
+          id="featured2"
+          class="font-display text-green text-2xl"
+          :length="9"
+          :speed="30"
+          path="/home"
+          >FEATURED ON APPLE KEYNOTE</SlidingBanner
+        >
+      </div>
 
       <!-- <transition name="expandText"> -->
       <div class="md:py-4 py-2"></div>
@@ -124,6 +140,7 @@
 import IconifyIcon from '@iconify/vue'
 
 import TransitionExpand from '~/components/TransitionExpand.vue'
+import SlidingBanner from '~/components/SlidingBanner.vue'
 import Featured from '~/components/Featured.vue'
 import Featured2 from '~/components/Featured2.vue'
 
