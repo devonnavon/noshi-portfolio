@@ -28,8 +28,8 @@ export default {
     link: [
       {
         rel: 'icon',
-        type: 'image/png',
-        href: '/icon.png',
+        type: 'image/x-icon-',
+        href: '/favicon/favicon-32x32.png',
       },
     ],
     script: [
@@ -53,9 +53,9 @@ export default {
     ],
   },
   pwa: {
-    icon: {
-      src: '/icon.png',
-    },
+    // icon: {
+    //   src: '/favicon/favicon-32x32.png',
+    // },
 
     manifest: {
       name: 'noshi design studio',
@@ -65,7 +65,7 @@ export default {
         'noshi is a two person, los angeles based, design studio focused on developing digital products',
       icons: [
         {
-          src: '/icon.png',
+          src: '/favicon/favicon-32x32.png',
         },
         {
           src: '/favicon/favicon-16x16.png',
