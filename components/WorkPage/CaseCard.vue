@@ -44,7 +44,7 @@
           </div>
           <div class="text-lg opacity-50 pb-2 md:hidden">{{ work.client }}</div>
           <div
-            class="text-base pt-2 md:w-full lg:w-3/4 hidden md:inline-block text-justify"
+            class="text-base pt-2 md:w-full lg:w-3/4 hidden md:inline-block text-justify pl-1"
           >
             {{ work.description }}
           </div>
