@@ -46,6 +46,17 @@ export default {
       },
     ],
   },
+  pwa: {
+    icon: {
+      source:'~/static/icon.png'
+    },
+    manifest: {
+      name: 'noshi design studio',
+      short_name: 'noshi design studio',
+      lang: 'en',
+      description: 'noshi is a two person, los angeles based, design studio focused on developing digital products'
+    }
+  },
   /*
    ** Global CSS
    */
