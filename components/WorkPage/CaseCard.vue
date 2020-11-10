@@ -25,18 +25,20 @@
         >
       </div>
 
-      <div class="flex-row text-2xl opacity-50 pb-2 hidden md:flex">
+      <div
+        class="flex-row text-2xl opacity-50 hidden pl-0 pb-0 md:pb-1 md:flex"
+      >
         {{ work.client }}
       </div>
       <div class="flex flex-row">
         <div class="flex flex-col w-1/4 md:w-1/3 flex-shrink-0">
           <div class="case-thumbnail">
-            <img :src="work.thumbnail" class="w-full h-auto" alt="" />
+            <img :src="work.thumbnail" class="w-full h-auto p-0" alt="" />
           </div>
         </div>
-        <div class="flex flex-col pl-4 w-2/3 md:w-auto">
+        <div class="flex flex-col md:pl-4 pl-2 w-2/3 md:w-auto">
           <div
-            class="text-xl md:text-3xl xl:text-6xl leading-none w-3/4 md:w-2/3"
+            class="text-xl md:text-3xl xl:text-6xl leading-none w-3/4 md:w-2/3 pt-1 md:pt-0"
           >
             {{ work.title }}
           </div>
@@ -110,6 +112,7 @@
             </div> -->
           </div>
           <div
+            v-if="work.galleryImages != undefined"
             class="flex flex-col md:flex-row mx-auto md:justify-center items-center w-full md:w-2/3 py-4"
           >
             <img

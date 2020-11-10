@@ -1,0 +1,22 @@
+{
+  "roles": [
+    "UX Design",
+    "UX Research",
+    "Ideation",
+    "Prototyping"
+  ],
+  "seo": [
+    "UX Design",
+    "The Field Museum",
+    "SUE",
+    "Tyrannosaurus Rex",
+    "Design Workshop",
+    "Bone Scan"
+  ],
+  "title": "Dinosaur Toolkit",
+  "client": "The Field Museum",
+  "thumbnail": "/img/thumbnail.jpg",
+  "description": "The Dinosaur Toolkit was a project that leveraged SUE, the largest and most complete Tyrannosaurus rex specimen discovered, in an interactive learning environment.",
+  "overview": "The Learning Center at The Field Museum was developing a digital toolkit about dinosaurs and geologic time that educators across the country could use in the classroom. The problem space presented to us was extremely open, the only anchor to this project was that we had to incorporate the bone scans of SUE, the largest and best preserved T-Rex ever discovered. This was both extremely exciting and scary, as we only had about 9 weeks to complete the project.<br/>\nDue to time constraints coupled with the open nature of the project, our designs weren't as fleshed out as we wanted them to be. However, our research and initial design ideas set the foundation in which The Field Museum can build upon.",
+  "details": "# Process\n\nWe first conducted a competitive analysis to gain knowledge of what products are currently on the market and to get initial ideas for our own toolkit. We then did user research to get a more concise understanding of the basic requirements our interface. We went about this by talking with our client, creating a survey, and sending it out to a set of teachers that had previously been helpful in providing feedback to the museum about teaching toolkits. Additionally, we developed user personas and journeys to identify pain points in the teaching and learning experience for our users which will be addressed in our initial design of the toolkit.<br/><br/>\n\n# Research\n\nWe conducted a survey with 8 educators from the Chicago area to learn basic demographic information as well as understand what teachers find exciting and what they think will lead to engagement of their students.<br/><br/>\n\nThe survey helped us come to the conclusion that our target demographic is middle school students, and that we should aim to create a flexible web application that can be easily adapted to lesson plans with activities that can be done individually or in a group of students together.\n<br/><br/>\n\n![Primary Persona Jeff](/img/jeff-persona.png \"Primary Persona Jeff\")\n\n![Primary Persona Gwen](/img/gwen-persona.png \"Primary Persona Gwen\")\n\n<br/><br/>\n\nWe created two personas meant to represent the two kinds of users of The Field Museum's toolkits. The personas were originally created using the qualitative responses of teachers from The Field Museum’s Biomechanics Toolkit survey.\n\n<br/><br/>\n\n![Jeff User Journey](/img/jeff-journey.jpg \"Jeff User Journey\")\n\n<br/><br/>\n\n![Gwen User Journey](/img/gwen-user-journey.jpg \"Gwen User Journey\")\n\n<br/><br/>\n\nTo accompany these personas, we created user journeys to illustrate how each of the users may act and feel when completing an activity in the current state."
+}

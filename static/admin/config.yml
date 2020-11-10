@@ -92,6 +92,7 @@ collections:
           name: 'galleryImages',
           widget: 'list',
           field: { label: Image, name: image, widget: image },
+          required: false,
         }
       - {
           label: 'Seo Keywords',
