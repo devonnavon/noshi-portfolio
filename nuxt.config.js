@@ -66,6 +66,8 @@ export default {
       icons: [
         {
           src: '/favicon/favicon-32x32.png',
+          sizes: '32x32',
+          type: 'image/png',
         },
         {
           src: '/favicon/favicon-16x16.png',
@@ -88,7 +90,7 @@ export default {
           type: 'image/png',
         },
         {
-          src: '/favicon/android-chrome-192x192-.png',
+          src: '/favicon/android-chrome-192x192.png',
           sizes: '192x192',
           type: 'image/png',
         },
@@ -127,7 +129,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    ['@nuxtjs/pwa', { icon: false}],
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
     '@nuxtjs/markdownit',
