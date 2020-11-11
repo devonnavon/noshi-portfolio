@@ -13,7 +13,7 @@
           <ScrollAnchor
             anchor="summary"
             class="self-center justify-self-center text-center sm:mt-auto -mt-24 font-display text-l text-green"
-            >be cool
+            >take a look
           </ScrollAnchor>
         </div>
       </div>
