@@ -1,13 +1,27 @@
 <template>
   <section id="contact" class="bg-pink py-24 px-6">
-    <div class="flex flex-col flex-wrap justify-center">
+    <div class="flex flex-col justify-center">
       <div
+        class="flex flex-col font-serif text-green text-left w-full md:py-0 md:mt-auto"
+      >
+        <!-- <div class="flex-shrink h-20"></div> -->
+        <div class="md:text-6xl text-4xl">Let's make your next</div>
+        <ServiceSwitcher
+          class="md:text-huge text-5xl font-semibold"
+          id="contactSwitcher2"
+        />
+        <div class="self-end font-bold md:text-5xl text-3xl pt-16">
+          together.
+        </div>
+      </div>
+      <div class="md:py-12 py-0"></div>
+      <!-- <div
         class="font-serif md:text-big text-4xl text-green self-center pb-12 text-center"
       >
         So, let's make your next
-      </div>
+      </div> -->
 
-      <div class="flex flex-col w-full justify-between">
+      <!-- <div class="flex flex-col w-full justify-between">
         <div class="flex flex-row w-auto h-auto">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +96,7 @@
             </g>
           </svg>
         </div>
-      </div>
+      </div> -->
     </div>
     <SlidingBanner
       id="contact"
@@ -97,38 +111,14 @@
 
 <script>
 import SomethingSwitcher from '~/components/SomethingSwitcher'
+import ServiceSwitcher from '~/components/ServicesSwitcher'
 import SlidingBanner from '~/components/SlidingBanner'
 
 export default {
   components: {
     SomethingSwitcher,
     SlidingBanner,
-  },
-  mounted() {
-    this.gearRotate()
-  },
-  methods: {
-    gearRotate() {
-      gsap.to('#gearOne', 3.5, {
-        rotation: '360_cw',
-        repeat: -1,
-        ease: Sine.easeInOut,
-      })
-      gsap.to('#smallGear', 3.5, {
-        delay: 1,
-        rotation: '360_cw',
-        repeat: -1,
-        ease: Sine.easeInOut,
-        transformOrigin: '50%',
-      })
-      gsap.to('#bigGear', 3.5, {
-        delay: 1,
-        rotation: '360_ccw',
-        repeat: -1,
-        ease: Sine.easeInOut,
-        transformOrigin: '50%',
-      })
-    },
+    ServiceSwitcher,
   },
 }
 </script>
