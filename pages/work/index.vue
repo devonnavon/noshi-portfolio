@@ -10,12 +10,14 @@
       </div>
     </div>
     <div class="xl:container mx-auto pb-24 md:pb-0">
-      <CaseCard v-for="(work, i) in works" :key="i" :work="work" />
+      <CaseCard v-for="(work, i) in workCases" :key="i" :work="work" />
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+
 import CaseCard from '~/components/WorkPage/CaseCard'
 
 export default {
@@ -24,25 +26,18 @@ export default {
       title: 'work',
     }
   },
-  async asyncData({ $content }) {
-    const works = await $content('work').fetch()
-    return {
-      works,
-    }
+  async created() {
+    await this.fetchWorkCases()
   },
   components: {
     CaseCard,
   },
+  computed: mapGetters(['workCases']),
+  methods: mapActions(['fetchWorkCases']),
 }
 </script>
 
 <style>
-/* @media only screen and (min-width: 768px) {
-  #work-header {
-    line-height: 158px;
-  }
-} */
-
 .gradient-background {
   background: linear-gradient(180deg, #ffffff 0%, #d8cbcf 99%);
 }

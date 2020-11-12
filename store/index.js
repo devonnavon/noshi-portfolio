@@ -50,11 +50,13 @@ export const state = () => ({
       ],
     },
   ],
+  workCases:[]
 })
 
 export const getters = {
   servicesList: (state) => state.servicesList,
   servicesDetail: (state) => state.servicesDetail,
+  workCases: (state) => state.workCases
 }
 
 export const actions = {
@@ -63,7 +65,11 @@ export const actions = {
   },
   updateLastScrollPosition({ commit }, num) { 
     commit('changeLastScrollPosition', num)
-  }
+  },
+  async fetchWorkCases({ commit }) {
+    const cases = await this.$content('work').fetch()
+		commit('setWorkCases', cases);
+	},
 }
 
 export const mutations = {
@@ -72,8 +78,9 @@ export const mutations = {
   },
   changeLastScrollPosition(state, num) {
     state.lastScrollPosition = num
-   },
+  },
   switchAutoScrolling(state, isAutoscrolling) { 
     state.autoScrolling = isAutoscrolling
-  }
+  },
+  setWorkCases: (state, workCases) => (state.workCases = workCases),
 }
