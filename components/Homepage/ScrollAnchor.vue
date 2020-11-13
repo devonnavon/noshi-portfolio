@@ -19,7 +19,7 @@ export default {
   methods: {
     animate() {
       gsap.set('#homeanchor', { y: '15' })
-      gsap.to('#homeanchor', { delay: 3.5, y: 0, opacity: 1 })
+      gsap.to('#homeanchor', { delay: 0.5, y: 0, opacity: 1 })
     },
     gotoid(id) {
       smoothscroll.polyfill()
