@@ -31,7 +31,8 @@ export default {
   },
   computed: mapGetters(['getWorkCases']),
   async fetch({ store }) {
-    await store.dispatch('fetchWorkCases')
+    if (store.state.workCases.length === 0)
+      await store.dispatch('fetchWorkCases')
   },
 }
 </script>
