@@ -1,7 +1,7 @@
 <template>
   <div id="#container" class="xl:container mx-auto bg-pink md:px-6">
     <!-- <div class="xl:container mx-auto"> -->
-    <ServicesLanding />
+    <!-- <ServicesLanding /> -->
     <Services />
     <DesignDevelop />
     <WhatYouSee />

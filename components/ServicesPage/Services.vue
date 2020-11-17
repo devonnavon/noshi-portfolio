@@ -1,5 +1,8 @@
 <template>
-  <section id="servicesServices" class="bg-pink h-auto text-green px-6 pt-20">
+  <section
+    id="servicesServices"
+    class="bg-pink h-auto text-green px-6 md:pt-40 pt-12"
+  >
     <div>
       <div
         id="yournext"
