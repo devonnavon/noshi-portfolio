@@ -30,9 +30,8 @@ export default {
     CaseCard,
   },
   computed: mapGetters(['getWorkCases']),
-  methods: mapActions(['fetchWorkCases']),
-  async created() {
-    await this.fetchWorkCases()
+  async fetch({ store }) {
+    await store.dispatch('fetchWorkCases')
   },
 }
 </script>
