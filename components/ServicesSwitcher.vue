@@ -1,10 +1,13 @@
 <template>
-  <span><span id="switcharoo"></span><span>&nbsp;</span></span>
+  <span><span :id="this.id" class="switcharoo"></span><span>&nbsp;</span></span>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 export default {
+  props: {
+    id: String,
+  },
   mounted() {
     this.animate()
   },
@@ -21,7 +24,7 @@ export default {
       let masterTl = gsap.timeline({ repeat: -1 })
       this.servicesList.forEach((word) => {
         let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 })
-        tl.to('#switcharoo', { duration: 0.1 * word.length, text: word })
+        tl.to(`#${this.id}`, { duration: 0.1 * word.length, text: word })
         masterTl.add(tl)
       })
     },
@@ -31,12 +34,12 @@ export default {
 
 <style>
 @media only screen and (max-width: 768px) {
-  #switcharoo {
+  .switcharoo {
     min-height: 310px;
   }
 }
 
-#switcharoo {
+.switcharoo {
   min-height: 77px;
 }
 </style>

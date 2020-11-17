@@ -52,7 +52,7 @@ export default {
       this.phrases.forEach((phrase, i) => {
         let pauseFlag = false
         let tl = gsap.timeline()
-        let duration = 0.1
+        let duration = 0.05
         if ([0, 3, 4].includes(i)) {
           this.splitWords(phrase, tl, i, duration, [
             'small',

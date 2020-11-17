@@ -41,7 +41,10 @@
         >
           <div>We can make your next</div>
           <div id="homeswitch">
-            <ServicesSwitcher class="text-5xl font-semibold" />
+            <ServicesSwitcher
+              class="text-5xl font-semibold"
+              id="contactSwitcher1"
+            />
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@
     id="plantflicker"
   >
     <g id="Group 2">
-      <g xmlns="http://www.w3.org/2000/svg" id="logo" class="opacity-0">
+      <g xmlns="http://www.w3.org/2000/svg" id="logo" class="">
         <text
           id="noshi"
           fill="#006838"
@@ -164,30 +164,30 @@ export default {
   methods: {
     animate() {
       gsap.set('#plantflicker', { autoAlpha: 1 })
-      gsap.set('#mask', { y: '+=500' })
-      gsap.set('#sun', { scale: 0.5, opacity: 0 })
-      gsap.set('#logo', {
-        y: +800,
-      })
-      gsap.to('#sun', {
-        delay: 0.5,
-        scale: 1.0,
-        opacity: 100,
-        duration: 2.0,
-        ease: 'bounce.out',
-        motionPath: {
-          path: '#path',
-          align: '#path',
-          autoRotate: true,
-          alignOrigin: [0.5, 0.5],
-        },
-      })
-      gsap.to('#mask', {
-        y: '-=500',
-        duration: 2.5,
-        delay: 1.5,
-        ease: 'power3.inOut',
-      })
+      // gsap.set('#mask', { y: '+=500' })
+      // gsap.set('#sun', { scale: 0.5, opacity: 0 })
+      // gsap.set('#logo', {
+      //   y: +800,
+      // })
+      // gsap.to('#sun', {
+      //   delay: 0.5,
+      //   scale: 1.0,
+      //   opacity: 100,
+      //   duration: 2.0,
+      //   ease: 'bounce.out',
+      //   motionPath: {
+      //     path: '#path',
+      //     align: '#path',
+      //     autoRotate: true,
+      //     alignOrigin: [0.5, 0.5],
+      //   },
+      // })
+      // gsap.to('#mask', {
+      //   y: '-=500',
+      //   duration: 2.5,
+      //   delay: 1.5,
+      //   ease: 'power3.inOut',
+      // })
       gsap.to('#leaf', {
         // y: '+=1',
         // x: '+=1',
@@ -217,21 +217,14 @@ export default {
       //   opacity: 0,
       // })
 
-      gsap.to('#logo', {
-        opacity: 100,
-        delay: 1.75,
-        duration: 3.0,
-        y: 0,
-        ease: 'elastic.out(1, 0.75)',
-      })
-      gsap.to('.menu', {
-        opacity: 100,
-        delay: 3.5,
-        stagger: 0.3,
-        duration: 1.5,
-        y: 0,
-        ease: 'elastic.out(0.9, 1)',
-      })
+      // gsap.to('#logo', {
+      //   opacity: 100,
+      //   delay: 1.75,
+      //   duration: 3.0,
+      //   y: 0,
+      //   ease: 'elastic.out(1, 0.75)',
+      // })
+
       gsap.to('#sun', 0.7, {
         y: '-=7',
         ease: Sine.easeInOut,
