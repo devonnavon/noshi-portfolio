@@ -99,6 +99,9 @@
 </template>
 
 <script>
+import data from '@iconify/icons-ic/sharp-expand-more'
+import { mapGetters, mapActions } from 'vuex'
+
 import SlidingBanner from '~/components/SlidingBanner.vue'
 
 export default {
@@ -110,19 +113,9 @@ export default {
       title: this.work.title,
     }
   },
-  async asyncData({ $content, params, error }) {
-    let work
-    console.warn(params)
-    try {
-      work = await $content('work', params.case).fetch()
-      //   work = await $content(`work/${params.slug}`).fetch()
-    } catch (e) {
-      error({ message: e })
-    }
-
-    return {
-      work,
-    }
+  computed: mapGetters({ work: 'getWorkCase' }),
+  async fetch({ store }) {
+    await store.dispatch('fetchWorkCases')
   },
 }
 </script>

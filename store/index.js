@@ -2,6 +2,7 @@ export const state = () => ({
   autoScrolling: false,
   lastScrollPosition:0,
   page: 'index',
+  case: undefined,
   servicesList: [
     'web app',
     'website',
@@ -56,7 +57,10 @@ export const state = () => ({
 export const getters = {
   servicesList: (state) => state.servicesList,
   servicesDetail: (state) => state.servicesDetail,
-  workCases: (state) => state.workCases
+  getWorkCases: (state) => state.workCases,
+  getWorkCase: (state) => {
+    return state.workCases.find(workCase => workCase.slug === state.case)
+  }
 }
 
 export const actions = {
@@ -69,12 +73,15 @@ export const actions = {
   async fetchWorkCases({ commit }) {
     const cases = await this.$content('work').fetch()
 		commit('setWorkCases', cases);
-	},
+  },
 }
 
 export const mutations = {
   updatePage(state, pageName) {
     state.page = pageName
+  },
+  updateCase(state, caseName) {
+    state.case = caseName
   },
   changeLastScrollPosition(state, num) {
     state.lastScrollPosition = num

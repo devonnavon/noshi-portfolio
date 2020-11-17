@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="xl:container mx-auto pb-24 md:pb-0">
-      <CaseCard v-for="(work, i) in workCases" :key="i" :work="work" />
+      <CaseCard v-for="(work, i) in getWorkCases" :key="i" :work="work" />
     </div>
   </div>
 </template>
@@ -26,14 +26,14 @@ export default {
       title: 'work',
     }
   },
-  async created() {
-    await this.fetchWorkCases()
-  },
   components: {
     CaseCard,
   },
-  computed: mapGetters(['workCases']),
+  computed: mapGetters(['getWorkCases']),
   methods: mapActions(['fetchWorkCases']),
+  async created() {
+    await this.fetchWorkCases()
+  },
 }
 </script>
 
