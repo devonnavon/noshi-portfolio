@@ -20,6 +20,8 @@ module.exports = {
       blue: '#3159C8',
       pink: '#D8CBCF',
       white: '#F6F6F6',
+      black: '#000000',
+      darkpink: '#CFC2C6',
     },
     container: {
       center: true,

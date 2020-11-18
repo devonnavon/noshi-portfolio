@@ -1,7 +1,14 @@
 <template>
   <div class="xl:container mx-auto h-auto md:h-full">
     <Summary />
-    <div class="md:py-24"></div>
+    <div class="py-24 font-minimedium text-black text-center px-16 text-base">
+      We like to create experiences for clients that care about design as much
+      as we do but may not have the technical capabilities to build it
+      themselves. Our design and development experience allows us to realize
+      solutions that are on the cutting edge of technology while retaining the
+      personality and soul of our client.
+    </div>
+    <Boxes />
     <Services />
     <CaseCard v-for="(work, i) in featuredWorks" :key="i" :work="work" />
     <Experience />
@@ -16,7 +23,7 @@ import Divider from '~/components/Homepage/Divider'
 import Summary from '~/components/Homepage/Summary'
 import Experience from '~/components/Homepage/Experience'
 import Contact from '~/components/ContactFooter'
-import ScrollAnchor from '~/components/Homepage/ScrollAnchor'
+import Boxes from '~/components/Homepage/Boxes'
 import CaseCard from '~/components/WorkPage/CaseCard'
 
 export default {
@@ -27,7 +34,7 @@ export default {
     Summary,
     Experience,
     Contact,
-    ScrollAnchor,
+    Boxes,
     CaseCard,
   },
   head() {
