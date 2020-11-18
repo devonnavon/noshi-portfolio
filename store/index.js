@@ -3,54 +3,8 @@ export const state = () => ({
   lastScrollPosition:0,
   page: 'index',
   case: undefined,
-  servicesList: [
-    'web app',
-    'website',
-    'digital strategy',
-    'data pipeline',
-    'ecommerce store',
-  ],
-  servicesDetail: [
-    {
-      key: 'design',
-      details: [
-        'ux design',
-        'product design',
-        'creative direction',
-        'graphic design',
-        'web design',
-        'prototyping',
-        'interactive',
-        'brand identity'
-      ],
-    },
-    {
-      key: 'develop',
-      details: [
-        'web/mobile app',
-        'ecommerce',
-        'cms',
-        'responsive',
-        'full stack',
-        'vuejs',
-        'nodejs',
-        'pwa'
-      ],
-    },
-    {
-      key: 'etc',
-      details: [
-        'ux strategy',
-        'innovation workshops',
-        'business model design',
-        'SEO',
-        'analytics',
-        'data science',
-        'user research',
-        'machine learning'
-      ],
-    },
-  ],
+  servicesList: [],
+  servicesDetail: [],
   workCases:[]
 })
 
@@ -74,6 +28,27 @@ export const actions = {
     const cases = await this.$content('work').fetch()
 		commit('setWorkCases', cases);
   },
+  async fetchServices({ commit }) {
+    const services = await this.$content('settings/services').fetch()
+    const servicesDetail = [
+      {
+        key: 'design',
+        details: services.designServices
+      },
+      {
+        key: 'develop',
+        details: services.developServices
+      },
+      {
+        key: 'etc',
+        details: services.etcServices
+      }
+    ]
+    const servicesList = services.productServices
+    commit('setServicesDetail', servicesDetail);
+    commit('setServicesList', servicesList);
+
+  },
 }
 
 export const mutations = {
@@ -90,4 +65,6 @@ export const mutations = {
     state.autoScrolling = isAutoscrolling
   },
   setWorkCases: (state, workCases) => (state.workCases = workCases),
+  setServicesDetail: (state, servicesDetail) => (state.servicesDetail = servicesDetail),
+  setServicesList: (state, servicesList) => (state.servicesList = servicesList),
 }

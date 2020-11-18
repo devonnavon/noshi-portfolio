@@ -1,0 +1,27 @@
+{
+  "productServices": [
+    "web app",
+    "website",
+    "ecommerce store",
+    "mobile app",
+    "digital strategy"
+  ],
+  "designServices": [
+    "ux design",
+    "creative direction",
+    "graphic design",
+    "prototyping"
+  ],
+  "developServices": [
+    "web/mobile app",
+    "ecommerce",
+    "content management",
+    "javascript"
+  ],
+  "etcServices": [
+    "innovation workshops",
+    "seo",
+    "analytics",
+    "user research"
+  ]
+}

@@ -35,6 +35,30 @@ collections:
               widget: text,
               required: false,
             }
+      - label: Services
+        name: services
+        format: json
+        file: 'content/settings/services.json'
+        fields:
+          - {
+              label: 'Design',
+              name: designServices,
+              widget: list,
+              required: true,
+            }
+          - {
+              label: 'Develop',
+              name: developServices,
+              widget: list,
+              required: true,
+            }
+          - { label: 'Etc', name: etcServices, widget: list, required: true }
+          - {
+              label: 'Products',
+              name: productServices,
+              widget: list,
+              required: true,
+            }
       # - label: Manifest
       #   name: manifest
       #   format: json

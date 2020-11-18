@@ -1,23 +1,5 @@
 <template>
   <div class="xl:container mx-auto h-auto md:h-full">
-    <!-- <section class="parallax parallax--hero h-full">
-      <div
-        id="growing"
-        class="w-full h-full mx-auto flex flex-wrap xl:container justify-center"
-      >
-        <div
-          class="w-screen h-full flex flex-col justify-items-center self-center sm:py-48 mx-6"
-        >
-          <Growing class="" />
-          <ScrollAnchor
-            anchor="summary"
-            class="self-center justify-self-center text-center sm:mt-auto -mt-24 font-display text-l text-green"
-            >take a look
-          </ScrollAnchor>
-        </div>
-      </div>
-    </section> -->
-
     <Summary />
     <div class="md:py-24"></div>
     <Services />
@@ -69,6 +51,13 @@ export default {
       settings,
       featuredWorks,
     }
+  },
+  async fetch({ store }) {
+    if (
+      store.state.servicesDetail.length === 0 ||
+      store.state.servicesList.length === 0
+    )
+      await store.dispatch('fetchServices')
   },
 }
 </script>
