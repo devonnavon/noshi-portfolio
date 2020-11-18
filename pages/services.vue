@@ -30,6 +30,13 @@ export default {
       title: 'noshi services',
     }
   },
+  async fetch({ store }) {
+    if (
+      store.state.servicesDetail.length === 0 ||
+      store.state.servicesList.length === 0
+    )
+      await store.dispatch('fetchServices')
+  },
   components: {
     ServicesLanding,
     Services,
