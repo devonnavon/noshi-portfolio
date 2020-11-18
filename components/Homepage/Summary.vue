@@ -1,7 +1,7 @@
 <template>
   <section
     id="summary"
-    class="bg-pink relative font-serif w-full md:w-auto pt-20 md:pt-20 flex flex-col justify-center align-center"
+    class="bg-pink relative font-serif w-full md:w-auto pt-24 md:pt-24 flex flex-col justify-center align-center"
   >
     <div
       class="phrases relative text-green sm:text-5xl sm:px-6 xl:text-huge text-3xl md:pl-16 px-4 md:px-6"
@@ -23,10 +23,19 @@
 <script>
 export default {
   mounted() {
-    let tl = gsap.timeline()
-    tl.from('.strike', { delay: 0.5, width: 0, duration: 0.3 })
-      .from('.strike2', { width: 0, duration: 1 })
-      .from('.under', { width: 0, duration: 0.3 })
+    this.animateText()
+  },
+  methods: {
+    animateText() {
+      let tl = gsap.timeline({
+        onComplete: () => {
+          tl.invalidate()
+        },
+      })
+      tl.from('.strike', { delay: 0.5, width: 0, duration: 0.3 })
+        .from('.strike2', { width: 0, duration: 1 })
+        .from('.under', { width: 0, duration: 0.3 })
+    },
   },
 }
 </script>
