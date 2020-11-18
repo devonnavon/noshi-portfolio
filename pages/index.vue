@@ -1,7 +1,6 @@
 <template>
   <div class="xl:container mx-auto h-auto md:h-full">
-    <section class="parallax parallax--hero h-full">
-      <!-- <div class="md:h-20"></div> -->
+    <!-- <section class="parallax parallax--hero h-full">
       <div
         id="growing"
         class="w-full h-full mx-auto flex flex-wrap xl:container justify-center"
@@ -17,7 +16,7 @@
           </ScrollAnchor>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <Summary />
     <div class="md:py-24"></div>
