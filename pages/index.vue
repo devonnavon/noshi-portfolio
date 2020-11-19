@@ -1,12 +1,14 @@
 <template>
   <div class="xl:container mx-auto h-auto md:h-full">
     <Summary />
-    <div class="py-24 font-minimedium text-black text-center px-16 text-base">
-      We like to create experiences for clients that care about design as much
+    <div
+      class="py-24 font-minimedium text-black text-center md:px-32 px-16 text-base"
+    >
+      We like to create experiences for clients that care as much about design
       as we do but may not have the technical capabilities to build it
       themselves. Our design and development experience allows us to realize
-      solutions that are on the cutting edge of technology while retaining the
-      personality and soul of our client.
+      solutions that are on the cutting edge of technology without losing
+      personality and playfulness.
     </div>
     <Boxes />
     <Services />
