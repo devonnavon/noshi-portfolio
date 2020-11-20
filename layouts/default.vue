@@ -10,7 +10,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import NavBar from '~/components/NavBar'
+import NavBar from '~/components/NewNavBar'
 
 export default {
   components: {
