@@ -1,23 +1,18 @@
 <template>
   <div class="font-display text-green z-50 text-l">
-    <nav id="thenav" class="thenav flex justify-center pt-6">
-      <div class="relative border-solid">
-        <div
-          id="nav-text"
-          class="absolute flex text-center items-center justify-around"
-        >
-          <div :class="selectedClass('index')">
-            <NuxtLink to="/">home</NuxtLink>
-          </div>
-          <div :class="selectedClass('work')">
-            <NuxtLink to="work">work</NuxtLink>
-          </div>
-          <div :class="selectedClass('services')">
-            <NuxtLink to="services">services</NuxtLink>
-          </div>
-          <div :class="selectedClass('contact')">
-            <NuxtLink to="contact">contact</NuxtLink>
-          </div>
+    <nav id="thenav" class="flex justify-center pt-6">
+      <div class="flex justify-between border-2 rounded-full">
+        <div :class="selectedClass('index')" class="py-1 px-4">
+          <NuxtLink to="/">home</NuxtLink>
+        </div>
+        <div :class="selectedClass('work')" class="py-1 px-4">
+          <NuxtLink to="work">work</NuxtLink>
+        </div>
+        <div :class="selectedClass('services')" class="py-1 px-4">
+          <NuxtLink to="services">services</NuxtLink>
+        </div>
+        <div :class="selectedClass('contact')" class="py-1 px-4">
+          <NuxtLink to="contact">contact</NuxtLink>
         </div>
       </div>
     </nav>
@@ -50,7 +45,7 @@ export default {
   },
   methods: {
     selectedClass(page) {
-      if (page === this.page) return 'bg-green px-2 text-pink rounded-full'
+      if (page === this.page) return 'bg-green text-pink rounded-full'
     },
     onScroll() {
       const currentScrollPosition =
@@ -74,17 +69,4 @@ export default {
   },
 }
 </script>
-<style lang="scss">
-// #nav-text {
-//   width: 456px;
-//   height: 42px;
-//   top: 0;
-//   bottom: 0;
-//   margin-top: auto;
-//   margin-bottom: auto;
-//   div {
-//     width: 75px;
-//     // border: 1px black solid;
-//   }
-// }
-</style>
+<style lang="scss"></style>

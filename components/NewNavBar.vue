@@ -20,7 +20,7 @@
       <nav class="flex space-x-4" aria-label="Tabs">
         <a
           href="#"
-          class="px-3 py-2 font-medium text-sm rounded-md text-gray-500 hover:text-gray-700"
+          class="px-3 py-2 font-medium text-sm rounded-md text-gray-500 hover:text-orange"
         >
           My Account
         </a>
@@ -32,7 +32,7 @@
         </a>
         <a
           href="#"
-          class="px-3 py-2 font-medium text-sm rounded-md text-indigo-700 bg-indigo-100"
+          class="px-3 py-2 font-medium text-sm rounded-md text-indigo-700 bg-orange"
           aria-current="page"
         >
           Team Members
