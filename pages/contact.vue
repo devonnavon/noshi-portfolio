@@ -1,11 +1,13 @@
 <template>
   <div id="#container" class="xl:container mx-auto h-full bg-pink md:px-6">
     <Contact />
-    <div class="flex justify-center text-5xl font-semibold text-green py-40">
+    <div
+      class="flex justify-center md:text-5xl text-3xl font-minimedium text-green md:py-40 pb-16"
+    >
       or
     </div>
     <div class="font-serif text-green md:text-3xl text-xl flex justify-center">
-      leave us a message
+      leave us a message!
     </div>
     <ContactForm />
     <div class="py-12"></div>

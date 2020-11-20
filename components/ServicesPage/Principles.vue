@@ -1,7 +1,7 @@
 <template>
   <div class="bg-pink px-6">
     <div class="md:pb-40 pb-16">
-      <div class="md:-mb-10 -mb-20">
+      <!-- <div class="md:-mb-10 -mb-20">
         <svg
           class="md:w-2/5 w-full h-auto"
           width="697"
@@ -20,6 +20,11 @@
             stroke-width="4"
           />
         </svg>
+      </div> -->
+      <div
+        class="md:text-6xl text-5xl md:break-normal break-words font-minimedium text-green text-center"
+      >
+        Our Principles
       </div>
       <div>
         <div

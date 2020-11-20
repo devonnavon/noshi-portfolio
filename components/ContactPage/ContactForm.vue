@@ -1,6 +1,8 @@
 <template>
   <!--from  https://tailwindcomponents.com/component/basic-contact-form -->
-  <div class="flex justify-center py-40 font-display text-green px-3 md:px-0">
+  <div
+    class="flex justify-center md:py-40 py-20 font-serif text-green px-3 md:px-0"
+  >
     <div class="form-submitted w-full max-w-lg" v-show="!shown">
       <div
         class="flex flex-col justify-center font-serif text-l border-green border-dashed border-4 w-full text-center h-40"
@@ -22,10 +24,10 @@
       <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full px-3">
           <label
-            class="block tracking-wide text-gray-700 text-sm font-bold mb-2"
+            class="block tracking-wide text-gray-700 text-sm font-minisemi mb-2"
             for="grid-name"
           >
-            your name:
+            Your name:
           </label>
           <input
             class="font-serif text-orange appearance-none block w-full border border-green rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -43,10 +45,10 @@
       <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full px-3">
           <label
-            class="block tracking-wide text-gray-700 text-sm font-bold mb-2"
+            class="block tracking-wide text-gray-700 text-sm font-minisemi mb-2"
             for="email"
           >
-            your email:
+            Your email:
           </label>
           <input
             class="font-serif text-orange appearance-none block w-full border border-green rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -64,10 +66,10 @@
       <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full px-3">
           <label
-            class="block tracking-wide text-gray-700 text-sm font-bold mb-2"
+            class="block tracking-wide text-gray-700 text-sm font-minisemi mb-2"
             for="message"
           >
-            helpful info:
+            Helpful info:
           </label>
           <textarea
             class="font-serif text-orange no-resize appearance-none block w-full text-gray-700 border border-green rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
@@ -82,15 +84,13 @@
           </p>
         </div>
       </div>
-      <div class="md:flex md:items-center">
-        <div>
-          <input
-            class="bg-green hover:bg-orange text-white hover:text-green font-bold py-2 px-4 rounded"
-            type="submit"
-            value="get in touch"
-          />
-        </div>
-        <div class="md:w-2/3"></div>
+      <div class="flex flex-col items-end">
+        <input
+          class="bg-green hover:bg-orange text-white hover:text-green font-semimedium font-bold py-2 px-4 rounded self-end"
+          type="submit"
+          value="Submit"
+        />
+        <!-- <div class="md:w-2/3"></div> -->
       </div>
     </form>
   </div>

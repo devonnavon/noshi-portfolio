@@ -18,7 +18,7 @@
       <div v-if="work.client == 'NFL + Verizon'" class="pb-2 md:pb-0">
         <SlidingBanner
           id="featured1"
-          class="font-display text-green text-2xl"
+          class="font-display text-green text-xl"
           :length="9"
           :speed="30"
           >FEATURED ON APPLE KEYNOTE</SlidingBanner
@@ -26,7 +26,7 @@
       </div>
 
       <div
-        class="flex-row text-2xl opacity-50 hidden pl-0 pb-0 md:pb-1 md:flex"
+        class="flex-row text-2xl opacity-50 hidden pl-0 pb-0 md:pb-1 md:flex font-minimedium"
       >
         {{ work.client }}
       </div>
@@ -38,13 +38,15 @@
         </div>
         <div class="flex flex-col md:pl-4 pl-2 w-2/3 md:w-auto">
           <div
-            class="text-xl md:text-3xl xl:text-6xl leading-none w-3/4 md:w-2/3 pt-1 md:pt-0"
+            class="text-xl md:text-3xl xl:text-5xl leading-none w-3/4 md:w-2/3 pt-1 md:pt-0 font-minisemi md:pb-4 pb-2"
           >
             {{ work.title }}
           </div>
-          <div class="text-lg opacity-50 pb-2 md:hidden">{{ work.client }}</div>
+          <div class="text-lg opacity-50 pb-2 md:hidden font-minisemi">
+            {{ work.client }}
+          </div>
           <div
-            class="text-base pt-2 md:w-full lg:w-3/4 hidden md:inline-block text-justify pl-1"
+            class="text-base font-serif pt-2 md:w-full lg:w-3/4 hidden md:inline-block text-justify pl-1"
           >
             {{ work.description }}
           </div>
@@ -65,7 +67,7 @@
       <div v-if="work.client == 'NFL + Verizon'" class="py-2">
         <SlidingBanner
           id="featured2"
-          class="font-display text-green text-2xl"
+          class="font-display text-green text-xl"
           :length="9"
           :speed="30"
           >FEATURED ON APPLE KEYNOTE</SlidingBanner

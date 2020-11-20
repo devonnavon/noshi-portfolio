@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex md:flex-row flex-col space-y-4 space-x-0 md:space-y-0 md:space-x-4 text-black px-6 pb-12 md:pb-0"
+    class="flex md:flex-row flex-col space-y-4 space-x-0 md:space-y-0 md:space-x-4 text-black px-6 pb-16 md:pb-0"
   >
     <div class="flex-1 bg-darkpink rounded p-6">
       <div class="font-minisemi text-lg pb-2 text-green">Design heart</div>

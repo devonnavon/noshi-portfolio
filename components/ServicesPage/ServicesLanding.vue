@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col pt-40 pb-20">
+  <div class="flex flex-col md:pt-40 pt-20 pb-20">
     <div class="self-center py-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
