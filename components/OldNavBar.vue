@@ -5,24 +5,38 @@
       class="flex justify-center font-display text-green z-50 text-l"
     >
       <div class="flex justify-between border-2 rounded-full bg-pink">
-        <div :class="selectedClass('index')" class="py-1 px-4 m-1 rounded-full">
-          <NuxtLink to="/">home</NuxtLink>
-        </div>
-        <div :class="selectedClass('work')" class="py-1 px-4 m-1 rounded-full">
-          <NuxtLink to="work">work</NuxtLink>
-        </div>
-        <div
-          :class="selectedClass('services')"
-          class="py-1 px-4 m-1 rounded-full"
-        >
-          <NuxtLink to="services">services</NuxtLink>
-        </div>
-        <div
-          :class="selectedClass('contact')"
-          class="py-1 px-4 m-1 rounded-full"
-        >
-          <NuxtLink to="contact">contact</NuxtLink>
-        </div>
+        <NuxtLink to="/">
+          <div
+            :class="selectedClass('index')"
+            class="py-1 px-4 m-1 rounded-full"
+          >
+            home
+          </div>
+        </NuxtLink>
+        <NuxtLink to="work">
+          <div
+            :class="selectedClass('work')"
+            class="py-1 px-4 m-1 rounded-full"
+          >
+            work
+          </div>
+        </NuxtLink>
+        <NuxtLink to="services">
+          <div
+            :class="selectedClass('services')"
+            class="py-1 px-4 m-1 rounded-full"
+          >
+            services
+          </div>
+        </NuxtLink>
+        <NuxtLink to="contact">
+          <div
+            :class="selectedClass('contact')"
+            class="py-1 px-4 m-1 rounded-full"
+          >
+            contact
+          </div>
+        </NuxtLink>
       </div>
     </nav>
   </div>
