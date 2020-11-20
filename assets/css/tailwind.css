@@ -13,45 +13,37 @@ body {
 
 @font-face {
   font-family: 'Karrik-Regular';
-  src: url('~assets/fonts/Karrik-Regular.woff2') format('woff2'),
-    url('~assets/fonts/Karrik-Regular.woff') format('woff');
+  src: url(~assets/fonts/Karrik-Regular.woff2) format('woff2'),
+    url(~assets/fonts/Karrik-Regular.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Karrik-Regular';
-  src: url('~assets/fonts/Karrik-Italic.woff2'), format('woff2'),
-    url('~assets/fonts/Karrik-Italic.woff') format('woff');
+  src: url(~assets/fonts/Karrik-Italic.woff2) format('woff2'),
+    url(~assets/fonts/Karrik-Italic.woff) format('woff');
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Minipax-Regular';
-  src: url('~assets/fonts/Minipax-Regular.woff2'), format('woff2'),
-    url('~assets/fonts/Minipax-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  src: url(~assets/fonts/Minipax-Regular.woff2) format('woff2'),
+    url(~assets/fonts/Minipax-Regular.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Minipax-SemiBold';
-  src: url('~assets/fonts/Minipax-SemiBold.woff2'), format('woff2'),
-    url('~assets/fonts/Minipax-SemiBold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  src: url(~assets/fonts/Minipax-SemiBold.woff2) format('woff2'),
+    url(~assets/fonts/Minipax-SemiBold.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Minipax-Medium';
-  src: url('~assets/fonts/Minipax-Medium.woff2'), format('woff2'),
-    url('~assets/fonts/Minipax-Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  src: url(~assets/fonts/Minipax-Medium.woff2) format('woff2'),
+    url(~assets/fonts/Minipax-Medium.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Minipax-Bold';
-  src: url('~assets/fonts/Minipax-Bold.woff2'), format('woff2'),
-    url('~assets/fonts/Minipax-Bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  src: url(~assets/fonts/Minipax-Bold.woff2) format('woff2'),
+    url(~assets/fonts/Minipax-Bold.woff) format('woff');
 }

@@ -1,8 +1,9 @@
 <template>
   <div id="#container" class="xl:container mx-auto bg-pink md:px-6">
     <!-- <div class="xl:container mx-auto"> -->
-    <!-- <ServicesLanding /> -->
-    <Services />
+    <ServicesLanding />
+    <ServiceBox />
+    <!-- <Services /> -->
     <DesignDevelop />
     <WhatYouSee />
     <Engagements />
@@ -16,7 +17,7 @@
 
 <script>
 import ServicesLanding from '~/components/ServicesPage/ServicesLanding'
-import Services from '~/components/ServicesPage/Services'
+import ServiceBox from '~/components/ServicesPage/ServiceBox'
 import DesignDevelop from '~/components/ServicesPage/DesignDevelop'
 import WhatYouSee from '~/components/ServicesPage/WhatYouSee'
 import Engagements from '~/components/ServicesPage/Engagements'
@@ -39,7 +40,7 @@ export default {
   },
   components: {
     ServicesLanding,
-    Services,
+    ServiceBox,
     DesignDevelop,
     WhatYouSee,
     Engagements,
