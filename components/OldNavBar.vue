@@ -1,17 +1,23 @@
 <template>
   <div class="font-display text-green z-50 text-l">
-    <nav id="thenav" class="flex justify-center pt-6">
-      <div class="flex justify-between border-2 rounded-full">
-        <div :class="selectedClass('index')" class="py-1 px-4">
+    <nav id="thenav" class="flex justify-center">
+      <div class="flex justify-between border-2 rounded-full bg-pink">
+        <div :class="selectedClass('index')" class="py-1 px-4 m-1 rounded-full">
           <NuxtLink to="/">home</NuxtLink>
         </div>
-        <div :class="selectedClass('work')" class="py-1 px-4">
+        <div :class="selectedClass('work')" class="py-1 px-4 m-1 rounded-full">
           <NuxtLink to="work">work</NuxtLink>
         </div>
-        <div :class="selectedClass('services')" class="py-1 px-4">
+        <div
+          :class="selectedClass('services')"
+          class="py-1 px-4 m-1 rounded-full"
+        >
           <NuxtLink to="services">services</NuxtLink>
         </div>
-        <div :class="selectedClass('contact')" class="py-1 px-4">
+        <div
+          :class="selectedClass('contact')"
+          class="py-1 px-4 m-1 rounded-full"
+        >
           <NuxtLink to="contact">contact</NuxtLink>
         </div>
       </div>
@@ -46,6 +52,7 @@ export default {
   methods: {
     selectedClass(page) {
       if (page === this.page) return 'bg-green text-pink rounded-full'
+      else return 'hover:bg-green hover:text-pink'
     },
     onScroll() {
       const currentScrollPosition =
