@@ -2,7 +2,7 @@
   <div class="px-6 md:px-0">
     <div class="flex flex-col bg-darkpink rounded p-6">
       <div class="flex flex-col pb-10">
-        <div class="font-minimedium text-lg pb-2">What we can do</div>
+        <div class="font-minisemi text-lg pb-2">What we can do</div>
         <div class="font-serif text-base md:w-2/5">
           We provide the means to our clients end. Sometimes the end isn’t known
           yet and we come up with it together.

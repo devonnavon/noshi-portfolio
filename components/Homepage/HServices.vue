@@ -22,7 +22,7 @@
             />
           </svg>
           <div
-            class="text-green ml-2 pr-3 md:-mt-16 font-display text-md text-justify w-full"
+            class="text-green ml-2 pr-3 md:-mt-16 font-serif text-base text-justify w-full"
           >
             From ux design to full-stack development, our team excels in
             providing a full range of solutions throughout the digital realm.
@@ -30,7 +30,7 @@
             plan at all, we can help you execute and scale your next web
             project.<br /><br />
             <NuxtLink to="services"
-              ><span class="underline hover:no-underline"
+              ><span class="underline hover:no-underline font-minimedium"
                 >Learn more here.</span
               ></NuxtLink
             >
@@ -40,7 +40,7 @@
           class="font-serif text-green text-left text-4xl md:pt-4 md:w-3/5 md:pl-20 w-full md:py-0 py-16"
         >
           <div>We can make your next</div>
-          <div id="homeswitch">
+          <div id="homeswitch" class="font-minimedium">
             <ServicesSwitcher
               class="text-5xl font-semibold"
               id="contactSwitcher1"
@@ -49,7 +49,7 @@
         </div>
       </div>
       <ServicesCompact
-        class="md:pl-16 block font-display text-2xl text-justify flex-col md:pb-12 md:pt-4 text-green md:flex-row"
+        class="flex-col md:pb-12 md:pt-4 text-green md:flex-row"
       />
       <!-- <ServicesScroller
         v-else
