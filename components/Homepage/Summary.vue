@@ -39,20 +39,12 @@
 <script>
 export default {
   mounted() {
-    this.animateText()
+    // let tl = gsap.timeline()
+    // tl.from('.strike', { delay: 0.5, css: { width: 0 }, duration: 0.3 })
+    //   .from('.strike2', { width: 0, duration: 1 })
+    //   .from('.under', { width: 0, duration: 0.3 })
   },
-  methods: {
-    animateText() {
-      let tl = gsap.timeline({
-        onComplete: () => {
-          tl.invalidate()
-        },
-      })
-      tl.from('.strike', { delay: 0.5, width: 0, duration: 0.3 })
-        .from('.strike2', { width: 0, duration: 1 })
-        .from('.under', { width: 0, duration: 0.3 })
-    },
-  },
+  methods: {},
 }
 </script>
 
@@ -62,9 +54,8 @@ $h: 3px;
 span {
   position: relative;
   .strike {
-    content: '';
     position: absolute;
-    top: 56%;
+    top: 62%;
     left: -5%;
     width: 110%;
     height: $h;
@@ -73,7 +64,7 @@ span {
   .strike2 {
     content: '';
     position: absolute;
-    top: 56%;
+    top: 62%;
     left: -1%;
     width: 102%;
     height: $h;

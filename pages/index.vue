@@ -16,7 +16,7 @@
       v-for="(work, i) in featuredWorks"
       :key="i"
       :work="work"
-      class="pt-20"
+      class="pt-6"
     />
     <Experience />
     <Contact />
