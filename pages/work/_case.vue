@@ -6,7 +6,7 @@
       <div v-if="work.client == 'NFL + Verizon'" class="pb-2 md:pb-0">
         <SlidingBanner
           id="featured1"
-          class="font-display text-green text-2xl"
+          class="font-display text-green text-xl"
           :length="9"
           :speed="30"
           >FEATURED ON APPLE KEYNOTE</SlidingBanner
@@ -14,7 +14,7 @@
       </div>
 
       <div
-        class="flex-row text-2xl opacity-50 hidden pl-0 pb-0 md:pb-1 md:flex"
+        class="flex-row text-2xl opacity-50 hidden pl-0 pb-0 md:pb-1 md:flex font-minimedium"
       >
         {{ work.client }}
       </div>
@@ -26,13 +26,13 @@
         </div>
         <div class="flex flex-col md:pl-4 pl-2 w-2/3 md:w-auto">
           <div
-            class="text-xl md:text-3xl xl:text-6xl leading-none w-3/4 md:w-2/3 pt-1 md:pt-0"
+            class="text-lg md:text-3xl xl:text-5xl leading-none w-3/4 md:w-2/3 pt-1 md:pt-0 font-minisemi md:pb-4 pb-2"
           >
             {{ work.title }}
           </div>
           <div class="text-lg opacity-50 pb-2 md:hidden">{{ work.client }}</div>
           <div
-            class="text-base pt-2 md:w-full lg:w-3/4 hidden md:inline-block text-justify pl-1"
+            class="text-base font-serif pt-2 md:w-full lg:w-3/4 hidden md:inline-block text-justify pl-1 text-black"
           >
             {{ work.description }}
           </div>
@@ -41,7 +41,7 @@
       <div v-if="work.client == 'NFL + Verizon'" class="py-2">
         <SlidingBanner
           id="featured2"
-          class="font-display text-green text-2xl"
+          class="font-display text-green text-xl"
           :length="9"
           :speed="30"
           >FEATURED ON APPLE KEYNOTE</SlidingBanner
@@ -52,26 +52,30 @@
       <div class="h-auto">
         <div class="flex md:flex-row flex-col-reverse">
           <div class="flex flex-col md:w-3/4 w-full md:pr-12 pr-0">
-            <div class="text-3xl pb-4">Overview</div>
+            <div class="text-3xl pb-4 font-minimedium font-bold">Overview</div>
             <div
               v-html="$md.render(work.overview)"
-              class="page__content markdown"
+              class="page__content markdown text-black font-serif"
             />
           </div>
           <div class="flex flex-col pb-2 md:pb-0">
-            <div class="text-3xl md:pb-4 pb-2">Roles</div>
-            <div class="flex flex-row flex-wrap md:flex-col justify-center">
+            <div class="text-3xl md:pb-4 pb-2 font-minimedium font-bold">
+              Roles
+            </div>
+            <div
+              class="flex flex-row flex-wrap md:flex-col justify-center font-minimedium"
+            >
               <div
                 v-for="(role, i) in work.roles"
                 :key="i"
-                class="px-2 py-2 md:px-0 md:py-0 md:pb-1"
+                class="px-2 py-2 md:px-0 md:py-0 md:pb-1 text-black"
               >
                 {{ role }}
               </div>
             </div>
           </div>
           <div
-            class="text-base flex md:hidden justify-center text-center italic py-4"
+            class="text-base flex md:hidden justify-center text-center italic py-4 text-black"
           >
             {{ work.description }}
           </div>
@@ -93,7 +97,7 @@
     <div
       markdown="1"
       v-html="$md.render(work.details)"
-      class="page__content markdown overflow-hidden px-8 mx-auto font-display text-base text-green"
+      class="page__content markdown overflow-hidden px-8 mx-auto font-serif text-base text-black"
     />
   </div>
 </template>
@@ -125,11 +129,15 @@ export default {
 h1 {
   font-size: 1.875rem;
   padding-bottom: 1rem;
+  color: #006838;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 1.5rem;
   text-align: center;
+  color: #006838;
+  font-weight: 700;
 }
 
 iframe {
