@@ -2,7 +2,7 @@
   <div class="bg-pink px-6">
     <div class="md:pb-40 pb-20">
       <div
-        class="md:text-6xl text-4xl md:break-normal md:w-5/12 font-serif text-green text-justify md:pr-4 md:pb-0 pb-10"
+        class="md:text-6xl text-5xl md:break-normal break-words md:w-5/12 font-minimedium text-green text-justify md:pr-4 md:pb-0 pb-10"
       >
         Types of Compensation
       </div>
@@ -31,12 +31,35 @@
           </svg>
         </div>
       </div>
-      <div
+      <!-- <div
         class="grid md:grid-cols-3 grid-cols-1 gap-8 md:pt-20 pt-12 text-green font-display"
       >
         <div v-for="(item, i) in compensationTypes" :key="i">
           <TitleParagraph :title="item.title" :paragraph="item.description" />
         </div>
+      </div> -->
+      <div
+        class="flex flex-col md:flex-row md:space-x-4 space-x-0 space-y-10 md:space-y-0 pt-12"
+      >
+        <div
+          v-for="(item, i) in compensationTypes"
+          :key="i"
+          class="md:pb-0 pb-10 serviceCompact flex-1 justify-center flex"
+        >
+          <!-- <div class="md:w-20"> -->
+
+          <div class="inline-flex flex-col">
+            <div
+              class="inline-block font-minimedium font-bold text-2xl text-left pb-2 text-green"
+            >
+              {{ item.title }}
+            </div>
+            <div class="font-serif text-lg text-left">
+              {{ item.description }}
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
       </div>
     </div>
   </div>

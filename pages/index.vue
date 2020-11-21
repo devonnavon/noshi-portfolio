@@ -12,7 +12,12 @@
     </div>
     <Boxes />
     <Services />
-    <CaseCard v-for="(work, i) in featuredWorks" :key="i" :work="work" />
+    <CaseCard
+      v-for="(work, i) in featuredWorks"
+      :key="i"
+      :work="work"
+      class="pt-20"
+    />
     <Experience />
     <Contact />
   </div>

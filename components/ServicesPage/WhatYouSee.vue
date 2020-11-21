@@ -3,9 +3,9 @@
     <div class="pb-40 flex md:flex-row flex-col">
       <div
         id="whatusee"
-        class="md:text-6xl text-5xl md:w-5/12 font-serif text-green text-justify md:pr-4 md:pb-0 pb-10"
+        class="md:text-6xl text-5xl md:w-5/12 font-minimedium text-green text-justify md:pr-4 md:pb-0 pb-10"
       >
-        “What you see is what you get”
+        <div class="pb-4">“What you see is what you get”</div>
         <div class="float-right eyescontainer">
           <svg
             id="blinkingeyes"
@@ -83,13 +83,13 @@
         </div>
       </div>
       <div
-        class="md:w-7/12 font-display text-green text-xl md:pl-20 pt-8 text-justify"
+        class="md:w-7/12 font-serif text-black text-xl md:pl-20 pt-8 text-left"
       >
         Bringing design and development together isn’t a new concept by any
         means but when your designers are developing the product and your
         developers are designing the product we can ensure:
-        <div class="pt-8">
-          <div class="italic text-right" v-for="(item, i) in list" :key="i">
+        <div class="pt-8 text-center">
+          <div class="font-minimedium" v-for="(item, i) in list" :key="i">
             {{ item }}
           </div>
         </div>

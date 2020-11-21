@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-green font-serif bg-pink md:text-hugexl text-5xl text-center md:py-64 py-40 md:font-normal font-bold"
+    class="text-green font-minimedium bg-pink md:text-big text-5xl text-center md:py-64 py-40 md:font-normal font-bold"
   >
     <div id="ddtoptext">designers</div>
     <div>are your</div>
