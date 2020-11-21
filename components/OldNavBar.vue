@@ -1,10 +1,7 @@
 <template>
-  <div class="font-display text-green text-l">
-    <nav
-      id="thenav"
-      class="flex justify-center font-display text-green z-50 text-l"
-    >
-      <div class="flex justify-between border-2 rounded-full bg-pink">
+  <div class="font-display text-green text-l bg-transparent">
+    <nav id="thenav" class="flex justify-center font-display text-green text-l">
+      <div class="flex justify-between border-2 rounded-full">
         <NuxtLink to="/">
           <div
             :class="selectedClass('index')"
@@ -37,6 +34,7 @@
             contact
           </div>
         </NuxtLink>
+        <div class="nav-selected"></div>
       </div>
     </nav>
   </div>
@@ -106,4 +104,14 @@ export default {
   },
 }
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+.nav-selected {
+  position: absolute;
+  height: 34px;
+  width: 75px;
+  background-color: aqua;
+  border-radius: 9999px;
+  margin: 3px;
+  z-index: -1;
+}
+</style>

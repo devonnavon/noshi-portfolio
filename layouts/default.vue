@@ -1,9 +1,6 @@
 <template>
   <div id="container" class="bg-pink mx-auto h-full min-h-full w-full">
-    <NavBar
-      id="nav"
-      class="fixed inset-x-0 md:top-0 bottom-0 md:pt-6 pb-1 h-20 z-40"
-    />
+    <NavBar id="nav" class="fixed md:top-0 bottom-0 md:pt-6 pb-1 h-20 z-10" />
     <Nuxt id="body" class="w-full h-full" />
   </div>
 </template>
@@ -19,4 +16,9 @@ export default {
   computed: { ...mapState(['page']) },
 }
 </script>
-<style></style>
+<style>
+#nav {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+</style>
