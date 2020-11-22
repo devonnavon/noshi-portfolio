@@ -3,7 +3,7 @@
     <div class="pb-40">
       <div
         id="engagementsTitle"
-        class="md:text-6xl text-5xl md:break-normal break-words md:w-5/12 font-serif text-green text-justify md:pr-4 md:pb-0 pb-10"
+        class="md:text-6xl text-5xl md:break-normal break-words md:w-5/12 font-minimedium text-green text-justify md:pr-4 md:pb-0 pb-10"
       >
         Types of Engagement
       </div>

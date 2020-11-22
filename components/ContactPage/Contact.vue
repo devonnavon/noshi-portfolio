@@ -6,12 +6,12 @@
       class="flex flex-col font-serif text-green text-left w-full md:py-0 md:mt-auto"
     >
       <!-- <div class="flex-shrink h-20"></div> -->
-      <div class="md:text-6xl text-4xl">Let's make your next</div>
+      <div class="md:text-6xl text-3xl">Let's make your next</div>
       <ServiceSwitcher
-        class="md:text-huge text-5xl font-semibold"
+        class="md:text-huge text-4xl font-semibold"
         id="contactSwitcher"
       />
-      <div class="self-end font-bold md:text-5xl text-3xl pt-16">together.</div>
+      <div class="self-end font-bold md:text-5xl text-2xl pt-16">together.</div>
     </div>
     <div class="md:py-12 py-0"></div>
     <div

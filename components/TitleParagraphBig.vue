@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="md:text-4xl text-3xl font-serif font-bold md:pt-0">
+    <div class="md:text-3xl text-2xl font-minimedium font-bold md:pt-0">
       {{ title }}
     </div>
-    <div class="md:text-2xl text-xl">
+    <div class="text-lg font-serif text-black pt-2">
       {{ paragraph }}
     </div>
   </div>

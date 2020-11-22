@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="text-2xl font-serif font-bold pb-2">{{ title }}</div>
-    <div class="text-xl">
+    <div class="text-2xl font-minimedium font-bold pb-2">{{ title }}</div>
+    <div class="text-lg font-serif text-black">
       {{ paragraph }}
     </div>
   </div>

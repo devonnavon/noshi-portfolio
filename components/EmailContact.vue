@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div
-      class="hover:text-orange cursor-pointer"
+      class="hover:text-orange cursor-pointer font-minisemi"
       @click="copySomething('hey@noshi.cx')"
     >
       (hey@noshi.cx)

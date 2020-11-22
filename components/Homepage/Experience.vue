@@ -1,8 +1,8 @@
 <template>
-  <section id="experience" class="bg-pink pt-24 px-6 md:px-0 md:pb-12">
+  <section id="experience" class="bg-pink md:pt-24 pt-16 px-6 md:px-0 md:pb-12">
     <div>
-      <div class="flex md:flex-row flex-col">
-        <div class="md:w-2/5 md:pl-16 w-2/3">
+      <!-- <div class="flex md:flex-row flex-col"> -->
+      <!-- <div class="md:w-2/5 md:pl-16 w-2/3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="461"
@@ -21,8 +21,13 @@
               stroke-width="4"
             />
           </svg>
-        </div>
+        </div> -->
+      <div
+        class="md:text-xl text-lg md:break-normal break-words font-minisemi font-bold text-green text-center"
+      >
+        Our Experience
       </div>
+      <!-- </div> -->
       <div class="logo flex md:flex-row flex-wrap justify-center md:px-16 px-6">
         <div
           class="md:w-1/4 w-1/2 transition duration-500 ease-in-out md:opacity-25 hover:opacity-100 transform hover:-translate-y-1 hover:scale-110"

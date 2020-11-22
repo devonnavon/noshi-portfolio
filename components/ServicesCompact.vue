@@ -1,22 +1,25 @@
 <template>
-  <div class="flex md:justify-around">
+  <div
+    class="flex md:space-x-4 space-x-0 space-y-10 md:space-y-0 bg-darkpink md:mt-16 md:mb-12 rounded"
+  >
     <div
       v-for="service in servicesDetail"
       :key="service.key"
-      class="md:pr-4 md:pb-0 pb-10 serviceCompact"
+      class="md:pb-1 pb-10 serviceCompact flex-1 justify-center flex"
     >
       <!-- <div class="md:w-20"> -->
-      <div
-        class="font-serif font-bold md:text-3xl text-4xl text-center md:text-left"
-      >
-        {{ service.key }}
-      </div>
-      <div>
+
+      <div class="inline-flex flex-col justify-center">
+        <div
+          class="inline-block font-minisemi text-xl text-center md:text-left pb-2"
+        >
+          {{ service.key }}
+        </div>
         <div
           v-for="(detail, i) in service.details"
           :key="i"
           :id="`serviceCompact_${service.key}_${i}`"
-          class="font-display md:text-xl text-2xl text-center md:text-left"
+          class="font-serif text-base text-center md:text-left text-black"
         >
           {{ detail }}
         </div>

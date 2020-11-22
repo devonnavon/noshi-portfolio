@@ -1,8 +1,8 @@
 <template>
-  <section id="whatwedo" class="bg-pink">
+  <section id="whatwedo" class="bg-pink pb-12">
     <div class="relative h-auto my-auto">
-      <div class="flex md:flex-row flex-col md:pt-20 px-6 md:px-0">
-        <div class="md:w-2/5 md:pl-16 w-full">
+      <div class="flex md:flex-row flex-col md:pt-20 px-6">
+        <div class="md:w-2/6 w-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="461"
@@ -22,7 +22,7 @@
             />
           </svg>
           <div
-            class="text-green ml-2 pr-3 md:-mt-16 font-display text-md text-justify w-full"
+            class="ml-2 pr-3 md:-mt-16 -mt-6 font-serif text-base text-justify w-full text-black pb-20 md:pb-0"
           >
             From ux design to full-stack development, our team excels in
             providing a full range of solutions throughout the digital realm.
@@ -30,27 +30,30 @@
             plan at all, we can help you execute and scale your next web
             project.<br /><br />
             <NuxtLink to="services"
-              ><span class="underline hover:no-underline"
+              ><span class="underline hover:no-underline font-minimedium"
                 >Learn more here.</span
               ></NuxtLink
             >
           </div>
         </div>
-        <div
-          class="font-serif text-green text-left text-4xl md:pt-4 md:w-3/5 md:pl-20 w-full md:py-0 py-16"
-        >
-          <div>We can make your next</div>
-          <div id="homeswitch">
+        <!-- <div
+          class="font-serif text-green text-left md:text-4xl text-3xl md:pt-4 w-full md:py-0 pt-16"
+        > -->
+        <ServicesCompact
+          class="flex-col text-green md:flex-row mx-auto w-3/5 pt-6 md:pt-0"
+        />
+        <!-- <div>We can make your next</div>
+          <div id="homeswitch" class="font-minimedium">
             <ServicesSwitcher
-              class="text-5xl font-semibold"
+              class="md:text-5xl text-4xl font-semibold"
               id="contactSwitcher1"
             />
-          </div>
-        </div>
+          </div> -->
+        <!-- </div> -->
       </div>
-      <ServicesCompact
-        class="md:pl-16 block font-display text-2xl text-justify flex-col md:pb-12 md:pt-4 text-green md:flex-row"
-      />
+      <!-- <ServicesCompact
+        class="flex-col md:pb-12 md:pt-4 text-green md:flex-row"
+      /> -->
       <!-- <ServicesScroller
         v-else
         trigger="#whatwedo"
