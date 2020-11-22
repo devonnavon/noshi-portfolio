@@ -36,6 +36,7 @@
           </div>
         </NuxtLink>
         <div class="nav-selected"></div>
+        <div class="nav-background"></div>
       </div>
     </nav>
   </div>
@@ -62,8 +63,8 @@ export default {
     gsap.set('.nav-selected', {
       x: this.navMeta[this.page].x,
       width: this.navMeta[this.page].w,
-      delay: 0.1,
     })
+    gsap.set(`#${this.page}Nav`, { color: '#d8cbcf' })
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.onScroll)
@@ -72,20 +73,40 @@ export default {
     page(currentPage, lastPage) {
       let curr = this.navMeta[currentPage]
       let last = this.navMeta[lastPage]
-      // gsap.set('.nav-selected', {
-      //   x: this.navMeta[this.page].x,
-      //   width: this.navMeta[this.page].w,
-      //   delay: 0.1,
-      // })
       let tl = gsap.timeline()
-      if (curr.x < last.x) {
-        //forward
-        tl.to('.nav-selected', { width: curr.w + curr.x, delay: 0.5 })
-        tl.to('.nav-selected', { x: curr.x, width: curr.w, delay: 0.1 })
+      if (curr.x > last.x) {
+        tl.add('expand')
+          .to(
+            '.nav-selected',
+            {
+              width: curr.w + curr.x - last.x,
+              delay: 0.1,
+            },
+            'expand'
+          )
+          .set(`#${currentPage}Nav`, { color: '#d8cbcf' }, 'expand')
+          .add('shrink')
+          .to(
+            '.nav-selected',
+            { x: curr.x, width: curr.w, delay: 0.1 },
+            'shrink'
+          )
+          .set(`#${lastPage}Nav`, { color: '#006838' }, 'shrink')
       } else {
-        //backward
-        tl.to('.nav-selected', { x: '0px', width: '200px', delay: 0.1 })
-        tl.to('.nav-selected', { width: '78px', delay: 0.1 })
+        tl.add('expand')
+          .to(
+            '.nav-selected',
+            {
+              x: curr.x,
+              width: last.x + last.w - curr.x,
+              delay: 0.1,
+            },
+            'expand'
+          )
+          .set(`#${currentPage}Nav`, { color: '#d8cbcf' }, 'expand')
+          .add('shrink')
+          .to('.nav-selected', { width: curr.w, delay: 0.1 }, 'shrink')
+          .set(`#${lastPage}Nav`, { color: '#006838' }, 'shrink')
       }
     },
   },
@@ -110,7 +131,7 @@ export default {
     selectedClass(page) {
       if (page === this.page) return
       //'bg-green text-pink rounded-full'
-      else return 'hover:bg-green hover:text-pink'
+      else return 'hover:bg-darkpink' // hover:text-pink'
     },
     onScroll() {
       if (window.innerWidth <= 768) {
@@ -152,9 +173,18 @@ export default {
   position: absolute;
   height: 40px;
   width: 0;
-  background-color: aqua;
+  background-color: #006838;
+  border-width: 3px;
+  border-color: #d8cbcf;
   border-radius: 9999px;
-  // margin: 3px;
   z-index: -1;
+}
+.nav-background {
+  position: absolute;
+  height: 40px;
+  width: 349.53px;
+  background-color: #d8cbcf;
+  border-radius: 9999px;
+  z-index: -2;
 }
 </style>
