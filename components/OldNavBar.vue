@@ -29,7 +29,7 @@
 
         <NuxtLink to="contact" id="contactNav">
           <div
-            :class="selectedClass('contactNav')"
+            :class="selectedClass('contact')"
             class="py-1 px-4 m-1 rounded-full"
           >
             contact
