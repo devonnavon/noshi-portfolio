@@ -70,14 +70,23 @@ export default {
   },
   watch: {
     page(currentPage, lastPage) {
+      let curr = this.navMeta[currentPage]
+      let last = this.navMeta[lastPage]
+      // gsap.set('.nav-selected', {
+      //   x: this.navMeta[this.page].x,
+      //   width: this.navMeta[this.page].w,
+      //   delay: 0.1,
+      // })
       let tl = gsap.timeline()
-      console.log(this.$refs)
-      //forward
-      tl.to('.nav-selected', { width: '200px', delay: 0.5 })
-      tl.to('.nav-selected', { x: '100px', width: '100px', delay: 0.1 })
-      //backward
-      tl.to('.nav-selected', { x: '0px', width: '200px', delay: 0.1 })
-      tl.to('.nav-selected', { width: '78px', delay: 0.1 })
+      if (curr.x < last.x) {
+        //forward
+        tl.to('.nav-selected', { width: curr.w + curr.x, delay: 0.5 })
+        tl.to('.nav-selected', { x: curr.x, width: curr.w, delay: 0.1 })
+      } else {
+        //backward
+        tl.to('.nav-selected', { x: '0px', width: '200px', delay: 0.1 })
+        tl.to('.nav-selected', { width: '78px', delay: 0.1 })
+      }
     },
   },
   computed: {
@@ -141,11 +150,11 @@ export default {
 <style lang="scss">
 .nav-selected {
   position: absolute;
-  height: 34px;
-  width: 0px;
+  height: 40px;
+  width: 0;
   background-color: aqua;
   border-radius: 9999px;
-  margin: 3px;
+  // margin: 3px;
   z-index: -1;
 }
 </style>
