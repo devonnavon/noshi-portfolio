@@ -2,7 +2,7 @@
   <div class="font-display text-green text-l bg-transparent">
     <nav id="thenav" class="flex justify-center font-display text-green text-l">
       <div class="flex justify-between border-2 rounded-full">
-        <NuxtLink to="/" ref="index">
+        <NuxtLink to="/" id="indexNav">
           <div
             :class="selectedClass('index')"
             class="py-1 px-4 m-1 rounded-full"
@@ -10,7 +10,7 @@
             home
           </div>
         </NuxtLink>
-        <NuxtLink to="work" ref="work">
+        <NuxtLink to="work" id="workNav">
           <div
             :class="selectedClass('work')"
             class="py-1 px-4 m-1 rounded-full"
@@ -18,7 +18,7 @@
             work
           </div>
         </NuxtLink>
-        <NuxtLink to="services" ref="services">
+        <NuxtLink to="services" id="servicesNav">
           <div
             :class="selectedClass('services')"
             class="py-1 px-4 m-1 rounded-full"
@@ -27,9 +27,9 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink to="contact" ref="contact">
+        <NuxtLink to="contact" id="contactNav">
           <div
-            :class="selectedClass('contact')"
+            :class="selectedClass('contactNav')"
             class="py-1 px-4 m-1 rounded-full"
           >
             contact
@@ -45,12 +45,11 @@ import { mapState, mapActions } from 'vuex'
 export default {
   mounted() {
     window.addEventListener('scroll', this.onScroll)
-    console.log(this.$refs.index.$el.clientWidth)
     let ws = [
-      this.$refs.index.$el.clientWidth,
-      this.$refs.work.$el.clientWidth,
-      this.$refs.services.$el.clientWidth,
-      this.$refs.contact.$el.clientWidth,
+      document.getElementById('indexNav').getBoundingClientRect().width,
+      document.getElementById('workNav').getBoundingClientRect().width,
+      document.getElementById('servicesNav').getBoundingClientRect().width,
+      document.getElementById('contactNav').getBoundingClientRect().width,
     ]
 
     this.navMeta = {
