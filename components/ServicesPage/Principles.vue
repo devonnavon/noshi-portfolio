@@ -53,9 +53,9 @@ export default {
     return {
       principles: [
         {
-          title: 'FROM START TO FINISH',
+          title: 'ONE CLIENT RULE',
           description:
-            "We are fully engaged with our clients throughout the project lifecycle. We want to ensure that when we hand a product to a client they are excited to own it. Our work ends when the client understands what we've built as well as we do.",
+            'We have a small team that focuses on putting all of our energy into what we’re working on. When you hire us you’ll have 100% of our attention and a product as fast as we can build it.',
         },
         {
           title: 'DATA DRIVEN',
