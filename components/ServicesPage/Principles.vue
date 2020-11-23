@@ -30,7 +30,7 @@
         <div
           v-for="(item, i) in principles"
           :key="i"
-          class="grid md:grid-cols-3 grid-cols-6 md:gap-8 gap-0 pt-20 text-green font-display"
+          class="grid md:grid-cols-3 grid-cols-6 md:gap-8 gap-0 md:pt-20 pt-12 text-green font-display"
         >
           <div class="md:text-huge text-3xl">{{ `0${i + 1}` }}</div>
           <TitleParagraphBig

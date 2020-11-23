@@ -1,6 +1,9 @@
 <template>
   <!-- test a change -->
-  <div :id="getId('maindiv')" class="rounded-lg relative pb-8 overflow-hidden">
+  <div
+    :id="getId('maindiv')"
+    class="rounded-lg relative md:pb-8 pb-2 overflow-hidden"
+  >
     <transition name="fade">
       <button
         type="button"
@@ -102,14 +105,14 @@
                 <div
                   v-for="(role, i) in work.roles"
                   :key="i"
-                  class="px-2 py-2 md:px-0 md:py-0 md:pb-1 text-black"
+                  class="px-2 pt-6 md:px-0 md:pt-0 md:pb-1 text-black"
                 >
                   {{ role }}
                 </div>
               </div>
             </div>
             <div
-              class="text-base flex md:hidden justify-center text-center font-serif italic py-4 text-black"
+              class="text-base flex md:hidden justify-center text-center font-serif italic pb-4 pt-8 text-black"
             >
               {{ work.description }}
             </div>

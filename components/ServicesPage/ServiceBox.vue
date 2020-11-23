@@ -92,7 +92,7 @@
           <div class="font-minimedium flex-1 text-base md:pb-0 pb-2">
             Anything at all
           </div>
-          <div class="font-serif flex-1 text-base pb-8">
+          <div class="font-serif flex-1 text-base md:pb-8 pb-0">
             <div class="md:w-3/4 w-full">
               We're excited to tackle new challenges and use our expertise to
               help businesses or individuals find a presence in the ever

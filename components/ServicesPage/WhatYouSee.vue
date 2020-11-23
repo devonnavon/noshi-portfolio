@@ -1,6 +1,6 @@
 <template>
   <div class="bg-pink px-6">
-    <div class="pb-40 flex md:flex-row flex-col">
+    <div class="md:pb-40 pb-24 flex md:flex-row flex-col">
       <div
         id="whatusee"
         class="md:text-6xl text-5xl md:w-5/12 font-minimedium text-green text-justify md:pr-4 md:pb-0 pb-10"
@@ -88,7 +88,7 @@
         Bringing design and development together isn’t a new concept by any
         means but when your designers are developing the product and your
         developers are designing the product we can ensure:
-        <div class="pt-8 text-center">
+        <div class="pt-8 md:text-center text-left space-y-1">
           <div class="font-minimedium" v-for="(item, i) in list" :key="i">
             {{ item }}
           </div>

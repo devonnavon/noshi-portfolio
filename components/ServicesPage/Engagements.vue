@@ -1,6 +1,6 @@
 <template>
   <div class="bg-pink px-6">
-    <div class="pb-40">
+    <div class="md:pb-40 pb-24">
       <div
         id="engagementsTitle"
         class="md:text-6xl text-5xl md:break-normal break-words md:w-5/12 font-minimedium text-green text-justify md:pr-4 md:pb-0 pb-10"
