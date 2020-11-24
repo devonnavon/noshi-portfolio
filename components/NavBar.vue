@@ -182,7 +182,7 @@ export default {
 .nav-background {
   position: absolute;
   height: 40px;
-  width: 349.53px;
+  width: 347px;
   background-color: #d8cbcf;
   border-radius: 9999px;
   z-index: -2;
