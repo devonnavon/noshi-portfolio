@@ -20,7 +20,7 @@
       </div>
       <div class="flex flex-col md:space-y-16 space-y-4">
         <div
-          class="flex md:flex-row flex-col border-2 border-pink border-solid rounded px-2 py-4 md:border-none md:pt-0 md:pb-4 md:py-0"
+          class="flex md:flex-row flex-col border-2 border-pink border-solid rounded px-2 py-4 md:border-none md:pt-0 md:pb-4 md:px-0"
           v-for="(service, i) in services"
           :key="i"
         >
