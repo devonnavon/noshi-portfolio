@@ -84,7 +84,7 @@ export default {
             },
             'expand'
           )
-          .set(`#${currentPage}Nav`, { color: '#d8cbcf' }, 'expand')
+          .set(`#${currentPage}Nav`, { color: '#d8cbcf', delay: 0.2 }, 'expand')
           .add('shrink')
           .to(
             '.nav-selected',
@@ -103,7 +103,7 @@ export default {
             },
             'expand'
           )
-          .set(`#${currentPage}Nav`, { color: '#d8cbcf' }, 'expand')
+          .set(`#${currentPage}Nav`, { color: '#d8cbcf', delay: 0.2 }, 'expand')
           .add('shrink')
           .to('.nav-selected', { width: curr.w, delay: 0.1 }, 'shrink')
           .set(`#${lastPage}Nav`, { color: '#006838' }, 'shrink')
@@ -169,6 +169,9 @@ export default {
 }
 </script>
 <style lang="scss">
+#thenav {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .nav-selected {
   position: absolute;
   height: 40px;
