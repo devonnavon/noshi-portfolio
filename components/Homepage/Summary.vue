@@ -1,7 +1,7 @@
 <template>
   <section
     id="summary"
-    class="bg-pink relative font-serif w-full md:w-auto pt-24 md:pt-48 flex flex-row pl-6"
+    class="bg-pink relative font-serif w-full md:w-auto pt-24 md:pt-48 flex flex-row pl-4"
   >
     <div class="self-center">
       <svg
@@ -10,6 +10,7 @@
         height="133"
         viewBox="0 0 53 133"
         fill="none"
+        class="h-20 md:h-auto"
       >
         <path
           fill-rule="evenodd"
@@ -20,7 +21,7 @@
       </svg>
     </div>
     <div
-      class="phrases relative text-green sm:text-4xl sm:px-6 xl:text-5xl text-2xl md:pl-16 px-4 md:px-6 font-minimedium"
+      class="phrases relative text-green sm:text-3xl sm:px-6 xl:text-5xl text-xl md:pl-16 px-4 md:px-6 font-minimedium"
     >
       <div>
         noshi is a <span>small<span class="strike"></span></span> (two person)
