@@ -10,7 +10,7 @@
             home
           </div>
         </NuxtLink>
-        <NuxtLink to="work" id="workNav">
+        <NuxtLink to="/work" id="workNav">
           <div
             :class="selectedClass('work')"
             class="py-1 px-4 m-1 rounded-full"
@@ -18,7 +18,7 @@
             work
           </div>
         </NuxtLink>
-        <NuxtLink to="services" id="servicesNav">
+        <NuxtLink to="/services" id="servicesNav">
           <div
             :class="selectedClass('services')"
             class="py-1 px-4 m-1 rounded-full"
@@ -27,7 +27,7 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink to="contact" id="contactNav">
+        <NuxtLink to="/contact" id="contactNav">
           <div
             :class="selectedClass('contact')"
             class="py-1 px-4 m-1 rounded-full"
@@ -52,13 +52,14 @@ export default {
       document.getElementById('servicesNav').getBoundingClientRect().width,
       document.getElementById('contactNav').getBoundingClientRect().width,
     ]
-
     this.navMeta = {
       index: { w: ws[0], x: 0 },
       work: { w: ws[1], x: ws[0] },
       services: { w: ws[2], x: ws[0] + ws[1] },
       contact: { w: ws[3], x: ws[0] + ws[1] + ws[2] },
     }
+    console.log('page', this.page)
+    console.log('navmeta!!', this.navMeta)
 
     gsap.set('.nav-selected', {
       x: this.navMeta[this.page].x,
@@ -71,8 +72,19 @@ export default {
   },
   watch: {
     page(currentPage, lastPage) {
+      let last
+      if (currentPage === 'work-case') {
+        return
+      }
+      if (lastPage === 'work-case') {
+        lastPage = 'work'
+        if (currentPage === 'work') {
+          return
+        }
+      }
+      last = this.navMeta[lastPage]
       let curr = this.navMeta[currentPage]
-      let last = this.navMeta[lastPage]
+
       let tl = gsap.timeline()
       if (curr.x > last.x) {
         tl.add('expand')
