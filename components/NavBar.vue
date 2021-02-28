@@ -58,8 +58,6 @@ export default {
       services: { w: ws[2], x: ws[0] + ws[1] },
       contact: { w: ws[3], x: ws[0] + ws[1] + ws[2] },
     }
-    console.log('page', this.page)
-    console.log('navmeta!!', this.navMeta)
 
     gsap.set('.nav-selected', {
       x: this.navMeta[this.page].x,

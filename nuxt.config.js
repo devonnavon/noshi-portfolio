@@ -102,6 +102,12 @@ export default {
       ],
     },
   },
+  sitemap: {
+    hostname: 'https://www.noshi.cx',
+    // gzip: true,
+    exclude: ['/admin/**'],
+    routes: ['/work/ux-design-dinosaur-toolkit', '/work/nfl-verizon-20201028'],
+  },
   /*
    ** Global CSS
    */
@@ -129,11 +135,12 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    ['@nuxtjs/pwa', { icon: false}],
+    ['@nuxtjs/pwa', { icon: false }],
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
     '@nuxtjs/markdownit',
     'nuxt-clipboard2',
+    '@nuxtjs/sitemap',
     // 'smoothscroll-polyfill',
   ],
   /*
